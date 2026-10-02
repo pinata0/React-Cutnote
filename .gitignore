@@ -1,0 +1,88 @@
+# Public application source lives in /main/handoff-package/.
+# Preserve original checkouts, personal state, backups and tooling locally.
+/main/outputs/
+/main/work/
+/main/handoff-package/handoff-package/
+/docs_ext/
+/example/
+/docs/사전 멘토링 및 참가자 허브 이용 안내.md
+/.security-checks/
+/legacy/초기 아이디어 기획서.md
+# Presentation contains personal library captures; retain locally pending review.
+/docs/Presentation.pdf
+
+# Local API keys and environment settings
+.env
+.env.*
+!.env.example
+!.env.*.example
+.dev.vars
+.dev.vars.*
+
+# Credentials, pairing state and signing material
+*.key
+*.pem
+*.p12
+*.pfx
+*.jks
+*.keystore
+.npmrc.local
+local.properties
+connection.txt
+.cutnote-pairing.json
+.cutnote-launcher.lock
+
+# Personal databases and backups (SQL migrations remain source files)
+*.db
+*.db-*
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
+*.backup
+*.bak
+*.dump
+.wrangler/
+.qa-state/
+
+# Generated dependencies, caches and local execution state
+node_modules/
+.next/
+.vinext/
+dist/
+coverage/
+.sites-runtime/
+.agents/
+.codex/
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.tsbuildinfo
+next-env.d.ts
+*.log
+*.log.*
+*.har
+*.tmp
+
+# Distribution archives and Android outputs
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.gz
+*.7z
+*.rar
+*.cpgz
+*.apk
+*.aab
+*.idsig
+/main/handoff-package/cutnote-android/build/
+
+# macOS metadata, including metadata copies of ignored private directories
+__MACOSX/
+._*
+.DS_Store
+
+# Captured external pages may contain embedded API keys
+/main/work/youtube-probe/public-search.html

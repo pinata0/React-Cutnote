@@ -1,0 +1,170 @@
+[
+  {
+    "path": "outputs/cutnote/.sites-runtime/**",
+    "reason": "Git 이력·의존성·실행 상태·생성물 (상세 EXCLUDED_FILES 참고)"
+  },
+  {
+    "path": "outputs/cutnote/dist/**",
+    "reason": "Git 이력·의존성·실행 상태·생성물 (상세 EXCLUDED_FILES 참고)"
+  },
+  {
+    "path": "outputs/cutnote/node_modules/**",
+    "reason": "Git 이력·의존성·실행 상태·생성물 (상세 EXCLUDED_FILES 참고)"
+  },
+  {
+    "path": "outputs/cutnote/.vinext/**",
+    "reason": "Git 이력·의존성·실행 상태·생성물 (상세 EXCLUDED_FILES 참고)"
+  },
+  {
+    "path": "outputs/cutnote/.next/**",
+    "reason": "Git 이력·의존성·실행 상태·생성물 (상세 EXCLUDED_FILES 참고)"
+  },
+  {
+    "path": "outputs/cutnote/.git/**",
+    "reason": "Git 이력·의존성·실행 상태·생성물 (상세 EXCLUDED_FILES 참고)"
+  },
+  {
+    "path": "outputs/cutnote/.wrangler/**",
+    "reason": "Git 이력·의존성·실행 상태·생성물 (상세 EXCLUDED_FILES 참고)"
+  },
+  {
+    "path": "outputs/cutnote/.dev.vars",
+    "reason": "비밀 설정·연결 인증 정보·OS 메타데이터"
+  },
+  {
+    "path": "outputs/cutnote/tsconfig.tsbuildinfo",
+    "reason": "재생성 가능; README에 생성 절차 기록"
+  },
+  {
+    "path": "outputs/cutnote/next-env.d.ts",
+    "reason": "재생성 가능; README에 생성 절차 기록"
+  },
+  {
+    "path": "outputs/cutnote/README.md",
+    "reason": "기존 절차 조사 후 새 인수인계 문서에 통합"
+  },
+  {
+    "path": "outputs/cutnote/lib/taxonomy-data.ts",
+    "reason": "재생성 가능; README에 생성 절차 기록"
+  },
+  {
+    "path": "outputs/cutnote/data/taxonomy/taxonomy.generated.json",
+    "reason": "재생성 가능; README에 생성 절차 기록"
+  },
+  {
+    "path": "outputs/cutnote-android/build/**",
+    "reason": "Git 이력·의존성·실행 상태·생성물 (상세 EXCLUDED_FILES 참고)"
+  },
+  {
+    "path": "outputs/cutnote-android/cutnote-android-0.4.1.apk.sha256",
+    "reason": "빌드 산출물·서명 정보"
+  },
+  {
+    "path": "outputs/cutnote-android/cutnote-android-0.3.1.apk.sha256",
+    "reason": "빌드 산출물·서명 정보"
+  },
+  {
+    "path": "outputs/cutnote-android/cutnote-android.apk.cpgz",
+    "reason": "빌드 산출물·서명 정보"
+  },
+  {
+    "path": "outputs/cutnote-android/.DS_Store",
+    "reason": "비밀 설정·연결 인증 정보·OS 메타데이터"
+  },
+  {
+    "path": "outputs/cutnote-android/cutnote-android.apk.sha256",
+    "reason": "빌드 산출물·서명 정보"
+  },
+  {
+    "path": "outputs/cutnote-android/connection.txt",
+    "reason": "비밀 설정·연결 인증 정보·OS 메타데이터"
+  },
+  {
+    "path": "outputs/cutnote-android/cutnote-android-0.4.3.apk.sha256",
+    "reason": "빌드 산출물·서명 정보"
+  },
+  {
+    "path": "outputs/cutnote-android/README.md",
+    "reason": "기존 절차 조사 후 새 인수인계 문서에 통합"
+  },
+  {
+    "path": "outputs/cutnote-android/cutnote-android.apk.zip",
+    "reason": "빌드 산출물·서명 정보"
+  },
+  {
+    "path": "outputs/cutnote-android/cutnote-android-0.3.1.apk",
+    "reason": "빌드 산출물·서명 정보"
+  },
+  {
+    "path": "outputs/cutnote-android/cutnote-android-0.4.0.apk.sha256",
+    "reason": "빌드 산출물·서명 정보"
+  },
+  {
+    "path": "outputs/cutnote-android/.cutnote-pairing.json",
+    "reason": "비밀 설정·연결 인증 정보·OS 메타데이터"
+  },
+  {
+    "path": "outputs/cutnote-android/cutnote-android-0.4.2.apk.zip",
+    "reason": "빌드 산출물·서명 정보"
+  },
+  {
+    "path": "outputs/cutnote-android/cutnote-android.apk.idsig",
+    "reason": "빌드 산출물·서명 정보"
+  },
+  {
+    "path": "outputs/cutnote-android/cutnote-android.apk",
+    "reason": "빌드 산출물·서명 정보"
+  },
+  {
+    "path": "outputs/cutnote-android/cutnote-android-0.4.0.apk",
+    "reason": "빌드 산출물·서명 정보"
+  },
+  {
+    "path": "outputs/cutnote-android/cutnote-android-0.4.2.apk.sha256",
+    "reason": "빌드 산출물·서명 정보"
+  },
+  {
+    "path": "outputs/cutnote-android/cutnote-android-0.4.1.apk",
+    "reason": "빌드 산출물·서명 정보"
+  },
+  {
+    "path": "outputs/cutnote-android/cutnote-android-0.4.3.apk",
+    "reason": "빌드 산출물·서명 정보"
+  },
+  {
+    "path": "outputs/cutnote-android/cutnote-android-0.4.1.apk.zip",
+    "reason": "빌드 산출물·서명 정보"
+  },
+  {
+    "path": "outputs/cutnote-android/cutnote-android-0.4.2.apk",
+    "reason": "빌드 산출물·서명 정보"
+  },
+  {
+    "path": "outputs/cutnote-android/bridge/README.md",
+    "reason": "기존 절차 조사 후 새 인수인계 문서에 통합"
+  },
+  {
+    "path": "outputs/cutnote-logo-kit/cutnote-app-icon.png",
+    "reason": "벡터에서 재생성 가능한 PNG/프리뷰 또는 오래된 설명"
+  },
+  {
+    "path": "outputs/cutnote-logo-kit/preview.png",
+    "reason": "벡터에서 재생성 가능한 PNG/프리뷰 또는 오래된 설명"
+  },
+  {
+    "path": "outputs/cutnote-logo-kit/cutnote-lockup-white.png",
+    "reason": "벡터에서 재생성 가능한 PNG/프리뷰 또는 오래된 설명"
+  },
+  {
+    "path": "outputs/cutnote-logo-kit/cutnote-web-icon.png",
+    "reason": "벡터에서 재생성 가능한 PNG/프리뷰 또는 오래된 설명"
+  },
+  {
+    "path": "outputs/cutnote-logo-kit/cutnote-lockup-dark.png",
+    "reason": "벡터에서 재생성 가능한 PNG/프리뷰 또는 오래된 설명"
+  },
+  {
+    "path": "outputs/cutnote-logo-kit/README.md",
+    "reason": "벡터에서 재생성 가능한 PNG/프리뷰 또는 오래된 설명"
+  }
+]

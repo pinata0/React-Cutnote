@@ -1,0 +1,15 @@
+{
+  "source_hashes": {
+    "checked": 251,
+    "changed_or_missing": [],
+    "unchanged": true
+  },
+  "git_hashes": {
+    "checked": 4,
+    "changed_or_missing": [],
+    "unchanged": true
+  },
+  "git_commands": "Read-only with GIT_OPTIONAL_LOCKS=0; no commit/push/index/branch changes",
+  "source_mutations_performed": false,
+  "original_secret_or_user_database_content_read": false
+}

@@ -1,0 +1,80 @@
+{
+  "date": "2026-10-01",
+  "environment": {
+    "os": "macOS arm64",
+    "node": "24.19.0",
+    "npm": "10.9.2",
+    "jdk": "Temurin 21.0.12.1+1",
+    "android_platform": "35 revision 2",
+    "android_build_tools": "35.0.0"
+  },
+  "isolation": "Copied package into a newly created temporary directory. Fresh npm cache/install; original node_modules/DB/secrets were not linked or copied. Existing PC servers were untouched.",
+  "checks": [
+    {
+      "command": "npm ci --include=dev --include=optional --no-audit --no-fund",
+      "result": "PASS",
+      "detail": "690 packages installed from lockfile in fresh verification copy"
+    },
+    {
+      "command": "npm run taxonomy:generate",
+      "result": "PASS",
+      "detail": "2.0.0; 12 namespaces, 403 tags; schema/references/parent cycles verified"
+    },
+    {
+      "command": "npm run build",
+      "result": "PASS",
+      "detail": "Vinext/Vite production worker, client and SSR built"
+    },
+    {
+      "command": "node node_modules/typescript/bin/tsc --noEmit --incremental false",
+      "result": "PASS"
+    },
+    {
+      "command": "node ../tests/run-web.mjs (npm test entrypoint)",
+      "result": "PASS",
+      "detail": "11/11 offline suites; mocked providers and memory DB only"
+    },
+    {
+      "command": "node scripts/init-local-db.mjs (npm run db:init entrypoint)",
+      "result": "PASS",
+      "detail": "0000 through 0008 (9 migrations) applied to a fresh LOCAL D1; repeat returns No migrations to apply"
+    },
+    {
+      "command": "temporary built-worker smoke on self-assigned loopback port",
+      "result": "PASS",
+      "detail": "/ and /mobile HTML + CSS; empty library; AI unconfigured; synthetic example.invalid clip create/read/delete. Server shut down after test."
+    },
+    {
+      "command": "bash cutnote-android/build.sh in verification copy",
+      "result": "PASS",
+      "detail": "6 JVM suites, 211 checks; APK 0.4.3 code9 min26 target35, 45806 bytes; v2/v3 signature and zipalign verified"
+    },
+    {
+      "command": "node --test cutnote-android/bridge/server.test.mjs",
+      "result": "PASS",
+      "detail": "18/18 isolated loopback tests"
+    },
+    {
+      "command": "bash -n / zsh -n / node --check for changed Android entry scripts",
+      "result": "PASS"
+    }
+  ],
+  "warnings": [
+    "npm deprecated @esbuild-kit loader/core-utils notices",
+    "Vinext static analysis does not classify two page routes; build still passes",
+    "Java 8 source/target obsolete and deprecated Android API notices",
+    "Initial restricted environment blocked registry DNS and loopback binding; same commands passed after permitted network/local socket access."
+  ],
+  "not_verified": [
+    "Live paid OpenAI/Gemini calls or model access",
+    "Physical Android share/file picker/download/touch UI",
+    "Actual two-device Wi-Fi synchronization",
+    "Online deployment",
+    "Original user data migration",
+    "Design generator and font redistribution rights",
+    "Windows or other CPU/OS builds"
+  ],
+  "paid_api_calls": 0,
+  "secrets_in_package": false,
+  "generated_apk_or_keystore_in_package": false
+}

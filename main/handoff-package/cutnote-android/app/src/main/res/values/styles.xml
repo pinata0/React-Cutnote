@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="cutnote_navigation_bar">#191919</color>
+
+    <style name="AppTheme" parent="android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:colorPrimary">#191919</item>
+        <item name="android:colorPrimaryDark">#191919</item>
+        <item name="android:colorAccent">#191919</item>
+        <item name="android:colorControlNormal">#666666</item>
+        <item name="android:colorControlActivated">#191919</item>
+        <item name="android:colorControlHighlight">#24191919</item>
+        <item name="android:colorButtonNormal">#FFFFFF</item>
+        <item name="android:colorBackground">#F7F7F8</item>
+        <item name="android:colorBackgroundFloating">#FFFFFF</item>
+        <item name="android:windowBackground">#F7F7F8</item>
+        <item name="android:textColorPrimary">@color/cutnote_text_primary</item>
+        <item name="android:textColorSecondary">@color/cutnote_text_secondary</item>
+        <item name="android:textColorHint">@color/cutnote_text_secondary</item>
+        <item name="android:textColorLink">#191919</item>
+        <item name="android:alertDialogTheme">@style/CutnoteDialogTheme</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">#F7F7F8</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:navigationBarColor">@color/cutnote_navigation_bar</item>
+        <item name="android:navigationBarDividerColor">#DEDEE0</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:windowOptOutEdgeToEdgeEnforcement">true</item>
+    </style>
+
+    <style name="CutnoteDialogTheme" parent="android:style/Theme.Material.Light.Dialog.Alert">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:colorAccent">#191919</item>
+        <item name="android:colorControlNormal">#666666</item>
+        <item name="android:colorControlActivated">#191919</item>
+        <item name="android:colorControlHighlight">#24191919</item>
+        <item name="android:colorBackground">#FFFFFF</item>
+        <item name="android:colorBackgroundFloating">#FFFFFF</item>
+        <item name="android:windowBackground">@drawable/cutnote_dialog_background</item>
+        <item name="android:textColorPrimary">@color/cutnote_text_primary</item>
+        <item name="android:textColorSecondary">@color/cutnote_text_secondary</item>
+        <item name="android:textColorHint">@color/cutnote_text_secondary</item>
+        <item name="android:textColorLink">#191919</item>
+        <item name="android:buttonBarPositiveButtonStyle">@style/CutnoteDialogButton</item>
+        <item name="android:buttonBarNegativeButtonStyle">@style/CutnoteDialogButton</item>
+        <item name="android:buttonBarNeutralButtonStyle">@style/CutnoteDialogButton</item>
+    </style>
+
+    <style name="CutnoteDialogButton" parent="android:style/Widget.Material.Button.Borderless">
+        <item name="android:textColor">@color/cutnote_text_primary</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:minHeight">48dp</item>
+    </style>
+</resources>

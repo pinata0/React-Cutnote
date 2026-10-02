@@ -1,0 +1,2911 @@
+version: "2.0.0"
+source_document: "분류 후보군_개정판.md"
+description: "영상 효과 레퍼런스 서비스의 canonical 태그 사전"
+
+namespaces:
+  - id: "visual_style"
+    display_name: "Visual Style"
+    root_id: "visual_style.root"
+    default_observable: true
+    description: "화면 전체에서 관찰되는 미학적·매체적 스타일"
+  - id: "generation_method"
+    display_name: "Generation Method"
+    root_id: "generation_method.root"
+    default_observable: false
+    description: "효과를 생성한 것으로 추정되는 알고리즘 또는 시스템"
+  - id: "production_technique"
+    display_name: "Production Technique"
+    root_id: "production_technique.root"
+    default_observable: false
+    description: "촬영·애니메이션·후반 제작 과정에서 사용된 것으로 추정되는 기법"
+  - id: "transformation"
+    display_name: "Transformation"
+    root_id: "transformation.root"
+    default_observable: true
+    description: "픽셀, 형태, 시간축에 직접 적용된 시각 변형"
+  - id: "motion_style"
+    display_name: "Motion Style"
+    root_id: "motion_style.root"
+    default_observable: true
+    description: "피사체 또는 화면 요소가 보이는 방식과 시간적 리듬"
+  - id: "texture"
+    display_name: "Texture / Surface Style"
+    root_id: "texture.root"
+    default_observable: true
+    description: "화면 또는 표면에서 관찰되는 재질과 질감"
+  - id: "geometry_pattern"
+    display_name: "Geometry / Pattern"
+    root_id: "geometry_pattern.root"
+    default_observable: true
+    description: "반복 구조, 도형, 공간 패턴"
+  - id: "compositing"
+    display_name: "Compositing / Layer Interaction"
+    root_id: "compositing.root"
+    default_observable: true
+    description: "레이어 결합과 전경·배경 상호작용"
+  - id: "color"
+    display_name: "Color"
+    root_id: "color.root"
+    default_observable: true
+    description: "주조색, 색온도, 채도, 명암 등 화면에서 직접 관찰되는 색채 특성"
+  - id: "shot_type"
+    display_name: "Shot Type"
+    root_id: "shot_type.root"
+    default_observable: true
+    description: "주 피사체가 프레임 안에서 차지하는 크기와 구도"
+  - id: "camera_motion"
+    display_name: "Camera Motion"
+    root_id: "camera_motion.root"
+    default_observable: true
+    description: "피사체 움직임과 구분되는 카메라 또는 가상 카메라의 이동"
+  - id: "subject"
+    display_name: "Subject"
+    root_id: "subject.root"
+    default_observable: true
+    description: "클립에서 시각적으로 확인되는 주요 피사체 유형"
+
+tags:
+  - id: "visual_style.ascii"
+    namespace: "visual_style"
+    display_name: "ASCII"
+    aliases: []
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.pixel_art"
+    namespace: "visual_style"
+    display_name: "Pixel Art"
+    aliases: []
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.low_poly"
+    namespace: "visual_style"
+    display_name: "Low Poly"
+    aliases: []
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.voxel"
+    namespace: "visual_style"
+    display_name: "Voxel"
+    aliases: []
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.wireframe"
+    namespace: "visual_style"
+    display_name: "Wireframe"
+    aliases: []
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.outline"
+    namespace: "visual_style"
+    display_name: "Outline"
+    aliases: []
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.line_art"
+    namespace: "visual_style"
+    display_name: "Line Art"
+    aliases: []
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.sketch"
+    namespace: "visual_style"
+    display_name: "Sketch"
+    aliases: []
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.pencil"
+    namespace: "visual_style"
+    display_name: "Pencil"
+    aliases: []
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.ink"
+    namespace: "visual_style"
+    display_name: "Ink"
+    aliases: []
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.charcoal"
+    namespace: "visual_style"
+    display_name: "Charcoal"
+    aliases: []
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.watercolor"
+    namespace: "visual_style"
+    display_name: "Watercolor"
+    aliases: []
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.oil_paint"
+    namespace: "visual_style"
+    display_name: "Oil Paint"
+    aliases: []
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.pastel"
+    namespace: "visual_style"
+    display_name: "Pastel"
+    aliases: []
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.comic"
+    namespace: "visual_style"
+    display_name: "Comic"
+    aliases: []
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.manga"
+    namespace: "visual_style"
+    display_name: "Manga"
+    aliases: []
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.anime"
+    namespace: "visual_style"
+    display_name: "Anime"
+    aliases: []
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.cartoon"
+    namespace: "visual_style"
+    display_name: "Cartoon"
+    aliases: []
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.cel_shading"
+    namespace: "visual_style"
+    display_name: "Cel Shading"
+    aliases: []
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.halftone"
+    namespace: "visual_style"
+    display_name: "Halftone"
+    aliases: []
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.ben_day_dots"
+    namespace: "visual_style"
+    display_name: "Ben-Day Dots"
+    aliases: []
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.dither"
+    namespace: "visual_style"
+    display_name: "Dither"
+    aliases: []
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.duotone"
+    namespace: "visual_style"
+    display_name: "Duotone"
+    aliases: []
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.tritone"
+    namespace: "visual_style"
+    display_name: "Tritone"
+    aliases: []
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.posterized"
+    namespace: "visual_style"
+    display_name: "Posterized"
+    aliases: []
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.threshold"
+    namespace: "visual_style"
+    display_name: "Threshold"
+    aliases: []
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.solarized"
+    namespace: "visual_style"
+    display_name: "Solarized"
+    aliases: []
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.negative"
+    namespace: "visual_style"
+    display_name: "Negative"
+    aliases: []
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.monochrome"
+    namespace: "visual_style"
+    display_name: "Monochrome"
+    aliases: []
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.silhouette"
+    namespace: "visual_style"
+    display_name: "Silhouette"
+    aliases: []
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.vhs"
+    namespace: "visual_style"
+    display_name: "VHS"
+    aliases: ["Video Home System", "비디오테이프", "VHS 룩"]
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.crt"
+    namespace: "visual_style"
+    display_name: "CRT"
+    aliases: []
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.analog_tv"
+    namespace: "visual_style"
+    display_name: "Analog TV"
+    aliases: []
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.camcorder"
+    namespace: "visual_style"
+    display_name: "Camcorder"
+    aliases: []
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.film"
+    namespace: "visual_style"
+    display_name: "Film"
+    aliases: []
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.super_8"
+    namespace: "visual_style"
+    display_name: "Super 8"
+    aliases: []
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.16mm_film"
+    namespace: "visual_style"
+    display_name: "16mm Film"
+    aliases: []
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.film_burn"
+    namespace: "visual_style"
+    display_name: "Film Burn"
+    aliases: []
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.film_scratch"
+    namespace: "visual_style"
+    display_name: "Film Scratch"
+    aliases: []
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.film_grain"
+    namespace: "visual_style"
+    display_name: "Film Grain"
+    aliases: []
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.gate_weave"
+    namespace: "visual_style"
+    display_name: "Gate Weave"
+    aliases: []
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.light_leak"
+    namespace: "visual_style"
+    display_name: "Light Leak"
+    aliases: []
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.old_photo"
+    namespace: "visual_style"
+    display_name: "Old Photo"
+    aliases: []
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.cyberpunk"
+    namespace: "visual_style"
+    display_name: "Cyberpunk"
+    aliases: []
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.y2k"
+    namespace: "visual_style"
+    display_name: "Y2K"
+    aliases: []
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.retro_futurism"
+    namespace: "visual_style"
+    display_name: "Retro Futurism"
+    aliases: []
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.synthwave"
+    namespace: "visual_style"
+    display_name: "Synthwave"
+    aliases: []
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.vaporwave"
+    namespace: "visual_style"
+    display_name: "Vaporwave"
+    aliases: []
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.lo_fi"
+    namespace: "visual_style"
+    display_name: "Lo-fi"
+    aliases: []
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.grunge"
+    namespace: "visual_style"
+    display_name: "Grunge"
+    aliases: []
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.psychedelic"
+    namespace: "visual_style"
+    display_name: "Psychedelic"
+    aliases: []
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.surreal"
+    namespace: "visual_style"
+    display_name: "Surreal"
+    aliases: []
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.dreamy"
+    namespace: "visual_style"
+    display_name: "Dreamy"
+    aliases: []
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.ethereal"
+    namespace: "visual_style"
+    display_name: "Ethereal"
+    aliases: []
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.holographic"
+    namespace: "visual_style"
+    display_name: "Holographic"
+    aliases: []
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.neon"
+    namespace: "visual_style"
+    display_name: "Neon"
+    aliases: []
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.glitch"
+    namespace: "visual_style"
+    display_name: "Glitch"
+    aliases: []
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.digital_glitch"
+    namespace: "visual_style"
+    display_name: "Digital Glitch"
+    aliases: ["Digital Error", "디지털 글리치"]
+    parent: "visual_style.glitch"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.analog_glitch"
+    namespace: "visual_style"
+    display_name: "Analog Glitch"
+    aliases: []
+    parent: "visual_style.glitch"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.datamosh"
+    namespace: "visual_style"
+    display_name: "Datamosh"
+    aliases: []
+    parent: "visual_style.digital_glitch"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.pixel_sorting"
+    namespace: "visual_style"
+    display_name: "Pixel Sorting"
+    aliases: []
+    parent: "visual_style.digital_glitch"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.compression_artifact"
+    namespace: "visual_style"
+    display_name: "Compression Artifact"
+    aliases: []
+    parent: "visual_style.digital_glitch"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.block_artifact"
+    namespace: "visual_style"
+    display_name: "Block Artifact"
+    aliases: []
+    parent: "visual_style.digital_glitch"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.signal_error"
+    namespace: "visual_style"
+    display_name: "Signal Error"
+    aliases: []
+    parent: "visual_style.analog_glitch"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.rgb_split"
+    namespace: "visual_style"
+    display_name: "RGB Split"
+    aliases: ["RGB Shift Style", "RGB Separation Style"]
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.chromatic_aberration"
+    namespace: "visual_style"
+    display_name: "Chromatic Aberration"
+    aliases: []
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.scanline"
+    namespace: "visual_style"
+    display_name: "Scanline"
+    aliases: []
+    parent: "visual_style.analog_glitch"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.static"
+    namespace: "visual_style"
+    display_name: "Static"
+    aliases: []
+    parent: "visual_style.analog_glitch"
+    observable: true
+    auto_accept_allowed: true
+  - id: "visual_style.noise"
+    namespace: "visual_style"
+    display_name: "Noise"
+    aliases: []
+    parent: "visual_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "generation_method.fractal_noise"
+    namespace: "generation_method"
+    display_name: "Fractal Noise"
+    aliases: []
+    parent: "generation_method.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "generation_method.turbulent_noise"
+    namespace: "generation_method"
+    display_name: "Turbulent Noise"
+    aliases: []
+    parent: "generation_method.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "generation_method.perlin_noise"
+    namespace: "generation_method"
+    display_name: "Perlin Noise"
+    aliases: []
+    parent: "generation_method.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "generation_method.simplex_noise"
+    namespace: "generation_method"
+    display_name: "Simplex Noise"
+    aliases: []
+    parent: "generation_method.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "generation_method.cellular_noise"
+    namespace: "generation_method"
+    display_name: "Cellular Noise"
+    aliases: []
+    parent: "generation_method.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "generation_method.voronoi_noise"
+    namespace: "generation_method"
+    display_name: "Voronoi Noise"
+    aliases: []
+    parent: "generation_method.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "generation_method.random_noise"
+    namespace: "generation_method"
+    display_name: "Random Noise"
+    aliases: []
+    parent: "generation_method.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "generation_method.white_noise"
+    namespace: "generation_method"
+    display_name: "White Noise"
+    aliases: []
+    parent: "generation_method.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "generation_method.film_grain"
+    namespace: "generation_method"
+    display_name: "Film Grain"
+    aliases: []
+    parent: "generation_method.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "generation_method.procedural_texture"
+    namespace: "generation_method"
+    display_name: "Procedural Texture"
+    aliases: []
+    parent: "generation_method.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "generation_method.procedural_pattern"
+    namespace: "generation_method"
+    display_name: "Procedural Pattern"
+    aliases: []
+    parent: "generation_method.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "generation_method.procedural_animation"
+    namespace: "generation_method"
+    display_name: "Procedural Animation"
+    aliases: []
+    parent: "generation_method.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "generation_method.particle_system"
+    namespace: "generation_method"
+    display_name: "Particle System"
+    aliases: []
+    parent: "generation_method.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "generation_method.particle_field"
+    namespace: "generation_method"
+    display_name: "Particle Field"
+    aliases: []
+    parent: "generation_method.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "generation_method.particle_trail"
+    namespace: "generation_method"
+    display_name: "Particle Trail"
+    aliases: []
+    parent: "generation_method.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "generation_method.particle_flow"
+    namespace: "generation_method"
+    display_name: "Particle Flow"
+    aliases: []
+    parent: "generation_method.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "generation_method.fluid_simulation"
+    namespace: "generation_method"
+    display_name: "Fluid Simulation"
+    aliases: []
+    parent: "generation_method.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "generation_method.smoke_simulation"
+    namespace: "generation_method"
+    display_name: "Smoke Simulation"
+    aliases: []
+    parent: "generation_method.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "generation_method.fire_simulation"
+    namespace: "generation_method"
+    display_name: "Fire Simulation"
+    aliases: []
+    parent: "generation_method.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "generation_method.liquid_simulation"
+    namespace: "generation_method"
+    display_name: "Liquid Simulation"
+    aliases: []
+    parent: "generation_method.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "generation_method.cloth_simulation"
+    namespace: "generation_method"
+    display_name: "Cloth Simulation"
+    aliases: []
+    parent: "generation_method.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "generation_method.hair_simulation"
+    namespace: "generation_method"
+    display_name: "Hair Simulation"
+    aliases: []
+    parent: "generation_method.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "generation_method.displacement_map"
+    namespace: "generation_method"
+    display_name: "Displacement Map"
+    aliases: []
+    parent: "generation_method.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "generation_method.height_map"
+    namespace: "generation_method"
+    display_name: "Height Map"
+    aliases: []
+    parent: "generation_method.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "generation_method.normal_map"
+    namespace: "generation_method"
+    display_name: "Normal Map"
+    aliases: []
+    parent: "generation_method.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "generation_method.depth_map"
+    namespace: "generation_method"
+    display_name: "Depth Map"
+    aliases: []
+    parent: "generation_method.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "generation_method.flow_map"
+    namespace: "generation_method"
+    display_name: "Flow Map"
+    aliases: []
+    parent: "generation_method.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "generation_method.vector_field"
+    namespace: "generation_method"
+    display_name: "Vector Field"
+    aliases: []
+    parent: "generation_method.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "generation_method.reaction_diffusion"
+    namespace: "generation_method"
+    display_name: "Reaction Diffusion"
+    aliases: []
+    parent: "generation_method.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "generation_method.cellular_automata"
+    namespace: "generation_method"
+    display_name: "Cellular Automata"
+    aliases: []
+    parent: "generation_method.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "generation_method.l_system"
+    namespace: "generation_method"
+    display_name: "L-System"
+    aliases: []
+    parent: "generation_method.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "generation_method.fractal"
+    namespace: "generation_method"
+    display_name: "Fractal"
+    aliases: []
+    parent: "generation_method.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "generation_method.mandelbrot"
+    namespace: "generation_method"
+    display_name: "Mandelbrot"
+    aliases: []
+    parent: "generation_method.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "generation_method.julia_set"
+    namespace: "generation_method"
+    display_name: "Julia Set"
+    aliases: []
+    parent: "generation_method.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "generation_method.audio_reactive"
+    namespace: "generation_method"
+    display_name: "Audio Reactive"
+    aliases: []
+    parent: "generation_method.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "generation_method.spectrum_reactive"
+    namespace: "generation_method"
+    display_name: "Spectrum Reactive"
+    aliases: []
+    parent: "generation_method.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "generation_method.beat_reactive"
+    namespace: "generation_method"
+    display_name: "Beat Reactive"
+    aliases: []
+    parent: "generation_method.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "generation_method.generative_art"
+    namespace: "generation_method"
+    display_name: "Generative Art"
+    aliases: []
+    parent: "generation_method.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "generation_method.algorithmic_animation"
+    namespace: "generation_method"
+    display_name: "Algorithmic Animation"
+    aliases: []
+    parent: "generation_method.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "generation_method.feedback_loop"
+    namespace: "generation_method"
+    display_name: "Feedback Loop"
+    aliases: []
+    parent: "generation_method.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "generation_method.recursive_pattern"
+    namespace: "generation_method"
+    display_name: "Recursive Pattern"
+    aliases: []
+    parent: "generation_method.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "production_technique.rotoscoping"
+    namespace: "production_technique"
+    display_name: "Rotoscoping"
+    aliases: []
+    parent: "production_technique.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "production_technique.masking"
+    namespace: "production_technique"
+    display_name: "Masking"
+    aliases: []
+    parent: "production_technique.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "production_technique.matte_painting"
+    namespace: "production_technique"
+    display_name: "Matte Painting"
+    aliases: []
+    parent: "production_technique.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "production_technique.chroma_key"
+    namespace: "production_technique"
+    display_name: "Chroma Key"
+    aliases: []
+    parent: "production_technique.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "production_technique.luma_key"
+    namespace: "production_technique"
+    display_name: "Luma Key"
+    aliases: []
+    parent: "production_technique.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "production_technique.difference_key"
+    namespace: "production_technique"
+    display_name: "Difference Key"
+    aliases: []
+    parent: "production_technique.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "production_technique.garbage_matte"
+    namespace: "production_technique"
+    display_name: "Garbage Matte"
+    aliases: []
+    parent: "production_technique.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "production_technique.motion_tracking"
+    namespace: "production_technique"
+    display_name: "Motion Tracking"
+    aliases: []
+    parent: "production_technique.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "production_technique.point_tracking"
+    namespace: "production_technique"
+    display_name: "Point Tracking"
+    aliases: []
+    parent: "production_technique.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "production_technique.planar_tracking"
+    namespace: "production_technique"
+    display_name: "Planar Tracking"
+    aliases: []
+    parent: "production_technique.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "production_technique.camera_tracking"
+    namespace: "production_technique"
+    display_name: "Camera Tracking"
+    aliases: []
+    parent: "production_technique.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "production_technique.object_tracking"
+    namespace: "production_technique"
+    display_name: "Object Tracking"
+    aliases: []
+    parent: "production_technique.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "production_technique.face_tracking"
+    namespace: "production_technique"
+    display_name: "Face Tracking"
+    aliases: []
+    parent: "production_technique.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "production_technique.match_moving"
+    namespace: "production_technique"
+    display_name: "Match Moving"
+    aliases: []
+    parent: "production_technique.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "production_technique.motion_capture"
+    namespace: "production_technique"
+    display_name: "Motion Capture"
+    aliases: []
+    parent: "production_technique.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "production_technique.performance_capture"
+    namespace: "production_technique"
+    display_name: "Performance Capture"
+    aliases: []
+    parent: "production_technique.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "production_technique.frame_by_frame_animation"
+    namespace: "production_technique"
+    display_name: "Frame-by-Frame Animation"
+    aliases: []
+    parent: "production_technique.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "production_technique.cel_animation"
+    namespace: "production_technique"
+    display_name: "Cel Animation"
+    aliases: []
+    parent: "production_technique.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "production_technique.stop_motion"
+    namespace: "production_technique"
+    display_name: "Stop Motion"
+    aliases: []
+    parent: "production_technique.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "production_technique.claymation"
+    namespace: "production_technique"
+    display_name: "Claymation"
+    aliases: []
+    parent: "production_technique.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "production_technique.cutout_animation"
+    namespace: "production_technique"
+    display_name: "Cutout Animation"
+    aliases: []
+    parent: "production_technique.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "production_technique.morphing"
+    namespace: "production_technique"
+    display_name: "Morphing"
+    aliases: []
+    parent: "production_technique.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "production_technique.warping"
+    namespace: "production_technique"
+    display_name: "Warping"
+    aliases: []
+    parent: "production_technique.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "production_technique.puppet_animation"
+    namespace: "production_technique"
+    display_name: "Puppet Animation"
+    aliases: []
+    parent: "production_technique.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "production_technique.rigging"
+    namespace: "production_technique"
+    display_name: "Rigging"
+    aliases: []
+    parent: "production_technique.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "production_technique.paint_over"
+    namespace: "production_technique"
+    display_name: "Paint Over"
+    aliases: []
+    parent: "production_technique.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "production_technique.frame_painting"
+    namespace: "production_technique"
+    display_name: "Frame Painting"
+    aliases: []
+    parent: "production_technique.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "production_technique.hand_drawn_animation"
+    namespace: "production_technique"
+    display_name: "Hand Drawn Animation"
+    aliases: []
+    parent: "production_technique.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "production_technique.scribble_animation"
+    namespace: "production_technique"
+    display_name: "Scribble Animation"
+    aliases: []
+    parent: "production_technique.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "production_technique.double_exposure"
+    namespace: "production_technique"
+    display_name: "Double Exposure"
+    aliases: []
+    parent: "production_technique.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "production_technique.multiple_exposure"
+    namespace: "production_technique"
+    display_name: "Multiple Exposure"
+    aliases: []
+    parent: "production_technique.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "production_technique.projection_mapping"
+    namespace: "production_technique"
+    display_name: "Projection Mapping"
+    aliases: []
+    parent: "production_technique.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "production_technique.screen_replacement"
+    namespace: "production_technique"
+    display_name: "Screen Replacement"
+    aliases: []
+    parent: "production_technique.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "production_technique.sky_replacement"
+    namespace: "production_technique"
+    display_name: "Sky Replacement"
+    aliases: []
+    parent: "production_technique.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "production_technique.set_extension"
+    namespace: "production_technique"
+    display_name: "Set Extension"
+    aliases: []
+    parent: "production_technique.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "production_technique.object_removal"
+    namespace: "production_technique"
+    display_name: "Object Removal"
+    aliases: []
+    parent: "production_technique.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "production_technique.wire_removal"
+    namespace: "production_technique"
+    display_name: "Wire Removal"
+    aliases: []
+    parent: "production_technique.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "production_technique.photogrammetry"
+    namespace: "production_technique"
+    display_name: "Photogrammetry"
+    aliases: []
+    parent: "production_technique.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "production_technique.3d_scanning"
+    namespace: "production_technique"
+    display_name: "3D Scanning"
+    aliases: []
+    parent: "production_technique.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "production_technique.depth_reconstruction"
+    namespace: "production_technique"
+    display_name: "Depth Reconstruction"
+    aliases: []
+    parent: "production_technique.root"
+    observable: false
+    auto_accept_allowed: false
+  - id: "transformation.blur"
+    namespace: "transformation"
+    display_name: "Blur"
+    aliases: []
+    parent: "transformation.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "transformation.sharpen"
+    namespace: "transformation"
+    display_name: "Sharpen"
+    aliases: []
+    parent: "transformation.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "transformation.glow"
+    namespace: "transformation"
+    display_name: "Glow"
+    aliases: []
+    parent: "transformation.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "transformation.bloom"
+    namespace: "transformation"
+    display_name: "Bloom"
+    aliases: []
+    parent: "transformation.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "transformation.warp"
+    namespace: "transformation"
+    display_name: "Warp"
+    aliases: []
+    parent: "transformation.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "transformation.distortion"
+    namespace: "transformation"
+    display_name: "Distortion"
+    aliases: []
+    parent: "transformation.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "transformation.displacement"
+    namespace: "transformation"
+    display_name: "Displacement"
+    aliases: []
+    parent: "transformation.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "transformation.liquify"
+    namespace: "transformation"
+    display_name: "Liquify"
+    aliases: []
+    parent: "transformation.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "transformation.twirl"
+    namespace: "transformation"
+    display_name: "Twirl"
+    aliases: []
+    parent: "transformation.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "transformation.ripple"
+    namespace: "transformation"
+    display_name: "Ripple"
+    aliases: []
+    parent: "transformation.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "transformation.wave"
+    namespace: "transformation"
+    display_name: "Wave"
+    aliases: []
+    parent: "transformation.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "transformation.bulge"
+    namespace: "transformation"
+    display_name: "Bulge"
+    aliases: []
+    parent: "transformation.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "transformation.stretch"
+    namespace: "transformation"
+    display_name: "Stretch"
+    aliases: []
+    parent: "transformation.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "transformation.smear"
+    namespace: "transformation"
+    display_name: "Smear"
+    aliases: []
+    parent: "transformation.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "transformation.melt"
+    namespace: "transformation"
+    display_name: "Melt"
+    aliases: []
+    parent: "transformation.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "transformation.pixelate"
+    namespace: "transformation"
+    display_name: "Pixelate"
+    aliases: []
+    parent: "transformation.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "transformation.mosaic"
+    namespace: "transformation"
+    display_name: "Mosaic"
+    aliases: []
+    parent: "transformation.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "transformation.blockify"
+    namespace: "transformation"
+    display_name: "Blockify"
+    aliases: []
+    parent: "transformation.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "transformation.quantize"
+    namespace: "transformation"
+    display_name: "Quantize"
+    aliases: []
+    parent: "transformation.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "transformation.posterize"
+    namespace: "transformation"
+    display_name: "Posterize"
+    aliases: []
+    parent: "transformation.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "transformation.pixel_sorting"
+    namespace: "transformation"
+    display_name: "Pixel Sorting"
+    aliases: []
+    parent: "transformation.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "transformation.datamosh"
+    namespace: "transformation"
+    display_name: "Datamosh"
+    aliases: []
+    parent: "transformation.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "transformation.data_corruption"
+    namespace: "transformation"
+    display_name: "Data Corruption"
+    aliases: []
+    parent: "transformation.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "transformation.compression"
+    namespace: "transformation"
+    display_name: "Compression"
+    aliases: []
+    parent: "transformation.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "transformation.frame_corruption"
+    namespace: "transformation"
+    display_name: "Frame Corruption"
+    aliases: []
+    parent: "transformation.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "transformation.rgb_split"
+    namespace: "transformation"
+    display_name: "RGB Split"
+    aliases: ["RGB Shift", "RGB Separation", "Color Split", "Channel Separation", "색분리", "RGB 분리"]
+    parent: "transformation.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "transformation.channel_shift"
+    namespace: "transformation"
+    display_name: "Channel Shift"
+    aliases: []
+    parent: "transformation.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "transformation.channel_swap"
+    namespace: "transformation"
+    display_name: "Channel Swap"
+    aliases: []
+    parent: "transformation.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "transformation.chromatic_aberration"
+    namespace: "transformation"
+    display_name: "Chromatic Aberration"
+    aliases: []
+    parent: "transformation.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "transformation.kaleidoscope"
+    namespace: "transformation"
+    display_name: "Kaleidoscope"
+    aliases: []
+    parent: "transformation.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "transformation.mirror"
+    namespace: "transformation"
+    display_name: "Mirror"
+    aliases: []
+    parent: "transformation.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "transformation.tile"
+    namespace: "transformation"
+    display_name: "Tile"
+    aliases: []
+    parent: "transformation.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "transformation.repeat"
+    namespace: "transformation"
+    display_name: "Repeat"
+    aliases: []
+    parent: "transformation.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "transformation.feedback"
+    namespace: "transformation"
+    display_name: "Feedback"
+    aliases: []
+    parent: "transformation.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "transformation.echo"
+    namespace: "transformation"
+    display_name: "Echo"
+    aliases: []
+    parent: "transformation.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "transformation.trail"
+    namespace: "transformation"
+    display_name: "Trail"
+    aliases: []
+    parent: "transformation.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "transformation.time_displacement"
+    namespace: "transformation"
+    display_name: "Time Displacement"
+    aliases: []
+    parent: "transformation.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "transformation.frame_blending"
+    namespace: "transformation"
+    display_name: "Frame Blending"
+    aliases: []
+    parent: "transformation.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "transformation.frame_interpolation"
+    namespace: "transformation"
+    display_name: "Frame Interpolation"
+    aliases: []
+    parent: "transformation.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "transformation.time_remapping"
+    namespace: "transformation"
+    display_name: "Time Remapping"
+    aliases: []
+    parent: "transformation.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "transformation.freeze_frame"
+    namespace: "transformation"
+    display_name: "Freeze Frame"
+    aliases: []
+    parent: "transformation.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "transformation.reverse"
+    namespace: "transformation"
+    display_name: "Reverse"
+    aliases: []
+    parent: "transformation.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "transformation.loop"
+    namespace: "transformation"
+    display_name: "Loop"
+    aliases: []
+    parent: "transformation.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "transformation.stutter"
+    namespace: "transformation"
+    display_name: "Stutter"
+    aliases: []
+    parent: "transformation.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "transformation.frame_skip"
+    namespace: "transformation"
+    display_name: "Frame Skip"
+    aliases: []
+    parent: "transformation.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "transformation.motion_blur"
+    namespace: "transformation"
+    display_name: "Motion Blur"
+    aliases: []
+    parent: "transformation.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "transformation.directional_blur"
+    namespace: "transformation"
+    display_name: "Directional Blur"
+    aliases: []
+    parent: "transformation.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "transformation.radial_blur"
+    namespace: "transformation"
+    display_name: "Radial Blur"
+    aliases: []
+    parent: "transformation.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "transformation.zoom_blur"
+    namespace: "transformation"
+    display_name: "Zoom Blur"
+    aliases: []
+    parent: "transformation.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "transformation.edge_detection"
+    namespace: "transformation"
+    display_name: "Edge Detection"
+    aliases: []
+    parent: "transformation.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "transformation.emboss"
+    namespace: "transformation"
+    display_name: "Emboss"
+    aliases: []
+    parent: "transformation.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "transformation.threshold"
+    namespace: "transformation"
+    display_name: "Threshold"
+    aliases: []
+    parent: "transformation.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "transformation.contour"
+    namespace: "transformation"
+    display_name: "Contour"
+    aliases: []
+    parent: "transformation.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "transformation.outline"
+    namespace: "transformation"
+    display_name: "Outline"
+    aliases: []
+    parent: "transformation.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "motion_style.shake"
+    namespace: "motion_style"
+    display_name: "Shake"
+    aliases: []
+    parent: "motion_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "motion_style.handheld"
+    namespace: "motion_style"
+    display_name: "Handheld"
+    aliases: []
+    parent: "motion_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "motion_style.jitter"
+    namespace: "motion_style"
+    display_name: "Jitter"
+    aliases: ["Micro Shake", "떨림"]
+    parent: "motion_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "motion_style.wiggle"
+    namespace: "motion_style"
+    display_name: "Wiggle"
+    aliases: []
+    parent: "motion_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "motion_style.float"
+    namespace: "motion_style"
+    display_name: "Float"
+    aliases: []
+    parent: "motion_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "motion_style.drift"
+    namespace: "motion_style"
+    display_name: "Drift"
+    aliases: []
+    parent: "motion_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "motion_style.hover"
+    namespace: "motion_style"
+    display_name: "Hover"
+    aliases: []
+    parent: "motion_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "motion_style.sway"
+    namespace: "motion_style"
+    display_name: "Sway"
+    aliases: []
+    parent: "motion_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "motion_style.bounce"
+    namespace: "motion_style"
+    display_name: "Bounce"
+    aliases: []
+    parent: "motion_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "motion_style.elastic"
+    namespace: "motion_style"
+    display_name: "Elastic"
+    aliases: []
+    parent: "motion_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "motion_style.spring"
+    namespace: "motion_style"
+    display_name: "Spring"
+    aliases: []
+    parent: "motion_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "motion_style.overshoot"
+    namespace: "motion_style"
+    display_name: "Overshoot"
+    aliases: []
+    parent: "motion_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "motion_style.pulse"
+    namespace: "motion_style"
+    display_name: "Pulse"
+    aliases: []
+    parent: "motion_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "motion_style.flicker"
+    namespace: "motion_style"
+    display_name: "Flicker"
+    aliases: []
+    parent: "motion_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "motion_style.blink"
+    namespace: "motion_style"
+    display_name: "Blink"
+    aliases: []
+    parent: "motion_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "motion_style.flash"
+    namespace: "motion_style"
+    display_name: "Flash"
+    aliases: []
+    parent: "motion_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "motion_style.wave"
+    namespace: "motion_style"
+    display_name: "Wave"
+    aliases: []
+    parent: "motion_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "motion_style.ripple"
+    namespace: "motion_style"
+    display_name: "Ripple"
+    aliases: []
+    parent: "motion_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "motion_style.flow"
+    namespace: "motion_style"
+    display_name: "Flow"
+    aliases: []
+    parent: "motion_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "motion_style.swirl"
+    namespace: "motion_style"
+    display_name: "Swirl"
+    aliases: []
+    parent: "motion_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "motion_style.spiral"
+    namespace: "motion_style"
+    display_name: "Spiral"
+    aliases: []
+    parent: "motion_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "motion_style.zoom"
+    namespace: "motion_style"
+    display_name: "Zoom"
+    aliases: []
+    parent: "motion_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "motion_style.crash_zoom"
+    namespace: "motion_style"
+    display_name: "Crash Zoom"
+    aliases: []
+    parent: "motion_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "motion_style.dolly_zoom"
+    namespace: "motion_style"
+    display_name: "Dolly Zoom"
+    aliases: []
+    parent: "motion_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "motion_style.spin"
+    namespace: "motion_style"
+    display_name: "Spin"
+    aliases: []
+    parent: "motion_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "motion_style.rotate"
+    namespace: "motion_style"
+    display_name: "Rotate"
+    aliases: []
+    parent: "motion_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "motion_style.orbit"
+    namespace: "motion_style"
+    display_name: "Orbit"
+    aliases: []
+    parent: "motion_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "motion_style.stretch"
+    namespace: "motion_style"
+    display_name: "Stretch"
+    aliases: []
+    parent: "motion_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "motion_style.squash"
+    namespace: "motion_style"
+    display_name: "Squash"
+    aliases: []
+    parent: "motion_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "motion_style.morph"
+    namespace: "motion_style"
+    display_name: "Morph"
+    aliases: []
+    parent: "motion_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "motion_style.loop"
+    namespace: "motion_style"
+    display_name: "Loop"
+    aliases: []
+    parent: "motion_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "motion_style.ping_pong"
+    namespace: "motion_style"
+    display_name: "Ping Pong"
+    aliases: []
+    parent: "motion_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "motion_style.infinite_loop"
+    namespace: "motion_style"
+    display_name: "Infinite Loop"
+    aliases: []
+    parent: "motion_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "motion_style.slow_motion"
+    namespace: "motion_style"
+    display_name: "Slow Motion"
+    aliases: []
+    parent: "motion_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "motion_style.fast_motion"
+    namespace: "motion_style"
+    display_name: "Fast Motion"
+    aliases: []
+    parent: "motion_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "motion_style.speed_ramp"
+    namespace: "motion_style"
+    display_name: "Speed Ramp"
+    aliases: []
+    parent: "motion_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "motion_style.time_freeze"
+    namespace: "motion_style"
+    display_name: "Time Freeze"
+    aliases: []
+    parent: "motion_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "motion_style.stutter"
+    namespace: "motion_style"
+    display_name: "Stutter"
+    aliases: []
+    parent: "motion_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "motion_style.frame_skip"
+    namespace: "motion_style"
+    display_name: "Frame Skip"
+    aliases: []
+    parent: "motion_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "motion_style.choppy"
+    namespace: "motion_style"
+    display_name: "Choppy"
+    aliases: []
+    parent: "motion_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "motion_style.stop_motion"
+    namespace: "motion_style"
+    display_name: "Stop Motion"
+    aliases: []
+    parent: "motion_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "motion_style.low_fps"
+    namespace: "motion_style"
+    display_name: "Low FPS"
+    aliases: []
+    parent: "motion_style.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "texture.clean"
+    namespace: "texture"
+    display_name: "Clean"
+    aliases: []
+    parent: "texture.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "texture.smooth"
+    namespace: "texture"
+    display_name: "Smooth"
+    aliases: []
+    parent: "texture.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "texture.soft"
+    namespace: "texture"
+    display_name: "Soft"
+    aliases: []
+    parent: "texture.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "texture.rough"
+    namespace: "texture"
+    display_name: "Rough"
+    aliases: []
+    parent: "texture.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "texture.grainy"
+    namespace: "texture"
+    display_name: "Grainy"
+    aliases: ["Grain", "Film Grain Texture", "입자감"]
+    parent: "texture.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "texture.noisy"
+    namespace: "texture"
+    display_name: "Noisy"
+    aliases: []
+    parent: "texture.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "texture.dusty"
+    namespace: "texture"
+    display_name: "Dusty"
+    aliases: []
+    parent: "texture.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "texture.dirty"
+    namespace: "texture"
+    display_name: "Dirty"
+    aliases: []
+    parent: "texture.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "texture.scratched"
+    namespace: "texture"
+    display_name: "Scratched"
+    aliases: []
+    parent: "texture.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "texture.paper"
+    namespace: "texture"
+    display_name: "Paper"
+    aliases: []
+    parent: "texture.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "texture.canvas"
+    namespace: "texture"
+    display_name: "Canvas"
+    aliases: []
+    parent: "texture.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "texture.cardboard"
+    namespace: "texture"
+    display_name: "Cardboard"
+    aliases: []
+    parent: "texture.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "texture.fabric"
+    namespace: "texture"
+    display_name: "Fabric"
+    aliases: []
+    parent: "texture.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "texture.metal"
+    namespace: "texture"
+    display_name: "Metal"
+    aliases: []
+    parent: "texture.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "texture.glass"
+    namespace: "texture"
+    display_name: "Glass"
+    aliases: []
+    parent: "texture.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "texture.plastic"
+    namespace: "texture"
+    display_name: "Plastic"
+    aliases: []
+    parent: "texture.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "texture.chrome"
+    namespace: "texture"
+    display_name: "Chrome"
+    aliases: []
+    parent: "texture.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "texture.liquid"
+    namespace: "texture"
+    display_name: "Liquid"
+    aliases: []
+    parent: "texture.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "texture.gel"
+    namespace: "texture"
+    display_name: "Gel"
+    aliases: []
+    parent: "texture.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "texture.slime"
+    namespace: "texture"
+    display_name: "Slime"
+    aliases: []
+    parent: "texture.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "texture.ink"
+    namespace: "texture"
+    display_name: "Ink"
+    aliases: []
+    parent: "texture.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "texture.paint"
+    namespace: "texture"
+    display_name: "Paint"
+    aliases: []
+    parent: "texture.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "texture.smoke"
+    namespace: "texture"
+    display_name: "Smoke"
+    aliases: []
+    parent: "texture.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "texture.cloud"
+    namespace: "texture"
+    display_name: "Cloud"
+    aliases: []
+    parent: "texture.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "texture.fog"
+    namespace: "texture"
+    display_name: "Fog"
+    aliases: []
+    parent: "texture.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "texture.organic"
+    namespace: "texture"
+    display_name: "Organic"
+    aliases: []
+    parent: "texture.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "texture.marble"
+    namespace: "texture"
+    display_name: "Marble"
+    aliases: []
+    parent: "texture.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "texture.wood"
+    namespace: "texture"
+    display_name: "Wood"
+    aliases: []
+    parent: "texture.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "texture.stone"
+    namespace: "texture"
+    display_name: "Stone"
+    aliases: []
+    parent: "texture.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "texture.concrete"
+    namespace: "texture"
+    display_name: "Concrete"
+    aliases: []
+    parent: "texture.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "texture.holographic"
+    namespace: "texture"
+    display_name: "Holographic"
+    aliases: []
+    parent: "texture.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "texture.iridescent"
+    namespace: "texture"
+    display_name: "Iridescent"
+    aliases: []
+    parent: "texture.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "texture.reflective"
+    namespace: "texture"
+    display_name: "Reflective"
+    aliases: []
+    parent: "texture.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "texture.glossy"
+    namespace: "texture"
+    display_name: "Glossy"
+    aliases: []
+    parent: "texture.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "texture.matte"
+    namespace: "texture"
+    display_name: "Matte"
+    aliases: []
+    parent: "texture.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "texture.metallic"
+    namespace: "texture"
+    display_name: "Metallic"
+    aliases: []
+    parent: "texture.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "texture.cracked"
+    namespace: "texture"
+    display_name: "Cracked"
+    aliases: []
+    parent: "texture.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "texture.burnt"
+    namespace: "texture"
+    display_name: "Burnt"
+    aliases: []
+    parent: "texture.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "texture.distressed"
+    namespace: "texture"
+    display_name: "Distressed"
+    aliases: []
+    parent: "texture.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "texture.weathered"
+    namespace: "texture"
+    display_name: "Weathered"
+    aliases: []
+    parent: "texture.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "texture.grunge"
+    namespace: "texture"
+    display_name: "Grunge"
+    aliases: []
+    parent: "texture.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "geometry_pattern.point"
+    namespace: "geometry_pattern"
+    display_name: "Point"
+    aliases: []
+    parent: "geometry_pattern.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "geometry_pattern.line"
+    namespace: "geometry_pattern"
+    display_name: "Line"
+    aliases: []
+    parent: "geometry_pattern.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "geometry_pattern.circle"
+    namespace: "geometry_pattern"
+    display_name: "Circle"
+    aliases: []
+    parent: "geometry_pattern.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "geometry_pattern.ring"
+    namespace: "geometry_pattern"
+    display_name: "Ring"
+    aliases: []
+    parent: "geometry_pattern.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "geometry_pattern.square"
+    namespace: "geometry_pattern"
+    display_name: "Square"
+    aliases: []
+    parent: "geometry_pattern.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "geometry_pattern.rectangle"
+    namespace: "geometry_pattern"
+    display_name: "Rectangle"
+    aliases: []
+    parent: "geometry_pattern.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "geometry_pattern.triangle"
+    namespace: "geometry_pattern"
+    display_name: "Triangle"
+    aliases: []
+    parent: "geometry_pattern.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "geometry_pattern.polygon"
+    namespace: "geometry_pattern"
+    display_name: "Polygon"
+    aliases: []
+    parent: "geometry_pattern.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "geometry_pattern.hexagon"
+    namespace: "geometry_pattern"
+    display_name: "Hexagon"
+    aliases: []
+    parent: "geometry_pattern.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "geometry_pattern.grid"
+    namespace: "geometry_pattern"
+    display_name: "Grid"
+    aliases: []
+    parent: "geometry_pattern.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "geometry_pattern.dot_grid"
+    namespace: "geometry_pattern"
+    display_name: "Dot Grid"
+    aliases: []
+    parent: "geometry_pattern.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "geometry_pattern.checkerboard"
+    namespace: "geometry_pattern"
+    display_name: "Checkerboard"
+    aliases: []
+    parent: "geometry_pattern.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "geometry_pattern.stripe"
+    namespace: "geometry_pattern"
+    display_name: "Stripe"
+    aliases: []
+    parent: "geometry_pattern.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "geometry_pattern.wave_pattern"
+    namespace: "geometry_pattern"
+    display_name: "Wave Pattern"
+    aliases: []
+    parent: "geometry_pattern.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "geometry_pattern.concentric"
+    namespace: "geometry_pattern"
+    display_name: "Concentric"
+    aliases: []
+    parent: "geometry_pattern.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "geometry_pattern.radial"
+    namespace: "geometry_pattern"
+    display_name: "Radial"
+    aliases: []
+    parent: "geometry_pattern.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "geometry_pattern.spiral"
+    namespace: "geometry_pattern"
+    display_name: "Spiral"
+    aliases: []
+    parent: "geometry_pattern.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "geometry_pattern.tunnel"
+    namespace: "geometry_pattern"
+    display_name: "Tunnel"
+    aliases: []
+    parent: "geometry_pattern.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "geometry_pattern.vortex"
+    namespace: "geometry_pattern"
+    display_name: "Vortex"
+    aliases: []
+    parent: "geometry_pattern.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "geometry_pattern.mandala"
+    namespace: "geometry_pattern"
+    display_name: "Mandala"
+    aliases: []
+    parent: "geometry_pattern.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "geometry_pattern.fractal"
+    namespace: "geometry_pattern"
+    display_name: "Fractal"
+    aliases: []
+    parent: "geometry_pattern.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "geometry_pattern.voronoi"
+    namespace: "geometry_pattern"
+    display_name: "Voronoi"
+    aliases: []
+    parent: "geometry_pattern.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "geometry_pattern.cellular"
+    namespace: "geometry_pattern"
+    display_name: "Cellular"
+    aliases: []
+    parent: "geometry_pattern.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "geometry_pattern.honeycomb"
+    namespace: "geometry_pattern"
+    display_name: "Honeycomb"
+    aliases: []
+    parent: "geometry_pattern.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "geometry_pattern.random"
+    namespace: "geometry_pattern"
+    display_name: "Random"
+    aliases: []
+    parent: "geometry_pattern.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "geometry_pattern.scattered"
+    namespace: "geometry_pattern"
+    display_name: "Scattered"
+    aliases: []
+    parent: "geometry_pattern.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "geometry_pattern.clustered"
+    namespace: "geometry_pattern"
+    display_name: "Clustered"
+    aliases: []
+    parent: "geometry_pattern.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "geometry_pattern.repeated"
+    namespace: "geometry_pattern"
+    display_name: "Repeated"
+    aliases: []
+    parent: "geometry_pattern.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "geometry_pattern.symmetrical"
+    namespace: "geometry_pattern"
+    display_name: "Symmetrical"
+    aliases: []
+    parent: "geometry_pattern.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "geometry_pattern.asymmetrical"
+    namespace: "geometry_pattern"
+    display_name: "Asymmetrical"
+    aliases: []
+    parent: "geometry_pattern.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "geometry_pattern.kaleidoscopic"
+    namespace: "geometry_pattern"
+    display_name: "Kaleidoscopic"
+    aliases: []
+    parent: "geometry_pattern.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "geometry_pattern.tessellation"
+    namespace: "geometry_pattern"
+    display_name: "Tessellation"
+    aliases: []
+    parent: "geometry_pattern.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "geometry_pattern.mosaic"
+    namespace: "geometry_pattern"
+    display_name: "Mosaic"
+    aliases: []
+    parent: "geometry_pattern.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "compositing.overlay"
+    namespace: "compositing"
+    display_name: "Overlay"
+    aliases: []
+    parent: "compositing.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "compositing.blend"
+    namespace: "compositing"
+    display_name: "Blend"
+    aliases: []
+    parent: "compositing.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "compositing.mask"
+    namespace: "compositing"
+    display_name: "Mask"
+    aliases: []
+    parent: "compositing.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "compositing.matte"
+    namespace: "compositing"
+    display_name: "Matte"
+    aliases: []
+    parent: "compositing.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "compositing.multiply"
+    namespace: "compositing"
+    display_name: "Multiply"
+    aliases: []
+    parent: "compositing.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "compositing.screen"
+    namespace: "compositing"
+    display_name: "Screen"
+    aliases: []
+    parent: "compositing.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "compositing.add"
+    namespace: "compositing"
+    display_name: "Add"
+    aliases: []
+    parent: "compositing.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "compositing.overlay_blend"
+    namespace: "compositing"
+    display_name: "Overlay Blend"
+    aliases: []
+    parent: "compositing.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "compositing.difference"
+    namespace: "compositing"
+    display_name: "Difference"
+    aliases: []
+    parent: "compositing.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "compositing.exclusion"
+    namespace: "compositing"
+    display_name: "Exclusion"
+    aliases: []
+    parent: "compositing.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "compositing.double_exposure"
+    namespace: "compositing"
+    display_name: "Double Exposure"
+    aliases: []
+    parent: "compositing.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "compositing.ghosting"
+    namespace: "compositing"
+    display_name: "Ghosting"
+    aliases: ["Ghost Image", "잔상 합성"]
+    parent: "compositing.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "compositing.afterimage"
+    namespace: "compositing"
+    display_name: "Afterimage"
+    aliases: []
+    parent: "compositing.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "compositing.echo"
+    namespace: "compositing"
+    display_name: "Echo"
+    aliases: []
+    parent: "compositing.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "compositing.cutout"
+    namespace: "compositing"
+    display_name: "Cutout"
+    aliases: []
+    parent: "compositing.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "compositing.collage"
+    namespace: "compositing"
+    display_name: "Collage"
+    aliases: []
+    parent: "compositing.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "compositing.photo_montage"
+    namespace: "compositing"
+    display_name: "Photo Montage"
+    aliases: []
+    parent: "compositing.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "compositing.foreground_isolation"
+    namespace: "compositing"
+    display_name: "Foreground Isolation"
+    aliases: []
+    parent: "compositing.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "compositing.background_isolation"
+    namespace: "compositing"
+    display_name: "Background Isolation"
+    aliases: []
+    parent: "compositing.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "compositing.silhouette_composite"
+    namespace: "compositing"
+    display_name: "Silhouette Composite"
+    aliases: []
+    parent: "compositing.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "compositing.depth_composite"
+    namespace: "compositing"
+    display_name: "Depth Composite"
+    aliases: []
+    parent: "compositing.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "compositing.parallax"
+    namespace: "compositing"
+    display_name: "Parallax"
+    aliases: []
+    parent: "compositing.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "compositing.two_point_five_d"
+    namespace: "compositing"
+    display_name: "2.5D"
+    aliases: []
+    parent: "compositing.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "color.red"
+    namespace: "color"
+    display_name: "Red"
+    aliases: ["red tone", "붉은색", "적색"]
+    parent: "color.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "color.orange"
+    namespace: "color"
+    display_name: "Orange"
+    aliases: ["orange tone", "주황색"]
+    parent: "color.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "color.yellow"
+    namespace: "color"
+    display_name: "Yellow"
+    aliases: ["yellow tone", "노란색"]
+    parent: "color.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "color.green"
+    namespace: "color"
+    display_name: "Green"
+    aliases: ["green tone", "초록색"]
+    parent: "color.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "color.cyan"
+    namespace: "color"
+    display_name: "Cyan"
+    aliases: ["청록색", "시안"]
+    parent: "color.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "color.blue"
+    namespace: "color"
+    display_name: "Blue"
+    aliases: ["blue tone", "bluish", "파란색", "푸른색"]
+    parent: "color.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "color.purple"
+    namespace: "color"
+    display_name: "Purple"
+    aliases: ["violet", "보라색"]
+    parent: "color.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "color.pink"
+    namespace: "color"
+    display_name: "Pink"
+    aliases: ["magenta", "분홍색"]
+    parent: "color.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "color.monochrome"
+    namespace: "color"
+    display_name: "Monochrome"
+    aliases: ["black and white", "grayscale", "흑백"]
+    parent: "color.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "color.warm"
+    namespace: "color"
+    display_name: "Warm"
+    aliases: ["warm tone", "warm color", "웜톤", "따뜻한 색감"]
+    parent: "color.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "color.cool"
+    namespace: "color"
+    display_name: "Cool"
+    aliases: ["cool tone", "cool color", "쿨톤", "차가운 색감"]
+    parent: "color.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "color.high_saturation"
+    namespace: "color"
+    display_name: "High Saturation"
+    aliases: ["saturated", "vivid", "고채도"]
+    parent: "color.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "color.desaturated"
+    namespace: "color"
+    display_name: "Desaturated"
+    aliases: ["low saturation", "muted color", "저채도"]
+    parent: "color.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "color.high_contrast"
+    namespace: "color"
+    display_name: "High Contrast"
+    aliases: ["strong contrast", "고대비"]
+    parent: "color.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "color.low_contrast"
+    namespace: "color"
+    display_name: "Low Contrast"
+    aliases: ["flat contrast", "저대비"]
+    parent: "color.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "color.dark"
+    namespace: "color"
+    display_name: "Dark"
+    aliases: ["low key", "어두운"]
+    parent: "color.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "color.bright"
+    namespace: "color"
+    display_name: "Bright"
+    aliases: ["high key", "밝은"]
+    parent: "color.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "color.pastel_palette"
+    namespace: "color"
+    display_name: "Pastel Palette"
+    aliases: ["pastel colors", "파스텔 색감"]
+    parent: "color.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "color.neon_palette"
+    namespace: "color"
+    display_name: "Neon Palette"
+    aliases: ["neon colors", "네온 색감"]
+    parent: "color.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "color.duotone_palette"
+    namespace: "color"
+    display_name: "Duotone Palette"
+    aliases: ["two color palette", "이중 색조"]
+    parent: "color.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "shot_type.extreme_close_up"
+    namespace: "shot_type"
+    display_name: "Extreme Close-Up"
+    aliases: ["ECU", "익스트림 클로즈업"]
+    parent: "shot_type.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "shot_type.close_up"
+    namespace: "shot_type"
+    display_name: "Close-Up"
+    aliases: ["CU", "클로즈업"]
+    parent: "shot_type.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "shot_type.medium_close_up"
+    namespace: "shot_type"
+    display_name: "Medium Close-Up"
+    aliases: ["MCU", "미디엄 클로즈업"]
+    parent: "shot_type.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "shot_type.medium_shot"
+    namespace: "shot_type"
+    display_name: "Medium Shot"
+    aliases: ["MS", "미디엄 숏"]
+    parent: "shot_type.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "shot_type.medium_full_shot"
+    namespace: "shot_type"
+    display_name: "Medium Full Shot"
+    aliases: ["cowboy shot", "미디엄 풀 숏"]
+    parent: "shot_type.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "shot_type.full_shot"
+    namespace: "shot_type"
+    display_name: "Full Shot"
+    aliases: ["FS", "full body", "풀 숏", "전신"]
+    parent: "shot_type.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "shot_type.wide_shot"
+    namespace: "shot_type"
+    display_name: "Wide Shot"
+    aliases: ["WS", "long shot", "와이드 숏"]
+    parent: "shot_type.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "shot_type.extreme_wide_shot"
+    namespace: "shot_type"
+    display_name: "Extreme Wide Shot"
+    aliases: ["EWS", "extreme long shot", "익스트림 와이드 숏"]
+    parent: "shot_type.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "shot_type.over_the_shoulder"
+    namespace: "shot_type"
+    display_name: "Over-the-Shoulder"
+    aliases: ["OTS", "오버 더 숄더"]
+    parent: "shot_type.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "shot_type.point_of_view"
+    namespace: "shot_type"
+    display_name: "Point of View"
+    aliases: ["POV", "시점 숏"]
+    parent: "shot_type.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "camera_motion.static"
+    namespace: "camera_motion"
+    display_name: "Static Camera"
+    aliases: ["locked-off", "고정 카메라"]
+    parent: "camera_motion.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "camera_motion.pan"
+    namespace: "camera_motion"
+    display_name: "Pan"
+    aliases: ["panning", "팬"]
+    parent: "camera_motion.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "camera_motion.tilt"
+    namespace: "camera_motion"
+    display_name: "Tilt"
+    aliases: ["tilting", "틸트"]
+    parent: "camera_motion.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "camera_motion.dolly_in"
+    namespace: "camera_motion"
+    display_name: "Dolly In"
+    aliases: ["push in", "트랙 인", "달리 인"]
+    parent: "camera_motion.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "camera_motion.dolly_out"
+    namespace: "camera_motion"
+    display_name: "Dolly Out"
+    aliases: ["pull out", "트랙 아웃", "달리 아웃"]
+    parent: "camera_motion.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "camera_motion.truck_left"
+    namespace: "camera_motion"
+    display_name: "Truck Left"
+    aliases: ["track left", "좌측 트래킹"]
+    parent: "camera_motion.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "camera_motion.truck_right"
+    namespace: "camera_motion"
+    display_name: "Truck Right"
+    aliases: ["track right", "우측 트래킹"]
+    parent: "camera_motion.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "camera_motion.pedestal_up"
+    namespace: "camera_motion"
+    display_name: "Pedestal Up"
+    aliases: ["camera rise", "카메라 상승"]
+    parent: "camera_motion.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "camera_motion.pedestal_down"
+    namespace: "camera_motion"
+    display_name: "Pedestal Down"
+    aliases: ["camera lower", "카메라 하강"]
+    parent: "camera_motion.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "camera_motion.crane"
+    namespace: "camera_motion"
+    display_name: "Crane"
+    aliases: ["jib", "크레인 숏"]
+    parent: "camera_motion.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "camera_motion.orbit"
+    namespace: "camera_motion"
+    display_name: "Orbit"
+    aliases: ["arc shot", "오빗", "회전 이동"]
+    parent: "camera_motion.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "camera_motion.handheld"
+    namespace: "camera_motion"
+    display_name: "Handheld Camera"
+    aliases: ["hand-held", "핸드헬드"]
+    parent: "camera_motion.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "camera_motion.steadicam"
+    namespace: "camera_motion"
+    display_name: "Steadicam"
+    aliases: ["stabilized follow", "스테디캠"]
+    parent: "camera_motion.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "camera_motion.whip_pan"
+    namespace: "camera_motion"
+    display_name: "Whip Pan"
+    aliases: ["swish pan", "휩 팬"]
+    parent: "camera_motion.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "camera_motion.dolly_zoom"
+    namespace: "camera_motion"
+    display_name: "Dolly Zoom"
+    aliases: ["vertigo effect", "zolly", "달리 줌"]
+    parent: "camera_motion.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "subject.person"
+    namespace: "subject"
+    display_name: "Person"
+    aliases: ["human", "사람", "인물"]
+    parent: "subject.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "subject.face"
+    namespace: "subject"
+    display_name: "Face"
+    aliases: ["facial", "얼굴"]
+    parent: "subject.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "subject.hand"
+    namespace: "subject"
+    display_name: "Hand"
+    aliases: ["hands", "손"]
+    parent: "subject.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "subject.crowd"
+    namespace: "subject"
+    display_name: "Crowd"
+    aliases: ["group of people", "군중"]
+    parent: "subject.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "subject.product"
+    namespace: "subject"
+    display_name: "Product"
+    aliases: ["object showcase", "제품"]
+    parent: "subject.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "subject.vehicle"
+    namespace: "subject"
+    display_name: "Vehicle"
+    aliases: ["car", "transport", "차량"]
+    parent: "subject.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "subject.building"
+    namespace: "subject"
+    display_name: "Building"
+    aliases: ["architecture", "건물", "건축"]
+    parent: "subject.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "subject.city"
+    namespace: "subject"
+    display_name: "City"
+    aliases: ["urban", "cityscape", "도시"]
+    parent: "subject.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "subject.landscape"
+    namespace: "subject"
+    display_name: "Landscape"
+    aliases: ["scenery", "풍경"]
+    parent: "subject.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "subject.nature"
+    namespace: "subject"
+    display_name: "Nature"
+    aliases: ["natural scene", "자연"]
+    parent: "subject.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "subject.animal"
+    namespace: "subject"
+    display_name: "Animal"
+    aliases: ["creature", "동물"]
+    parent: "subject.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "subject.food"
+    namespace: "subject"
+    display_name: "Food"
+    aliases: ["dish", "음식"]
+    parent: "subject.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "subject.typography"
+    namespace: "subject"
+    display_name: "Typography"
+    aliases: ["text", "lettering", "타이포그래피", "텍스트"]
+    parent: "subject.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "subject.abstract"
+    namespace: "subject"
+    display_name: "Abstract Subject"
+    aliases: ["non-representational", "추상"]
+    parent: "subject.root"
+    observable: true
+    auto_accept_allowed: true
+  - id: "subject.screen_interface"
+    namespace: "subject"
+    display_name: "Screen / Interface"
+    aliases: ["UI", "device screen", "화면", "인터페이스"]
+    parent: "subject.root"
+    observable: true
+    auto_accept_allowed: true
+
+relations:
+  - source_tag_id: "visual_style.rgb_split"
+    target_tag_id: "transformation.rgb_split"
+    relation_type: "related_to"
+  - source_tag_id: "visual_style.chromatic_aberration"
+    target_tag_id: "transformation.chromatic_aberration"
+    relation_type: "related_to"
+  - source_tag_id: "visual_style.datamosh"
+    target_tag_id: "transformation.datamosh"
+    relation_type: "related_to"
+  - source_tag_id: "visual_style.pixel_sorting"
+    target_tag_id: "transformation.pixel_sorting"
+    relation_type: "related_to"
+  - source_tag_id: "motion_style.handheld"
+    target_tag_id: "camera_motion.handheld"
+    relation_type: "related_to"
+  - source_tag_id: "motion_style.dolly_zoom"
+    target_tag_id: "camera_motion.dolly_zoom"
+    relation_type: "related_to"
+  - source_tag_id: "motion_style.orbit"
+    target_tag_id: "camera_motion.orbit"
+    relation_type: "related_to"

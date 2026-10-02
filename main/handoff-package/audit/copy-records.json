@@ -1,0 +1,2018 @@
+[
+  {
+    "original": "outputs/cutnote/postcss.config.mjs",
+    "package": "cutnote/postcss.config.mjs",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde",
+    "modified": false,
+    "package_sha256": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde"
+  },
+  {
+    "original": "outputs/cutnote/.npmrc",
+    "package": "cutnote/.npmrc",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "a3909ac0447c469fda12c57374993be70f47ce73e49fd3124678c7c047f2214d",
+    "modified": false,
+    "package_sha256": "a3909ac0447c469fda12c57374993be70f47ce73e49fd3124678c7c047f2214d"
+  },
+  {
+    "original": "outputs/cutnote/cloudflare-env.d.ts",
+    "package": "cutnote/cloudflare-env.d.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "fbe07fbb23085499f2df106b5a4d8c864265f64117f5b66d7af71a10fd163395",
+    "modified": false,
+    "package_sha256": "fbe07fbb23085499f2df106b5a4d8c864265f64117f5b66d7af71a10fd163395"
+  },
+  {
+    "original": "outputs/cutnote/.gitignore",
+    "package": "cutnote/.gitignore",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "21ab2bf22045124f8d5f067fadf3634771d950f5488b10e4dac107e2ab9e988f",
+    "modified": true,
+    "package_sha256": "4742d08f8bb4458f6ffeb7d5b2f2e996552f8a8bc2706cfa7ae5a7ce5e2659d2"
+  },
+  {
+    "original": "outputs/cutnote/package-lock.json",
+    "package": "cutnote/package-lock.json",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "6d92e77e990da0cfabd6bd401d74aa27af4c61a953687ed6b4590fa8c21ef8e8",
+    "modified": false,
+    "package_sha256": "6d92e77e990da0cfabd6bd401d74aa27af4c61a953687ed6b4590fa8c21ef8e8"
+  },
+  {
+    "original": "outputs/cutnote/package.json",
+    "package": "cutnote/package.json",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "fb291551ae1d03755a1c14d324ac185b7a97eaaa266737f9328849cde7517d1c",
+    "modified": true,
+    "package_sha256": "1af8c6a2f849ffaf56acca677672a3283473dbc2b1c203d4fa5f1d6fe544d83d"
+  },
+  {
+    "original": "outputs/cutnote/components.json",
+    "package": "cutnote/components.json",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "31f4ca67a4a62572571003d3d5aac85ee6fbfca67a192924bac6b168d95e98fd",
+    "modified": false,
+    "package_sha256": "31f4ca67a4a62572571003d3d5aac85ee6fbfca67a192924bac6b168d95e98fd"
+  },
+  {
+    "original": "outputs/cutnote/tsconfig.json",
+    "package": "cutnote/tsconfig.json",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "7199c6e4e400921e8049729840165a39f1476fa97901bed00239e7697bfe8da4",
+    "modified": false,
+    "package_sha256": "7199c6e4e400921e8049729840165a39f1476fa97901bed00239e7697bfe8da4"
+  },
+  {
+    "original": "outputs/cutnote/drizzle.config.ts",
+    "package": "cutnote/drizzle.config.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "af081f7384aaeb0082cf422e29f139d137ca2f6a57c69b2c37b9fb1f8479867b",
+    "modified": false,
+    "package_sha256": "af081f7384aaeb0082cf422e29f139d137ca2f6a57c69b2c37b9fb1f8479867b"
+  },
+  {
+    "original": "outputs/cutnote/vite.config.ts",
+    "package": "cutnote/vite.config.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "6f6d890794fbe23f3e35cceb327f49d5977432a5aaf715e040a6408932da395b",
+    "modified": false,
+    "package_sha256": "6f6d890794fbe23f3e35cceb327f49d5977432a5aaf715e040a6408932da395b"
+  },
+  {
+    "original": "outputs/cutnote/eslint.config.mjs",
+    "package": "cutnote/eslint.config.mjs",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "f22a254df7d934bbf9be499d3c969a13abb7f7f64c03f5967d0095cad81dfe06",
+    "modified": false,
+    "package_sha256": "f22a254df7d934bbf9be499d3c969a13abb7f7f64c03f5967d0095cad81dfe06"
+  },
+  {
+    "original": "outputs/cutnote/next.config.ts",
+    "package": "cutnote/next.config.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "4993517648817ff6daafd429f8c107c185dabfb36f54bc35d344966433992cf7",
+    "modified": false,
+    "package_sha256": "4993517648817ff6daafd429f8c107c185dabfb36f54bc35d344966433992cf7"
+  },
+  {
+    "original": "outputs/cutnote/app/tag-review.tsx",
+    "package": "cutnote/app/tag-review.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "75fa5789b84278b16f68ad86d9142efbdd0ee2498783717012c03d86f9a02b1c",
+    "modified": false,
+    "package_sha256": "75fa5789b84278b16f68ad86d9142efbdd0ee2498783717012c03d86f9a02b1c"
+  },
+  {
+    "original": "outputs/cutnote/app/sortable-cards.tsx",
+    "package": "cutnote/app/sortable-cards.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "06f01e010dd4ed814cb002e24ea8cc499a360aee4ef8c3dad77a9bdeb9119973",
+    "modified": false,
+    "package_sha256": "06f01e010dd4ed814cb002e24ea8cc499a360aee4ef8c3dad77a9bdeb9119973"
+  },
+  {
+    "original": "outputs/cutnote/app/effect-explorer.tsx",
+    "package": "cutnote/app/effect-explorer.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "a48e253550eb4675496eed514a1237b3d771100c8fe11cc0864cf207140e9966",
+    "modified": false,
+    "package_sha256": "a48e253550eb4675496eed514a1237b3d771100c8fe11cc0864cf207140e9966"
+  },
+  {
+    "original": "outputs/cutnote/app/chatgpt-auth.ts",
+    "package": "cutnote/app/chatgpt-auth.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "4265a2e7c2dcb3a6f4b7026f762bf5b6e4caec76cc13c0a45987ee9a9f2e42cc",
+    "modified": false,
+    "package_sha256": "4265a2e7c2dcb3a6f4b7026f762bf5b6e4caec76cc13c0a45987ee9a9f2e42cc"
+  },
+  {
+    "original": "outputs/cutnote/app/cutnote.tsx",
+    "package": "cutnote/app/cutnote.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "9fca88f8cd95d37066cf8e527a352ea9231e7da11a79aac171bfcb477700da2c",
+    "modified": false,
+    "package_sha256": "9fca88f8cd95d37066cf8e527a352ea9231e7da11a79aac171bfcb477700da2c"
+  },
+  {
+    "original": "outputs/cutnote/app/favorite-button.tsx",
+    "package": "cutnote/app/favorite-button.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "8ee652783b74ef26c78294c7ead44e770a4982b492facc45e9ab1c094c33ece9",
+    "modified": false,
+    "package_sha256": "8ee652783b74ef26c78294c7ead44e770a4982b492facc45e9ab1c094c33ece9"
+  },
+  {
+    "original": "outputs/cutnote/app/segment-library.tsx",
+    "package": "cutnote/app/segment-library.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "8eb8b35c67a5ff6aa08a1c0a218579fe283800ab092b045175a3012bf220a98d",
+    "modified": false,
+    "package_sha256": "8eb8b35c67a5ff6aa08a1c0a218579fe283800ab092b045175a3012bf220a98d"
+  },
+  {
+    "original": "outputs/cutnote/app/video-player.tsx",
+    "package": "cutnote/app/video-player.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "e1df8fff20e4e1f81d3ccddbff0a7cbf44558e37ed4fe55ededd96d33eb7aeb1",
+    "modified": false,
+    "package_sha256": "e1df8fff20e4e1f81d3ccddbff0a7cbf44558e37ed4fe55ededd96d33eb7aeb1"
+  },
+  {
+    "original": "outputs/cutnote/app/layout.tsx",
+    "package": "cutnote/app/layout.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "085ed3755963bd1a8c87a6e4dd5f38d411b62abd7bdd17ddb80ee19c84a7de38",
+    "modified": false,
+    "package_sha256": "085ed3755963bd1a8c87a6e4dd5f38d411b62abd7bdd17ddb80ee19c84a7de38"
+  },
+  {
+    "original": "outputs/cutnote/app/youtube-discovery.tsx",
+    "package": "cutnote/app/youtube-discovery.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "9915578625d2faa22cad348de3d742df1669992f319305f96d1be129b169dde1",
+    "modified": false,
+    "package_sha256": "9915578625d2faa22cad348de3d742df1669992f319305f96d1be129b169dde1"
+  },
+  {
+    "original": "outputs/cutnote/app/library-connection.tsx",
+    "package": "cutnote/app/library-connection.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "97460c9bb6ddd19e1f7d4d812b63501debf5ea3d36f9f5cf6fd8946a2bb330ab",
+    "modified": false,
+    "package_sha256": "97460c9bb6ddd19e1f7d4d812b63501debf5ea3d36f9f5cf6fd8946a2bb330ab"
+  },
+  {
+    "original": "outputs/cutnote/app/ai-connection.tsx",
+    "package": "cutnote/app/ai-connection.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "6f8c6518e78477afd8d63f5585400d213c878e531fba4e52d2310073db364199",
+    "modified": false,
+    "package_sha256": "6f8c6518e78477afd8d63f5585400d213c878e531fba4e52d2310073db364199"
+  },
+  {
+    "original": "outputs/cutnote/app/segment-editor.tsx",
+    "package": "cutnote/app/segment-editor.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "c7db4d2169a78a2bf61d4d4c850a98de98b63b48db00a72f3fd08842e3c2fd3d",
+    "modified": false,
+    "package_sha256": "c7db4d2169a78a2bf61d4d4c850a98de98b63b48db00a72f3fd08842e3c2fd3d"
+  },
+  {
+    "original": "outputs/cutnote/app/page.tsx",
+    "package": "cutnote/app/page.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "9d1faf2a629fd51acbd1e17e83ed482a7e9e2192eab027cb565e0c576a2f148f",
+    "modified": false,
+    "package_sha256": "9d1faf2a629fd51acbd1e17e83ed482a7e9e2192eab027cb565e0c576a2f148f"
+  },
+  {
+    "original": "outputs/cutnote/app/image-search.tsx",
+    "package": "cutnote/app/image-search.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "a78b8c96adc3c192d961a1384f5ef06fec36288b1cf99b192f8248e10f1acf41",
+    "modified": false,
+    "package_sha256": "a78b8c96adc3c192d961a1384f5ef06fec36288b1cf99b192f8248e10f1acf41"
+  },
+  {
+    "original": "outputs/cutnote/app/source-player.tsx",
+    "package": "cutnote/app/source-player.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "00563b98d07a07b9728c7d247c76600ec68a8bb89816ad4596fb71cc6aaa6f86",
+    "modified": false,
+    "package_sha256": "00563b98d07a07b9728c7d247c76600ec68a8bb89816ad4596fb71cc6aaa6f86"
+  },
+  {
+    "original": "outputs/cutnote/app/globals.css",
+    "package": "cutnote/app/globals.css",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "9b4f5983f322b273029190dfe5c5e7d381136c288e4a19cf5eab98a41477fdf9",
+    "modified": false,
+    "package_sha256": "9b4f5983f322b273029190dfe5c5e7d381136c288e4a19cf5eab98a41477fdf9"
+  },
+  {
+    "original": "outputs/cutnote/app/mobile/save.tsx",
+    "package": "cutnote/app/mobile/save.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "72d92b9ebaa1944e4a66ada3cd3de1588a5f44a70c8b2fd5a2e95c47f1e87de7",
+    "modified": false,
+    "package_sha256": "72d92b9ebaa1944e4a66ada3cd3de1588a5f44a70c8b2fd5a2e95c47f1e87de7"
+  },
+  {
+    "original": "outputs/cutnote/app/mobile/page.tsx",
+    "package": "cutnote/app/mobile/page.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "7d46ce051e5cae6b977797fa82cd2beef55ac688bac1a7d256653011322f9735",
+    "modified": false,
+    "package_sha256": "7d46ce051e5cae6b977797fa82cd2beef55ac688bac1a7d256653011322f9735"
+  },
+  {
+    "original": "outputs/cutnote/app/api/clips/route.ts",
+    "package": "cutnote/app/api/clips/route.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "3371b7ad2b0ceea91683d1a4bfe6dbf571b628f89d2ee817591e4ecc0176e013",
+    "modified": false,
+    "package_sha256": "3371b7ad2b0ceea91683d1a4bfe6dbf571b628f89d2ee817591e4ecc0176e013"
+  },
+  {
+    "original": "outputs/cutnote/app/api/clips/[id]/route.ts",
+    "package": "cutnote/app/api/clips/[id]/route.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "dad0f63133377acd42075f936470548b809e06cc1b93527ce981330a37b6431e",
+    "modified": false,
+    "package_sha256": "dad0f63133377acd42075f936470548b809e06cc1b93527ce981330a37b6431e"
+  },
+  {
+    "original": "outputs/cutnote/app/api/library/order/route.ts",
+    "package": "cutnote/app/api/library/order/route.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "6745e43b8a4f075ecf8f01a2dacf8b1269f21e54e8bc032453f8b1ddd8d11f28",
+    "modified": false,
+    "package_sha256": "6745e43b8a4f075ecf8f01a2dacf8b1269f21e54e8bc032453f8b1ddd8d11f28"
+  },
+  {
+    "original": "outputs/cutnote/app/api/recommendations/youtube/route.ts",
+    "package": "cutnote/app/api/recommendations/youtube/route.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "0b394ef8524deb1f19fad1cf7e09668c52ef4218dd732205dcae49eee3adc1fa",
+    "modified": false,
+    "package_sha256": "0b394ef8524deb1f19fad1cf7e09668c52ef4218dd732205dcae49eee3adc1fa"
+  },
+  {
+    "original": "outputs/cutnote/app/api/recommendations/feedback/route.ts",
+    "package": "cutnote/app/api/recommendations/feedback/route.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "2d01af8976e19cf6e45d99fe6c29b43388b6af959c23d34b6ed26b99eec95337",
+    "modified": false,
+    "package_sha256": "2d01af8976e19cf6e45d99fe6c29b43388b6af959c23d34b6ed26b99eec95337"
+  },
+  {
+    "original": "outputs/cutnote/app/api/links/resolve/route.ts",
+    "package": "cutnote/app/api/links/resolve/route.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "f85370da069495fb2f0967a44ff9bae5e2b4e001fad6fb48b288aa808b9031fc",
+    "modified": false,
+    "package_sha256": "f85370da069495fb2f0967a44ff9bae5e2b4e001fad6fb48b288aa808b9031fc"
+  },
+  {
+    "original": "outputs/cutnote/app/api/links/media/route.ts",
+    "package": "cutnote/app/api/links/media/route.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "0042c76bd10c5e387a9926f8f252bf62bcd484b684f7db898f952fb8e0f1f764",
+    "modified": false,
+    "package_sha256": "0042c76bd10c5e387a9926f8f252bf62bcd484b684f7db898f952fb8e0f1f764"
+  },
+  {
+    "original": "outputs/cutnote/app/api/ai/frames/route.ts",
+    "package": "cutnote/app/api/ai/frames/route.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "7dcbaac802fe4658d922cd0e32a7067879afd2be176169718b0220d095deb0e4",
+    "modified": false,
+    "package_sha256": "7dcbaac802fe4658d922cd0e32a7067879afd2be176169718b0220d095deb0e4"
+  },
+  {
+    "original": "outputs/cutnote/app/api/ai/status/route.ts",
+    "package": "cutnote/app/api/ai/status/route.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "a266c6d6d4f5456e50bd8da54b000a2add687e18b8f79733d90983604b0bef6d",
+    "modified": false,
+    "package_sha256": "a266c6d6d4f5456e50bd8da54b000a2add687e18b8f79733d90983604b0bef6d"
+  },
+  {
+    "original": "outputs/cutnote/app/api/ai/analyze/route.ts",
+    "package": "cutnote/app/api/ai/analyze/route.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "b55defb6a6a17c5e61930863e8430111ca48a85afa6d0f70289ca91e88f01c98",
+    "modified": false,
+    "package_sha256": "b55defb6a6a17c5e61930863e8430111ca48a85afa6d0f70289ca91e88f01c98"
+  },
+  {
+    "original": "outputs/cutnote/app/api/ai/connect/route.ts",
+    "package": "cutnote/app/api/ai/connect/route.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "018fee276304a44b042f6d19b81f3608962ebf64a9e632be172cc8af4f0ed7f4",
+    "modified": false,
+    "package_sha256": "018fee276304a44b042f6d19b81f3608962ebf64a9e632be172cc8af4f0ed7f4"
+  },
+  {
+    "original": "outputs/cutnote/app/api/ai/image-query/route.ts",
+    "package": "cutnote/app/api/ai/image-query/route.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "34261d06368509158317ab49f190c2599a1f178ff242162a92f7a59320bd752f",
+    "modified": false,
+    "package_sha256": "34261d06368509158317ab49f190c2599a1f178ff242162a92f7a59320bd752f"
+  },
+  {
+    "original": "outputs/cutnote/app/api/ai/effect-query/route.ts",
+    "package": "cutnote/app/api/ai/effect-query/route.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "7641af25c6d0567e45741cbc3e5aea55209376edaff0c630915d9872c2215de6",
+    "modified": false,
+    "package_sha256": "7641af25c6d0567e45741cbc3e5aea55209376edaff0c630915d9872c2215de6"
+  },
+  {
+    "original": "outputs/cutnote/app/api/segment-media/[id]/route.ts",
+    "package": "cutnote/app/api/segment-media/[id]/route.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "e3e9857e930697399f4e371e07ce1cf007de77f8ffe54233006ceca6133e3cd4",
+    "modified": false,
+    "package_sha256": "e3e9857e930697399f4e371e07ce1cf007de77f8ffe54233006ceca6133e3cd4"
+  },
+  {
+    "original": "outputs/cutnote/app/api/segment-media/[id]/[segmentId]/route.ts",
+    "package": "cutnote/app/api/segment-media/[id]/[segmentId]/route.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "a54dfc643c5eca0f18e75e4819dac723ee9926c56aeb19b739008d009fbd3716",
+    "modified": false,
+    "package_sha256": "a54dfc643c5eca0f18e75e4819dac723ee9926c56aeb19b739008d009fbd3716"
+  },
+  {
+    "original": "outputs/cutnote/app/api/media/[id]/route.ts",
+    "package": "cutnote/app/api/media/[id]/route.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "b480c5d856bd8dc082dd38c46a249d74f1dedc9b3ec4b37e15b966819eaa5477",
+    "modified": false,
+    "package_sha256": "b480c5d856bd8dc082dd38c46a249d74f1dedc9b3ec4b37e15b966819eaa5477"
+  },
+  {
+    "original": "outputs/cutnote/components/connector-error.tsx",
+    "package": "cutnote/components/connector-error.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "2d0d04559952ce9c9a327cca499f4b99f35d885cccfce375230e116695d3f155",
+    "modified": false,
+    "package_sha256": "2d0d04559952ce9c9a327cca499f4b99f35d885cccfce375230e116695d3f155"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/aspect-ratio.tsx",
+    "package": "cutnote/components/ui/aspect-ratio.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "b1c157886236782cb92d8fbcd4749532aaf6d8aabefd6e157ca40358f902f407",
+    "modified": false,
+    "package_sha256": "b1c157886236782cb92d8fbcd4749532aaf6d8aabefd6e157ca40358f902f407"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/alert-dialog.tsx",
+    "package": "cutnote/components/ui/alert-dialog.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "9a8d950f2b9b4352d5ebb762fb44d5c28c2d353aa29712071973656a8736e311",
+    "modified": false,
+    "package_sha256": "9a8d950f2b9b4352d5ebb762fb44d5c28c2d353aa29712071973656a8736e311"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/pagination.tsx",
+    "package": "cutnote/components/ui/pagination.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "374ad135c3d4ff3ec080a0009cd9745cdd0e12faa89d2b0e86074f11e5127fd1",
+    "modified": false,
+    "package_sha256": "374ad135c3d4ff3ec080a0009cd9745cdd0e12faa89d2b0e86074f11e5127fd1"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/direction.tsx",
+    "package": "cutnote/components/ui/direction.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "84ae2ad658207f0e0f367978e5508cd8027cd00c29c41d3d13db21a708c3d1e6",
+    "modified": false,
+    "package_sha256": "84ae2ad658207f0e0f367978e5508cd8027cd00c29c41d3d13db21a708c3d1e6"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/tabs.tsx",
+    "package": "cutnote/components/ui/tabs.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "865d0194331b9b2be36723fa79d3575dc83078b4cb941cafee87cb72fc2cff46",
+    "modified": false,
+    "package_sha256": "865d0194331b9b2be36723fa79d3575dc83078b4cb941cafee87cb72fc2cff46"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/button-group.tsx",
+    "package": "cutnote/components/ui/button-group.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "784c89d8ee683e1bc972ae69e6ea8225a7f63abe22aa1b5fc3423ae8a2a399c0",
+    "modified": false,
+    "package_sha256": "784c89d8ee683e1bc972ae69e6ea8225a7f63abe22aa1b5fc3423ae8a2a399c0"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/card.tsx",
+    "package": "cutnote/components/ui/card.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "c48dd3b96be90a7066f1aebf294f0af9d00ebcdc367d5d4aca55429ade570c1c",
+    "modified": false,
+    "package_sha256": "c48dd3b96be90a7066f1aebf294f0af9d00ebcdc367d5d4aca55429ade570c1c"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/slider.tsx",
+    "package": "cutnote/components/ui/slider.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "0e37484f4b416e79ac18c655cac961aefacf6e67085cfc2b320ea8af545635a3",
+    "modified": false,
+    "package_sha256": "0e37484f4b416e79ac18c655cac961aefacf6e67085cfc2b320ea8af545635a3"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/input-group.tsx",
+    "package": "cutnote/components/ui/input-group.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "6afbd58fea4c438e6252dc4568bddc122e84ababead4ad5cee50ace01100c9a0",
+    "modified": false,
+    "package_sha256": "6afbd58fea4c438e6252dc4568bddc122e84ababead4ad5cee50ace01100c9a0"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/popover.tsx",
+    "package": "cutnote/components/ui/popover.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "31c350309ff5d3034e6ecf1b0eda75ba8855bdbf987fc7ad6d71f0ef07c5a447",
+    "modified": false,
+    "package_sha256": "31c350309ff5d3034e6ecf1b0eda75ba8855bdbf987fc7ad6d71f0ef07c5a447"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/progress.tsx",
+    "package": "cutnote/components/ui/progress.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "c8c26e8f5f041c3cdf4915347dc1d9c022f9448f149990fadcaf303e952fa57d",
+    "modified": false,
+    "package_sha256": "c8c26e8f5f041c3cdf4915347dc1d9c022f9448f149990fadcaf303e952fa57d"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/input-otp.tsx",
+    "package": "cutnote/components/ui/input-otp.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "161946daa89f0eda2575b9271c0494e35807c4ffb55598a49f67160c17fec299",
+    "modified": false,
+    "package_sha256": "161946daa89f0eda2575b9271c0494e35807c4ffb55598a49f67160c17fec299"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/chart.tsx",
+    "package": "cutnote/components/ui/chart.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "45aa5ea4a386f4fb5b8869ff4bab3a08cf89255190ee322043baf84c3e950b6a",
+    "modified": false,
+    "package_sha256": "45aa5ea4a386f4fb5b8869ff4bab3a08cf89255190ee322043baf84c3e950b6a"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/hover-card.tsx",
+    "package": "cutnote/components/ui/hover-card.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "f5d8df42c59370ec14d61bcc54f7d68e9bb7dfa0d6a872b2f7cffc2aafbf23b8",
+    "modified": false,
+    "package_sha256": "f5d8df42c59370ec14d61bcc54f7d68e9bb7dfa0d6a872b2f7cffc2aafbf23b8"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/sheet.tsx",
+    "package": "cutnote/components/ui/sheet.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "63863cf2df8f8973e52b3459ac9bdbf81be1262dbc70eb53d5271ffb03488e16",
+    "modified": false,
+    "package_sha256": "63863cf2df8f8973e52b3459ac9bdbf81be1262dbc70eb53d5271ffb03488e16"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/field.tsx",
+    "package": "cutnote/components/ui/field.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "ba67d76f017ac059fc86cf8c344e0b2991c4322d3619e125498c19b87f6eefbd",
+    "modified": false,
+    "package_sha256": "ba67d76f017ac059fc86cf8c344e0b2991c4322d3619e125498c19b87f6eefbd"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/scroll-area.tsx",
+    "package": "cutnote/components/ui/scroll-area.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "8bd9d986b2844c9a87de825c6de4787b6739b36c3dc9a05ccf3eb107160e4043",
+    "modified": false,
+    "package_sha256": "8bd9d986b2844c9a87de825c6de4787b6739b36c3dc9a05ccf3eb107160e4043"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/resizable.tsx",
+    "package": "cutnote/components/ui/resizable.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "bc63958467aa00557c551bb0d96a5ae4c965c1e1ba2380e595949d933b132f7c",
+    "modified": false,
+    "package_sha256": "bc63958467aa00557c551bb0d96a5ae4c965c1e1ba2380e595949d933b132f7c"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/label.tsx",
+    "package": "cutnote/components/ui/label.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "a476e41f08b9de5bd447de66a33d8bc2ad18f2fa6b96c064778bab4b6f439f4c",
+    "modified": false,
+    "package_sha256": "a476e41f08b9de5bd447de66a33d8bc2ad18f2fa6b96c064778bab4b6f439f4c"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/sonner.tsx",
+    "package": "cutnote/components/ui/sonner.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "13ccc9b0fe4248e622f83a1d3b2f0566b72b5e04162d7d0c8db8945ecc71b55f",
+    "modified": false,
+    "package_sha256": "13ccc9b0fe4248e622f83a1d3b2f0566b72b5e04162d7d0c8db8945ecc71b55f"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/navigation-menu.tsx",
+    "package": "cutnote/components/ui/navigation-menu.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "889d358a77de88e9cb6f39ea4895ea4c76eaf01d731b74e44f1c41e97a78a044",
+    "modified": false,
+    "package_sha256": "889d358a77de88e9cb6f39ea4895ea4c76eaf01d731b74e44f1c41e97a78a044"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/accordion.tsx",
+    "package": "cutnote/components/ui/accordion.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "a4f153089ba886dfcf73fac26b5c01ca933fa12fbe88df6fb723912bfffdfbb0",
+    "modified": false,
+    "package_sha256": "a4f153089ba886dfcf73fac26b5c01ca933fa12fbe88df6fb723912bfffdfbb0"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/bubble.tsx",
+    "package": "cutnote/components/ui/bubble.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "870cc0c5cfc8a515053f7e41e706a6bd017a909b45f1305fd3b164a52cc4483b",
+    "modified": false,
+    "package_sha256": "870cc0c5cfc8a515053f7e41e706a6bd017a909b45f1305fd3b164a52cc4483b"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/drawer.tsx",
+    "package": "cutnote/components/ui/drawer.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "cb6eaf58eb0757ca91af284e5d925b89a42ad7eb19cb3f44c575a3487aa9350f",
+    "modified": false,
+    "package_sha256": "cb6eaf58eb0757ca91af284e5d925b89a42ad7eb19cb3f44c575a3487aa9350f"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/empty.tsx",
+    "package": "cutnote/components/ui/empty.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "ae95bdcf367a076ae02e7925f14522a148798f72d9651749c6d55497dba584c0",
+    "modified": false,
+    "package_sha256": "ae95bdcf367a076ae02e7925f14522a148798f72d9651749c6d55497dba584c0"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/tooltip.tsx",
+    "package": "cutnote/components/ui/tooltip.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "a0784eb77831a799fad7991df4f1b666f876201565a80175e1aa68733574a2e4",
+    "modified": false,
+    "package_sha256": "a0784eb77831a799fad7991df4f1b666f876201565a80175e1aa68733574a2e4"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/alert.tsx",
+    "package": "cutnote/components/ui/alert.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "2cc59b5f7bda91c1670884b1bf46bfc8a2a6f226cef184f5762acc037188885b",
+    "modified": false,
+    "package_sha256": "2cc59b5f7bda91c1670884b1bf46bfc8a2a6f226cef184f5762acc037188885b"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/combobox.tsx",
+    "package": "cutnote/components/ui/combobox.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "2d68e78b2dc7e38a085f222dede60a80b4f8229a6e91732c484605e204d46735",
+    "modified": false,
+    "package_sha256": "2d68e78b2dc7e38a085f222dede60a80b4f8229a6e91732c484605e204d46735"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/switch.tsx",
+    "package": "cutnote/components/ui/switch.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "386d4d4deb39f34126f9700fe9bf5393d238485dd94018bba9d154dda84c62ae",
+    "modified": false,
+    "package_sha256": "386d4d4deb39f34126f9700fe9bf5393d238485dd94018bba9d154dda84c62ae"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/calendar.tsx",
+    "package": "cutnote/components/ui/calendar.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "3855fbe0d3f8ad3a4b93071f98b76a9f6782d46ec8b05f5d2ddbee1e4e39bc84",
+    "modified": false,
+    "package_sha256": "3855fbe0d3f8ad3a4b93071f98b76a9f6782d46ec8b05f5d2ddbee1e4e39bc84"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/native-select.tsx",
+    "package": "cutnote/components/ui/native-select.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "007516b111fca8c98a6c40c94ab91bb68cc5b52afce1ed1f5e510c3d86e7347c",
+    "modified": false,
+    "package_sha256": "007516b111fca8c98a6c40c94ab91bb68cc5b52afce1ed1f5e510c3d86e7347c"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/breadcrumb.tsx",
+    "package": "cutnote/components/ui/breadcrumb.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "d4c0831bba2212e778248f54a6ace6ef378df8bba4616d1abf27787a31eabae5",
+    "modified": false,
+    "package_sha256": "d4c0831bba2212e778248f54a6ace6ef378df8bba4616d1abf27787a31eabae5"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/radio-group.tsx",
+    "package": "cutnote/components/ui/radio-group.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "fe5ce39636d0818c2bf9c4eebddff893d1225fa2c81b5fa4bb8cbb39a8c913ce",
+    "modified": false,
+    "package_sha256": "fe5ce39636d0818c2bf9c4eebddff893d1225fa2c81b5fa4bb8cbb39a8c913ce"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/command.tsx",
+    "package": "cutnote/components/ui/command.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "361193df1e3d64a9e9b5048f045264782fcb387aab3f00f2b805fdcbf538b16a",
+    "modified": false,
+    "package_sha256": "361193df1e3d64a9e9b5048f045264782fcb387aab3f00f2b805fdcbf538b16a"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/item.tsx",
+    "package": "cutnote/components/ui/item.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "6e2144d6d87142dbbe56d568810bf546318c8aa661447ebb0d76ebbf382cb45f",
+    "modified": false,
+    "package_sha256": "6e2144d6d87142dbbe56d568810bf546318c8aa661447ebb0d76ebbf382cb45f"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/toggle-group.tsx",
+    "package": "cutnote/components/ui/toggle-group.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "69f643e889e933f05c1439084480d8646f66a161c7d1cf0730ee926382ade35e",
+    "modified": false,
+    "package_sha256": "69f643e889e933f05c1439084480d8646f66a161c7d1cf0730ee926382ade35e"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/avatar.tsx",
+    "package": "cutnote/components/ui/avatar.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "58a846bf1617b94b9681921db9b8461d0145f311424663d11678a06b6153cb34",
+    "modified": false,
+    "package_sha256": "58a846bf1617b94b9681921db9b8461d0145f311424663d11678a06b6153cb34"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/menubar.tsx",
+    "package": "cutnote/components/ui/menubar.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "9243af8afcea03703398ccd1c2a8c0a87ad6cbaf2bd272fb609f5b79fe46aebb",
+    "modified": false,
+    "package_sha256": "9243af8afcea03703398ccd1c2a8c0a87ad6cbaf2bd272fb609f5b79fe46aebb"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/kbd.tsx",
+    "package": "cutnote/components/ui/kbd.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "6088c3a5432338b1719c17e9b5d0e1fa74fd1f66060f248fc88909d33a82cd13",
+    "modified": false,
+    "package_sha256": "6088c3a5432338b1719c17e9b5d0e1fa74fd1f66060f248fc88909d33a82cd13"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/dialog.tsx",
+    "package": "cutnote/components/ui/dialog.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "dce39c6adc47d997bd2567f8b7a72f466b0134715105cd42f9194007b8ecdb14",
+    "modified": false,
+    "package_sha256": "dce39c6adc47d997bd2567f8b7a72f466b0134715105cd42f9194007b8ecdb14"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/badge.tsx",
+    "package": "cutnote/components/ui/badge.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "46a0de5224f6a5d5d63d45246534288518dce888f031064bff925bbc7fe6ad97",
+    "modified": false,
+    "package_sha256": "46a0de5224f6a5d5d63d45246534288518dce888f031064bff925bbc7fe6ad97"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/sidebar.tsx",
+    "package": "cutnote/components/ui/sidebar.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "4a8d73e7730a2b1fcecfca31299ed26db65c2307b84197a59c6ec7c01c7ad28e",
+    "modified": false,
+    "package_sha256": "4a8d73e7730a2b1fcecfca31299ed26db65c2307b84197a59c6ec7c01c7ad28e"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/message.tsx",
+    "package": "cutnote/components/ui/message.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "9d2952bf3b641081f09aa2739535e6bbd1be0a4946789752a2c20d8aaef43185",
+    "modified": false,
+    "package_sha256": "9d2952bf3b641081f09aa2739535e6bbd1be0a4946789752a2c20d8aaef43185"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/table.tsx",
+    "package": "cutnote/components/ui/table.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "20e5a7f224959c6b75802995706a97e9da171f693d4b6b1b436388fcd9df96f3",
+    "modified": false,
+    "package_sha256": "20e5a7f224959c6b75802995706a97e9da171f693d4b6b1b436388fcd9df96f3"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/separator.tsx",
+    "package": "cutnote/components/ui/separator.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "6da346505c8629a4668420d2a5ca48891383bbe0b0ceb14163537c671879427e",
+    "modified": false,
+    "package_sha256": "6da346505c8629a4668420d2a5ca48891383bbe0b0ceb14163537c671879427e"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/button.tsx",
+    "package": "cutnote/components/ui/button.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "cc36af0f8b5019c33cc039fbf03bb952a513072b15b55b53c592b78af3e5f4c4",
+    "modified": false,
+    "package_sha256": "cc36af0f8b5019c33cc039fbf03bb952a513072b15b55b53c592b78af3e5f4c4"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/toggle.tsx",
+    "package": "cutnote/components/ui/toggle.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "ba4d0b0a2b2fee75dc36dfc19e32082e721024b919050c97fd5dc70faa924e16",
+    "modified": false,
+    "package_sha256": "ba4d0b0a2b2fee75dc36dfc19e32082e721024b919050c97fd5dc70faa924e16"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/marker.tsx",
+    "package": "cutnote/components/ui/marker.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "3d798763f094b2bb5e7ade2d5cd1b9bab498bc8ca7fd4cfaf4e5835bdedc34a0",
+    "modified": false,
+    "package_sha256": "3d798763f094b2bb5e7ade2d5cd1b9bab498bc8ca7fd4cfaf4e5835bdedc34a0"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/checkbox.tsx",
+    "package": "cutnote/components/ui/checkbox.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "b23ab9d4deeedf2ac8f512c368361ede681aa383437ef48563a6f9b7dbe95f27",
+    "modified": false,
+    "package_sha256": "b23ab9d4deeedf2ac8f512c368361ede681aa383437ef48563a6f9b7dbe95f27"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/spinner.tsx",
+    "package": "cutnote/components/ui/spinner.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "3e6e6e8d37fb4069f8e43e55318f8db06fbc36e6c8be0096da3c9337c1c798b9",
+    "modified": false,
+    "package_sha256": "3e6e6e8d37fb4069f8e43e55318f8db06fbc36e6c8be0096da3c9337c1c798b9"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/collapsible.tsx",
+    "package": "cutnote/components/ui/collapsible.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "c6598e5584f4258b5d9fefadbc5ad6a66888ad58729f4b634a0bb2d9c513188b",
+    "modified": false,
+    "package_sha256": "c6598e5584f4258b5d9fefadbc5ad6a66888ad58729f4b634a0bb2d9c513188b"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/dropdown-menu.tsx",
+    "package": "cutnote/components/ui/dropdown-menu.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "98f0dcdae38225b73734aceeb9213dd751fea2c72ea520df31003cd133deac8a",
+    "modified": false,
+    "package_sha256": "98f0dcdae38225b73734aceeb9213dd751fea2c72ea520df31003cd133deac8a"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/select.tsx",
+    "package": "cutnote/components/ui/select.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "0b796a108a4eb5ba52d9ad938b7aea36dc56ae66c703a6d0a23dbc24f96daff3",
+    "modified": false,
+    "package_sha256": "0b796a108a4eb5ba52d9ad938b7aea36dc56ae66c703a6d0a23dbc24f96daff3"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/textarea.tsx",
+    "package": "cutnote/components/ui/textarea.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "253cdeb487c73beaaccdf47fc163e36e7d5b7ae6ddf09a4f64998a109a112979",
+    "modified": false,
+    "package_sha256": "253cdeb487c73beaaccdf47fc163e36e7d5b7ae6ddf09a4f64998a109a112979"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/input.tsx",
+    "package": "cutnote/components/ui/input.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "8c4612a7c41319ac5049daa3b34b080f9784b6245c17780eb87c127e58e473db",
+    "modified": false,
+    "package_sha256": "8c4612a7c41319ac5049daa3b34b080f9784b6245c17780eb87c127e58e473db"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/message-scroller.tsx",
+    "package": "cutnote/components/ui/message-scroller.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "bb7660a248e4e9589c3816c7c1c199ea1381a70d2c8476ae895b567a7a4d86cf",
+    "modified": false,
+    "package_sha256": "bb7660a248e4e9589c3816c7c1c199ea1381a70d2c8476ae895b567a7a4d86cf"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/attachment.tsx",
+    "package": "cutnote/components/ui/attachment.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "ae8a25dd1a896d3964e3ef54d97e51221b418cde287dfd794428b89951c5c790",
+    "modified": false,
+    "package_sha256": "ae8a25dd1a896d3964e3ef54d97e51221b418cde287dfd794428b89951c5c790"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/skeleton.tsx",
+    "package": "cutnote/components/ui/skeleton.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "ba48dd5be5a6a1378bd4e011028654b5bf419f1e7d20ee4b9f8330c1264e7239",
+    "modified": false,
+    "package_sha256": "ba48dd5be5a6a1378bd4e011028654b5bf419f1e7d20ee4b9f8330c1264e7239"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/context-menu.tsx",
+    "package": "cutnote/components/ui/context-menu.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "2cf1fcf59df0649a3e2a126d1df2f639145f6b6bf5689ee54af1f40ab1245017",
+    "modified": false,
+    "package_sha256": "2cf1fcf59df0649a3e2a126d1df2f639145f6b6bf5689ee54af1f40ab1245017"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/form.tsx",
+    "package": "cutnote/components/ui/form.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "315b46bb75ab7d1c6061b5d750aa4bedf6e7a455e15e2d7f9182f053d5972b1e",
+    "modified": false,
+    "package_sha256": "315b46bb75ab7d1c6061b5d750aa4bedf6e7a455e15e2d7f9182f053d5972b1e"
+  },
+  {
+    "original": "outputs/cutnote/components/ui/carousel.tsx",
+    "package": "cutnote/components/ui/carousel.tsx",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "b7ea0dda3903d972c186f739e23da61f547bc83b5a0bf13b16856577846d5fc3",
+    "modified": false,
+    "package_sha256": "b7ea0dda3903d972c186f739e23da61f547bc83b5a0bf13b16856577846d5fc3"
+  },
+  {
+    "original": "outputs/cutnote/public/analysis-worker.js",
+    "package": "cutnote/public/analysis-worker.js",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "a3212e501ca20e235dab3e1bf24c1d277735753f65924744dbfd43d058a60dd9",
+    "modified": false,
+    "package_sha256": "a3212e501ca20e235dab3e1bf24c1d277735753f65924744dbfd43d058a60dd9"
+  },
+  {
+    "original": "outputs/cutnote/public/favicon.svg",
+    "package": "cutnote/public/favicon.svg",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "569931dad48dd685c55f347e8e4c036df1cda110ba960330464326f535b64e11",
+    "modified": false,
+    "package_sha256": "569931dad48dd685c55f347e8e4c036df1cda110ba960330464326f535b64e11"
+  },
+  {
+    "original": "outputs/cutnote/hooks/use-mobile.ts",
+    "package": "cutnote/hooks/use-mobile.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "ad0936f84f1df79d3697bfbff9c18f8ad58431c1cbaf2359c6a853b0fcc9f28b",
+    "modified": false,
+    "package_sha256": "ad0936f84f1df79d3697bfbff9c18f8ad58431c1cbaf2359c6a853b0fcc9f28b"
+  },
+  {
+    "original": "outputs/cutnote/examples/d1/app/api/notes/route.ts",
+    "package": "cutnote/examples/d1/app/api/notes/route.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "a3d4a74fd53b7bf53e2df41f169d9d9d44a8b22aeb6d92f4e754956079af8909",
+    "modified": false,
+    "package_sha256": "a3d4a74fd53b7bf53e2df41f169d9d9d44a8b22aeb6d92f4e754956079af8909"
+  },
+  {
+    "original": "outputs/cutnote/examples/d1/db/schema.ts",
+    "package": "cutnote/examples/d1/db/schema.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "d89eabd95716ce404f5f7ca2a254220435be8ddce7c899d7ef461ff22ec80454",
+    "modified": false,
+    "package_sha256": "d89eabd95716ce404f5f7ca2a254220435be8ddce7c899d7ef461ff22ec80454"
+  },
+  {
+    "original": "outputs/cutnote/scripts/sites-env.sh",
+    "package": "cutnote/scripts/sites-env.sh",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "df86ebfc27d2f00860036658e933ac0ddd7b5f6879aa5d51218f0863c7e1fb60",
+    "modified": false,
+    "package_sha256": "df86ebfc27d2f00860036658e933ac0ddd7b5f6879aa5d51218f0863c7e1fb60"
+  },
+  {
+    "original": "outputs/cutnote/scripts/run-framework.mjs",
+    "package": "cutnote/scripts/run-framework.mjs",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "9bf9f41a29314cabe0238b8e9c540ec3f7b5a6adafc7c8fb6c3940722d061dca",
+    "modified": false,
+    "package_sha256": "9bf9f41a29314cabe0238b8e9c540ec3f7b5a6adafc7c8fb6c3940722d061dca"
+  },
+  {
+    "original": "outputs/cutnote/scripts/sites-env.mjs",
+    "package": "cutnote/scripts/sites-env.mjs",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "5de99d6806b01f0ee0b941af3684d75dcf1afbbcff22cb95bfa2e584c5dafa88",
+    "modified": false,
+    "package_sha256": "5de99d6806b01f0ee0b941af3684d75dcf1afbbcff22cb95bfa2e584c5dafa88"
+  },
+  {
+    "original": "outputs/cutnote/scripts/pnpm-install.mjs",
+    "package": "cutnote/scripts/pnpm-install.mjs",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "a83164e344c1947053def83b546be8115deaa827314bbaead7afe6b6451c5cdf",
+    "modified": false,
+    "package_sha256": "a83164e344c1947053def83b546be8115deaa827314bbaead7afe6b6451c5cdf"
+  },
+  {
+    "original": "outputs/cutnote/scripts/install-ci.mjs",
+    "package": "cutnote/scripts/install-ci.mjs",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "4a5a92d60a08d0ba54effd8373da2da06284312c55b767287c68a0bec7200da7",
+    "modified": false,
+    "package_sha256": "4a5a92d60a08d0ba54effd8373da2da06284312c55b767287c68a0bec7200da7"
+  },
+  {
+    "original": "outputs/cutnote/scripts/generate-taxonomy.mjs",
+    "package": "cutnote/scripts/generate-taxonomy.mjs",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "00366b8c3fbea6bafc38343e979b9f1ba66875c5c695516bfb4cbef290d95817",
+    "modified": false,
+    "package_sha256": "00366b8c3fbea6bafc38343e979b9f1ba66875c5c695516bfb4cbef290d95817"
+  },
+  {
+    "original": "outputs/cutnote/scripts/install-ci.sh",
+    "package": "cutnote/scripts/install-ci.sh",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "10d8764a61be50351dc3496e13588270de7956f0aa5f1189c49cabb2d89fe5c0",
+    "modified": false,
+    "package_sha256": "10d8764a61be50351dc3496e13588270de7956f0aa5f1189c49cabb2d89fe5c0"
+  },
+  {
+    "original": "outputs/cutnote/scripts/npm-install.mjs",
+    "package": "cutnote/scripts/npm-install.mjs",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "9715c6a32d1d4a0289ef6376a0e819c3b6a6416b8a9877733d9fb4339ce626b6",
+    "modified": false,
+    "package_sha256": "9715c6a32d1d4a0289ef6376a0e819c3b6a6416b8a9877733d9fb4339ce626b6"
+  },
+  {
+    "original": "outputs/cutnote/scripts/execution-profile.mjs",
+    "package": "cutnote/scripts/execution-profile.mjs",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "2e71116f4d2b70cff8bb70436f8dd5c709ec7ff62893424530f404e0193d3630",
+    "modified": false,
+    "package_sha256": "2e71116f4d2b70cff8bb70436f8dd5c709ec7ff62893424530f404e0193d3630"
+  },
+  {
+    "original": "outputs/cutnote/scripts/build-verified.sh",
+    "package": "cutnote/scripts/build-verified.sh",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "2ae5329ac860076070c9217a43106a15cb5ecf907a0f7baeb9ef903f76b53c68",
+    "modified": false,
+    "package_sha256": "2ae5329ac860076070c9217a43106a15cb5ecf907a0f7baeb9ef903f76b53c68"
+  },
+  {
+    "original": "outputs/cutnote/scripts/install-pnpm.sh",
+    "package": "cutnote/scripts/install-pnpm.sh",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "a684c02c2b493dfbf262a66252a5cd36f81ca995a4024761728662ae63aa40c0",
+    "modified": false,
+    "package_sha256": "a684c02c2b493dfbf262a66252a5cd36f81ca995a4024761728662ae63aa40c0"
+  },
+  {
+    "original": "outputs/cutnote/scripts/start-pc.mjs",
+    "package": "cutnote/scripts/start-pc.mjs",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "8c3d5d23fbb102d53baccad9cc91e87ce0c3f01eaab95c63147f1e428c7906c5",
+    "modified": false,
+    "package_sha256": "8c3d5d23fbb102d53baccad9cc91e87ce0c3f01eaab95c63147f1e428c7906c5"
+  },
+  {
+    "original": "outputs/cutnote/scripts/connector-preview/host-binding.mjs",
+    "package": "cutnote/scripts/connector-preview/host-binding.mjs",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "9e44ab6864133a5c82f834a5904ebb7d6104cb783c24efba3c0fe1a161182cea",
+    "modified": false,
+    "package_sha256": "9e44ab6864133a5c82f834a5904ebb7d6104cb783c24efba3c0fe1a161182cea"
+  },
+  {
+    "original": "outputs/cutnote/scripts/connector-preview/protocol.mjs",
+    "package": "cutnote/scripts/connector-preview/protocol.mjs",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "111e062ebf08d3f180130f5bc3dcb3c1414c1d7be3c032c9d675a61c0c7513a8",
+    "modified": false,
+    "package_sha256": "111e062ebf08d3f180130f5bc3dcb3c1414c1d7be3c032c9d675a61c0c7513a8"
+  },
+  {
+    "original": "outputs/cutnote/scripts/connector-preview/connector-preview-session.mjs",
+    "package": "cutnote/scripts/connector-preview/connector-preview-session.mjs",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "45d5d0511a5b9689278b59570223017cdd3c4129431c6745e710c26323cac45c",
+    "modified": false,
+    "package_sha256": "45d5d0511a5b9689278b59570223017cdd3c4129431c6745e710c26323cac45c"
+  },
+  {
+    "original": "outputs/cutnote/lib/tagging.ts",
+    "package": "cutnote/lib/tagging.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "cf20739ae00d5351092af9385b4850abb9c1ed8846380042e800e1028a99e362",
+    "modified": false,
+    "package_sha256": "cf20739ae00d5351092af9385b4850abb9c1ed8846380042e800e1028a99e362"
+  },
+  {
+    "original": "outputs/cutnote/lib/library-order-server.ts",
+    "package": "cutnote/lib/library-order-server.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "90e313024e92805d3b4e3e0e76ea2e49c40a8c0838ee8ed3a5b82abe75fcd648",
+    "modified": false,
+    "package_sha256": "90e313024e92805d3b4e3e0e76ea2e49c40a8c0838ee8ed3a5b82abe75fcd648"
+  },
+  {
+    "original": "outputs/cutnote/lib/video-export.ts",
+    "package": "cutnote/lib/video-export.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "227b84da841b3a71a298a0ecbbc00a294384f2d083e664b4a4887258eb668580",
+    "modified": false,
+    "package_sha256": "227b84da841b3a71a298a0ecbbc00a294384f2d083e664b4a4887258eb668580"
+  },
+  {
+    "original": "outputs/cutnote/lib/segment-media.ts",
+    "package": "cutnote/lib/segment-media.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "81c877b6e0385269875890f5832d4ed1f20295ce466202171a1f4d7af0dbcd9f",
+    "modified": false,
+    "package_sha256": "81c877b6e0385269875890f5832d4ed1f20295ce466202171a1f4d7af0dbcd9f"
+  },
+  {
+    "original": "outputs/cutnote/lib/favorites.ts",
+    "package": "cutnote/lib/favorites.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "9204d30c468f7a332f0c7e92548a71fecf08c0280fee873e97b5bb9cd3c51f95",
+    "modified": false,
+    "package_sha256": "9204d30c468f7a332f0c7e92548a71fecf08c0280fee873e97b5bb9cd3c51f95"
+  },
+  {
+    "original": "outputs/cutnote/lib/image-search.ts",
+    "package": "cutnote/lib/image-search.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "5436594c611a1fdda8edc2337e228de723861cb6493ced90b643e58b7eff9e2b",
+    "modified": false,
+    "package_sha256": "5436594c611a1fdda8edc2337e228de723861cb6493ced90b643e58b7eff9e2b"
+  },
+  {
+    "original": "outputs/cutnote/lib/workspace-context.ts",
+    "package": "cutnote/lib/workspace-context.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "42260d2eed17345188fe1169e5b8b86f43691ed318b72f968e50f8b558950af6",
+    "modified": false,
+    "package_sha256": "42260d2eed17345188fe1169e5b8b86f43691ed318b72f968e50f8b558950af6"
+  },
+  {
+    "original": "outputs/cutnote/lib/taxonomy.ts",
+    "package": "cutnote/lib/taxonomy.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "462a3c0c8c6fbee24a7d7ee2ddfbb89b3e13bf220bef1e623208c9f23a1fe817",
+    "modified": false,
+    "package_sha256": "462a3c0c8c6fbee24a7d7ee2ddfbb89b3e13bf220bef1e623208c9f23a1fe817"
+  },
+  {
+    "original": "outputs/cutnote/lib/utils.ts",
+    "package": "cutnote/lib/utils.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "53f3d3d070f0a9082934da25b875f9499855c2b0693868dd28be8c23d8730f68",
+    "modified": false,
+    "package_sha256": "53f3d3d070f0a9082934da25b875f9499855c2b0693868dd28be8c23d8730f68"
+  },
+  {
+    "original": "outputs/cutnote/lib/discovery-profile.ts",
+    "package": "cutnote/lib/discovery-profile.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "33c2c9aa136b04b6bd12cfa25018993902e5c8e7ccb27174f90954a00f87cdf0",
+    "modified": false,
+    "package_sha256": "33c2c9aa136b04b6bd12cfa25018993902e5c8e7ccb27174f90954a00f87cdf0"
+  },
+  {
+    "original": "outputs/cutnote/lib/media-response.ts",
+    "package": "cutnote/lib/media-response.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "b4694196efd6340ab32243922f984196dfeb772ab1da652cb32c3cb0564896e5",
+    "modified": false,
+    "package_sha256": "b4694196efd6340ab32243922f984196dfeb772ab1da652cb32c3cb0564896e5"
+  },
+  {
+    "original": "outputs/cutnote/lib/segment-search.ts",
+    "package": "cutnote/lib/segment-search.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "718d81fe62a1c5f7b0a26ff5b1294e104ed6a7926b10a050f8aa5b0140ad623e",
+    "modified": false,
+    "package_sha256": "718d81fe62a1c5f7b0a26ff5b1294e104ed6a7926b10a050f8aa5b0140ad623e"
+  },
+  {
+    "original": "outputs/cutnote/lib/connector-errors.mts",
+    "package": "cutnote/lib/connector-errors.mts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "a22edf13d6873ae832c4a2a0d579fc666c73ec996ef0722d39172649d38f0871",
+    "modified": false,
+    "package_sha256": "a22edf13d6873ae832c4a2a0d579fc666c73ec996ef0722d39172649d38f0871"
+  },
+  {
+    "original": "outputs/cutnote/lib/recommendations.ts",
+    "package": "cutnote/lib/recommendations.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "2acbc69c310f37b8f7c69d7597910cfcecf4103909f58bbe80749833861532c8",
+    "modified": false,
+    "package_sha256": "2acbc69c310f37b8f7c69d7597910cfcecf4103909f58bbe80749833861532c8"
+  },
+  {
+    "original": "outputs/cutnote/lib/segment-tagging.ts",
+    "package": "cutnote/lib/segment-tagging.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "4caee4e5c2e42cc04e53613b50d0dc256d9b5ff12e4c110dc144311f730ad361",
+    "modified": false,
+    "package_sha256": "4caee4e5c2e42cc04e53613b50d0dc256d9b5ff12e4c110dc144311f730ad361"
+  },
+  {
+    "original": "outputs/cutnote/lib/library-order.ts",
+    "package": "cutnote/lib/library-order.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "3069f2f806f8b87ead7d5bc7e2504406f7ad5f00366acf5402c3a0b5f5e87267",
+    "modified": false,
+    "package_sha256": "3069f2f806f8b87ead7d5bc7e2504406f7ad5f00366acf5402c3a0b5f5e87267"
+  },
+  {
+    "original": "outputs/cutnote/lib/segments.ts",
+    "package": "cutnote/lib/segments.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "7fe1e8fbba722b65948dd02ee979bfc1ca354e29f662f6855cbcb431d4858b04",
+    "modified": false,
+    "package_sha256": "7fe1e8fbba722b65948dd02ee979bfc1ca354e29f662f6855cbcb431d4858b04"
+  },
+  {
+    "original": "outputs/cutnote/lib/clips.ts",
+    "package": "cutnote/lib/clips.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "87507b8466acc0096eca5b7e93eebf1bbfe95d08c7c2380c0f9420fc4e7747b5",
+    "modified": false,
+    "package_sha256": "87507b8466acc0096eca5b7e93eebf1bbfe95d08c7c2380c0f9420fc4e7747b5"
+  },
+  {
+    "original": "outputs/cutnote/lib/connector-contract.mts",
+    "package": "cutnote/lib/connector-contract.mts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "e1a7b24a8793af34b595690d9b1300c897c7321c14f215cedf58ad95799d7c3e",
+    "modified": false,
+    "package_sha256": "e1a7b24a8793af34b595690d9b1300c897c7321c14f215cedf58ad95799d7c3e"
+  },
+  {
+    "original": "outputs/cutnote/lib/id.ts",
+    "package": "cutnote/lib/id.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "04810a96cc1473693098cbabbfacd8312d60ab1585b8d0e417235a0d8f30a282",
+    "modified": false,
+    "package_sha256": "04810a96cc1473693098cbabbfacd8312d60ab1585b8d0e417235a0d8f30a282"
+  },
+  {
+    "original": "outputs/cutnote/lib/connectors.ts",
+    "package": "cutnote/lib/connectors.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "1c93d747e384c8e17e3e3dd5361b24412babf5eba2a11d2ae7a75f4e0924112c",
+    "modified": false,
+    "package_sha256": "1c93d747e384c8e17e3e3dd5361b24412babf5eba2a11d2ae7a75f4e0924112c"
+  },
+  {
+    "original": "outputs/cutnote/lib/connector-context.ts",
+    "package": "cutnote/lib/connector-context.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "bbddff68689cb0f6926fecd4b8b96f12f2054277c296e97b0df07d4ad5ece24e",
+    "modified": false,
+    "package_sha256": "bbddff68689cb0f6926fecd4b8b96f12f2054277c296e97b0df07d4ad5ece24e"
+  },
+  {
+    "original": "outputs/cutnote/lib/mobile-share.ts",
+    "package": "cutnote/lib/mobile-share.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "9ce42e3573f44f2dbfe3c60b447ded0a9ba104ae74f6f8467eb1aa92153d0cf1",
+    "modified": false,
+    "package_sha256": "9ce42e3573f44f2dbfe3c60b447ded0a9ba104ae74f6f8467eb1aa92153d0cf1"
+  },
+  {
+    "original": "outputs/cutnote/lib/server.ts",
+    "package": "cutnote/lib/server.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "4e487ab13efea5dce45a2b5bf3b42596da1d8ac7c9ad39d2a6de506d632eb5a8",
+    "modified": false,
+    "package_sha256": "4e487ab13efea5dce45a2b5bf3b42596da1d8ac7c9ad39d2a6de506d632eb5a8"
+  },
+  {
+    "original": "outputs/cutnote/lib/connector-preview.d.ts",
+    "package": "cutnote/lib/connector-preview.d.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "abd69a94f7f61f1359063bb557574faae35e8ff5a028cc4c04b9ee248ef52642",
+    "modified": false,
+    "package_sha256": "abd69a94f7f61f1359063bb557574faae35e8ff5a028cc4c04b9ee248ef52642"
+  },
+  {
+    "original": "outputs/cutnote/lib/analysis/video.ts",
+    "package": "cutnote/lib/analysis/video.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "10502a94473516f87589cf48d40a19b7cddab15525cc945565b9cf752704c5be",
+    "modified": false,
+    "package_sha256": "10502a94473516f87589cf48d40a19b7cddab15525cc945565b9cf752704c5be"
+  },
+  {
+    "original": "outputs/cutnote/lib/analysis/retag-segments.ts",
+    "package": "cutnote/lib/analysis/retag-segments.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "f25a0dd9dbdcc899c428f285d59fc1a00eb5bcabf87ad0ddec21d9a6df30bc0c",
+    "modified": false,
+    "package_sha256": "f25a0dd9dbdcc899c428f285d59fc1a00eb5bcabf87ad0ddec21d9a6df30bc0c"
+  },
+  {
+    "original": "outputs/cutnote/lib/analysis/types.ts",
+    "package": "cutnote/lib/analysis/types.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "d306acc1ab29c7a1fffd05dd4d814f196d7994980e752582c25d264819e63753",
+    "modified": false,
+    "package_sha256": "d306acc1ab29c7a1fffd05dd4d814f196d7994980e752582c25d264819e63753"
+  },
+  {
+    "original": "outputs/cutnote/lib/analysis/whole-video.ts",
+    "package": "cutnote/lib/analysis/whole-video.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "40072fc302b79502c729911fb243fca6e76cf8e3a22f7dc98a493fcbeb3a7177",
+    "modified": false,
+    "package_sha256": "40072fc302b79502c729911fb243fca6e76cf8e3a22f7dc98a493fcbeb3a7177"
+  },
+  {
+    "original": "outputs/cutnote/lib/analysis/color.ts",
+    "package": "cutnote/lib/analysis/color.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "636df50db51ea01bf17e22a1c9b48c8e82fb66801bc2924edaf3ca697e232ae5",
+    "modified": false,
+    "package_sha256": "636df50db51ea01bf17e22a1c9b48c8e82fb66801bc2924edaf3ca697e232ae5"
+  },
+  {
+    "original": "outputs/cutnote/lib/analysis/link.ts",
+    "package": "cutnote/lib/analysis/link.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "4887a747a02f915ca9cae6fdb9adceedea34abbf2c0e68dbd0a72fe4a8246d33",
+    "modified": false,
+    "package_sha256": "4887a747a02f915ca9cae6fdb9adceedea34abbf2c0e68dbd0a72fe4a8246d33"
+  },
+  {
+    "original": "outputs/cutnote/lib/links/instagram.ts",
+    "package": "cutnote/lib/links/instagram.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "aa77e5ad3b1c25113fdaee5cd9568186509c7b5431cee13a8c8772a41003d40d",
+    "modified": false,
+    "package_sha256": "aa77e5ad3b1c25113fdaee5cd9568186509c7b5431cee13a8c8772a41003d40d"
+  },
+  {
+    "original": "outputs/cutnote/lib/links/types.ts",
+    "package": "cutnote/lib/links/types.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "e2d76a6b1e6964dc0a5656d8a671dc046f88260fa72af4cd98e322f13e59bac2",
+    "modified": false,
+    "package_sha256": "e2d76a6b1e6964dc0a5656d8a671dc046f88260fa72af4cd98e322f13e59bac2"
+  },
+  {
+    "original": "outputs/cutnote/lib/links/provider.ts",
+    "package": "cutnote/lib/links/provider.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "d682568bdae38226160dd7428771c0aaf5a1d13c5db50e22521d3a068ca6d6ef",
+    "modified": false,
+    "package_sha256": "d682568bdae38226160dd7428771c0aaf5a1d13c5db50e22521d3a068ca6d6ef"
+  },
+  {
+    "original": "outputs/cutnote/lib/links/resolve.ts",
+    "package": "cutnote/lib/links/resolve.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "14166907af3e39e917ecb78bb4335f95ed3a8506780d3823a7424628d846d8ee",
+    "modified": false,
+    "package_sha256": "14166907af3e39e917ecb78bb4335f95ed3a8506780d3823a7424628d846d8ee"
+  },
+  {
+    "original": "outputs/cutnote/lib/links/fetch.ts",
+    "package": "cutnote/lib/links/fetch.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "10f1b32643b925c3ae4145e7d3948914e001efbf11678ccc28e201f5a86434ef",
+    "modified": false,
+    "package_sha256": "10f1b32643b925c3ae4145e7d3948914e001efbf11678ccc28e201f5a86434ef"
+  },
+  {
+    "original": "outputs/cutnote/lib/ai/key-input.ts",
+    "package": "cutnote/lib/ai/key-input.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "bde4bdd6387cc2a0c62928ec14073705bd32865283e2cae0d4c2b31213ffbec0",
+    "modified": false,
+    "package_sha256": "bde4bdd6387cc2a0c62928ec14073705bd32865283e2cae0d4c2b31213ffbec0"
+  },
+  {
+    "original": "outputs/cutnote/lib/ai/effect-query.ts",
+    "package": "cutnote/lib/ai/effect-query.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "e98cd7f0e42ee2f5afe2dd53e13ee3e361c81b46c9d5c6e67eacd29c4407f02b",
+    "modified": false,
+    "package_sha256": "e98cd7f0e42ee2f5afe2dd53e13ee3e361c81b46c9d5c6e67eacd29c4407f02b"
+  },
+  {
+    "original": "outputs/cutnote/lib/ai/settings.ts",
+    "package": "cutnote/lib/ai/settings.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "9bdcb2afec6f5603af8b0271debc515919ee0c887ea340a758d4661d0c8e4009",
+    "modified": false,
+    "package_sha256": "9bdcb2afec6f5603af8b0271debc515919ee0c887ea340a758d4661d0c8e4009"
+  },
+  {
+    "original": "outputs/cutnote/lib/ai/openai.ts",
+    "package": "cutnote/lib/ai/openai.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "0e7e8da79d727e590e1ffb3a9f76f844857dd56b9281810c1cc5605216eaee2a",
+    "modified": false,
+    "package_sha256": "0e7e8da79d727e590e1ffb3a9f76f844857dd56b9281810c1cc5605216eaee2a"
+  },
+  {
+    "original": "outputs/cutnote/lib/ai/crypto.ts",
+    "package": "cutnote/lib/ai/crypto.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "b8ab81f31d2e0437de5c2eb659f4ad00bda77eaf5df5b3ee697fd4506610b8af",
+    "modified": false,
+    "package_sha256": "b8ab81f31d2e0437de5c2eb659f4ad00bda77eaf5df5b3ee697fd4506610b8af"
+  },
+  {
+    "original": "outputs/cutnote/lib/ai/result.ts",
+    "package": "cutnote/lib/ai/result.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "31504084586e206c1990bcf713b1c1f71e1bda6ced2a34f664dd823c18d50154",
+    "modified": false,
+    "package_sha256": "31504084586e206c1990bcf713b1c1f71e1bda6ced2a34f664dd823c18d50154"
+  },
+  {
+    "original": "outputs/cutnote/lib/ai/gemini.ts",
+    "package": "cutnote/lib/ai/gemini.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "1400ea4c8024937b5b690f010a9bd2c9be1e0499f3a91304a538e86bb1afe60f",
+    "modified": false,
+    "package_sha256": "1400ea4c8024937b5b690f010a9bd2c9be1e0499f3a91304a538e86bb1afe60f"
+  },
+  {
+    "original": "outputs/cutnote/lib/ai/youtube-public-search.ts",
+    "package": "cutnote/lib/ai/youtube-public-search.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "ead0c1c1d705249cb254cb9238c6abf41d3977751665d7880439a0e769954c93",
+    "modified": false,
+    "package_sha256": "ead0c1c1d705249cb254cb9238c6abf41d3977751665d7880439a0e769954c93"
+  },
+  {
+    "original": "outputs/cutnote/lib/ai/image-query.ts",
+    "package": "cutnote/lib/ai/image-query.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "058a26e6ca206a1a08a1faac5a302537cea8a9376879d49d343324e1f07a812f",
+    "modified": false,
+    "package_sha256": "058a26e6ca206a1a08a1faac5a302537cea8a9376879d49d343324e1f07a812f"
+  },
+  {
+    "original": "outputs/cutnote/lib/ai/youtube-discovery.ts",
+    "package": "cutnote/lib/ai/youtube-discovery.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "4491afe2d830e6272f4b4f7ea7a1ed8922fc8e94558abb4d730f997456247de2",
+    "modified": false,
+    "package_sha256": "4491afe2d830e6272f4b4f7ea7a1ed8922fc8e94558abb4d730f997456247de2"
+  },
+  {
+    "original": "outputs/cutnote/db/schema.ts",
+    "package": "cutnote/db/schema.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "dd311b023086358039bb550c4018edd7131aa88f4e410d8ad49078fadc5ced7e",
+    "modified": false,
+    "package_sha256": "dd311b023086358039bb550c4018edd7131aa88f4e410d8ad49078fadc5ced7e"
+  },
+  {
+    "original": "outputs/cutnote/db/index.ts",
+    "package": "cutnote/db/index.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "dc7610b00b918e0ffff1360a63626f16655ced3064b2eaf96095a4101fb14bcd",
+    "modified": false,
+    "package_sha256": "dc7610b00b918e0ffff1360a63626f16655ced3064b2eaf96095a4101fb14bcd"
+  },
+  {
+    "original": "outputs/cutnote/.openai/hosting.json",
+    "package": "cutnote/.openai/hosting.json",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "242cec57ed4d08fa47a39d10d875004e16aa07414d0036695f8c8583436a72de",
+    "modified": true,
+    "package_sha256": "bcc60135f698bbe83722987ef0705bfb2f389f9eb1a163007cbb4c9ceab301cf"
+  },
+  {
+    "original": "outputs/cutnote/build/sites-worker.ts",
+    "package": "cutnote/build/sites-worker.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "28a75f74adfc226a773d1c00d5779c26412eea40a104da5c77f7d0f0fc30f0e8",
+    "modified": false,
+    "package_sha256": "28a75f74adfc226a773d1c00d5779c26412eea40a104da5c77f7d0f0fc30f0e8"
+  },
+  {
+    "original": "outputs/cutnote/build/connector-preview-worker.mjs",
+    "package": "cutnote/build/connector-preview-worker.mjs",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "c1b6b2c420cb67d9e28f8f4ae440f578c0dfd4cb840a12cfe4b58076629a17ba",
+    "modified": false,
+    "package_sha256": "c1b6b2c420cb67d9e28f8f4ae440f578c0dfd4cb840a12cfe4b58076629a17ba"
+  },
+  {
+    "original": "outputs/cutnote/build/connector-preview-plugin.mjs",
+    "package": "cutnote/build/connector-preview-plugin.mjs",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "a6a9fe2086e302f94a3f91e3c1a68a45bb3aa07d4a79faf01b14732191eb4e80",
+    "modified": false,
+    "package_sha256": "a6a9fe2086e302f94a3f91e3c1a68a45bb3aa07d4a79faf01b14732191eb4e80"
+  },
+  {
+    "original": "outputs/cutnote/build/sites-vite-plugin.ts",
+    "package": "cutnote/build/sites-vite-plugin.ts",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "07af20e7097d9ed1d76f7c446d02997550b8fc5ca89668b249e25eabd62c6834",
+    "modified": false,
+    "package_sha256": "07af20e7097d9ed1d76f7c446d02997550b8fc5ca89668b249e25eabd62c6834"
+  },
+  {
+    "original": "outputs/cutnote/build/sites-vite-plugin.LICENSE",
+    "package": "cutnote/build/sites-vite-plugin.LICENSE",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "7de1e115d165f176e68f962acdb809b5ab8d8ae78d3981e0701392b2ac50c713",
+    "modified": false,
+    "package_sha256": "7de1e115d165f176e68f962acdb809b5ab8d8ae78d3981e0701392b2ac50c713"
+  },
+  {
+    "original": "outputs/cutnote/data/taxonomy/taxonomy.v2.yaml",
+    "package": "cutnote/data/taxonomy/taxonomy.v2.yaml",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "a7761d646240f62e82827e6179a921f93392fe3e282cf817ced20ce3e189e10a",
+    "modified": false,
+    "package_sha256": "a7761d646240f62e82827e6179a921f93392fe3e282cf817ced20ce3e189e10a"
+  },
+  {
+    "original": "outputs/cutnote/data/taxonomy/taxonomy.schema.json",
+    "package": "cutnote/data/taxonomy/taxonomy.schema.json",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "50ab36cb2f1e464db811f779be1a0c549ba4a98eed157ec5afc5cf7a017c3cd0",
+    "modified": false,
+    "package_sha256": "50ab36cb2f1e464db811f779be1a0c549ba4a98eed157ec5afc5cf7a017c3cd0"
+  },
+  {
+    "original": "outputs/cutnote/vendor/shadcn-tailwind-4.13.0.LICENSE.md",
+    "package": "cutnote/vendor/shadcn-tailwind-4.13.0.LICENSE.md",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "1564074e13439397221ffd522e2e504d56561994a23d371aa5e3ad43e4f5423f",
+    "modified": false,
+    "package_sha256": "1564074e13439397221ffd522e2e504d56561994a23d371aa5e3ad43e4f5423f"
+  },
+  {
+    "original": "outputs/cutnote/vendor/shadcn-tailwind-4.13.0.css",
+    "package": "cutnote/vendor/shadcn-tailwind-4.13.0.css",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "bc7d83425702955b4cb67cb14ede9d603f9d912376d57a2d81d661094d2a782a",
+    "modified": false,
+    "package_sha256": "bc7d83425702955b4cb67cb14ede9d603f9d912376d57a2d81d661094d2a782a"
+  },
+  {
+    "original": "outputs/cutnote/drizzle/0005_special_famine.sql",
+    "package": "cutnote/drizzle/0005_special_famine.sql",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "cb54aa19208bbcb35ae521c9522933ee26eb02c81388edcd283b603a26442d09",
+    "modified": false,
+    "package_sha256": "cb54aa19208bbcb35ae521c9522933ee26eb02c81388edcd283b603a26442d09"
+  },
+  {
+    "original": "outputs/cutnote/drizzle/0001_narrow_xavin.sql",
+    "package": "cutnote/drizzle/0001_narrow_xavin.sql",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "61a0e84e8b1ae480ec4abe7a90933a8103ba60e01d3eabb76cac4e51efd0e2f7",
+    "modified": false,
+    "package_sha256": "61a0e84e8b1ae480ec4abe7a90933a8103ba60e01d3eabb76cac4e51efd0e2f7"
+  },
+  {
+    "original": "outputs/cutnote/drizzle/0008_silent_giant_man.sql",
+    "package": "cutnote/drizzle/0008_silent_giant_man.sql",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "bf045732ce05022447bcc0ffd3668b2bb3e2616778de874d227ea10a6c669c1c",
+    "modified": false,
+    "package_sha256": "bf045732ce05022447bcc0ffd3668b2bb3e2616778de874d227ea10a6c669c1c"
+  },
+  {
+    "original": "outputs/cutnote/drizzle/0003_public_psylocke.sql",
+    "package": "cutnote/drizzle/0003_public_psylocke.sql",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "c778ba0b7435c3ac0ee7640b11aa681d456716af7ae246e5ba1fcb0a6beef532",
+    "modified": false,
+    "package_sha256": "c778ba0b7435c3ac0ee7640b11aa681d456716af7ae246e5ba1fcb0a6beef532"
+  },
+  {
+    "original": "outputs/cutnote/drizzle/0000_steady_wendell_rand.sql",
+    "package": "cutnote/drizzle/0000_steady_wendell_rand.sql",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "9bf3d007427c8e92523d2bd70290375ccb2747358766d1c45cce98faf416c32b",
+    "modified": false,
+    "package_sha256": "9bf3d007427c8e92523d2bd70290375ccb2747358766d1c45cce98faf416c32b"
+  },
+  {
+    "original": "outputs/cutnote/drizzle/0004_dear_big_bertha.sql",
+    "package": "cutnote/drizzle/0004_dear_big_bertha.sql",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "23f500c8c50021fd5d540303ded8651e853178b49af1c2a1c94580a5820e2108",
+    "modified": false,
+    "package_sha256": "23f500c8c50021fd5d540303ded8651e853178b49af1c2a1c94580a5820e2108"
+  },
+  {
+    "original": "outputs/cutnote/drizzle/0006_confused_sentinels.sql",
+    "package": "cutnote/drizzle/0006_confused_sentinels.sql",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "c22cdd02c2a2cdca3ec81865cd56329a1d3954f8ffa2b487682cb1f29f51884e",
+    "modified": false,
+    "package_sha256": "c22cdd02c2a2cdca3ec81865cd56329a1d3954f8ffa2b487682cb1f29f51884e"
+  },
+  {
+    "original": "outputs/cutnote/drizzle/0002_lyrical_switch.sql",
+    "package": "cutnote/drizzle/0002_lyrical_switch.sql",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "ac0e0889923d99951560f4d7b588e15cf7e344d5ba01298f5a064e710c52b69e",
+    "modified": false,
+    "package_sha256": "ac0e0889923d99951560f4d7b588e15cf7e344d5ba01298f5a064e710c52b69e"
+  },
+  {
+    "original": "outputs/cutnote/drizzle/0007_amusing_blizzard.sql",
+    "package": "cutnote/drizzle/0007_amusing_blizzard.sql",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "22e43684912c63cd5c8ce6d35c898ad3d592ea90124bd68eb08c90cb6ee8a99a",
+    "modified": false,
+    "package_sha256": "22e43684912c63cd5c8ce6d35c898ad3d592ea90124bd68eb08c90cb6ee8a99a"
+  },
+  {
+    "original": "outputs/cutnote/drizzle/meta/0007_snapshot.json",
+    "package": "cutnote/drizzle/meta/0007_snapshot.json",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "a5a4f6b00ba69b203c8741ce0c72fdf5b98ba5f67ab6a95dce988ae09223a5ee",
+    "modified": false,
+    "package_sha256": "a5a4f6b00ba69b203c8741ce0c72fdf5b98ba5f67ab6a95dce988ae09223a5ee"
+  },
+  {
+    "original": "outputs/cutnote/drizzle/meta/0003_snapshot.json",
+    "package": "cutnote/drizzle/meta/0003_snapshot.json",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "c13358d511b86607a4101c7dd1931e3772682f570b59332333c84ee8eb9d1c35",
+    "modified": false,
+    "package_sha256": "c13358d511b86607a4101c7dd1931e3772682f570b59332333c84ee8eb9d1c35"
+  },
+  {
+    "original": "outputs/cutnote/drizzle/meta/0004_snapshot.json",
+    "package": "cutnote/drizzle/meta/0004_snapshot.json",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "317a46d5d871a7a45d29411472f903efd2fdd4aaedb968a7f04b2bc886ce5f7c",
+    "modified": false,
+    "package_sha256": "317a46d5d871a7a45d29411472f903efd2fdd4aaedb968a7f04b2bc886ce5f7c"
+  },
+  {
+    "original": "outputs/cutnote/drizzle/meta/0000_snapshot.json",
+    "package": "cutnote/drizzle/meta/0000_snapshot.json",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "c363a4045bb063a0fbdcb77b855831dd04cefb43a05bc5b9a403f9122062f234",
+    "modified": false,
+    "package_sha256": "c363a4045bb063a0fbdcb77b855831dd04cefb43a05bc5b9a403f9122062f234"
+  },
+  {
+    "original": "outputs/cutnote/drizzle/meta/0008_snapshot.json",
+    "package": "cutnote/drizzle/meta/0008_snapshot.json",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "f0f2c17ae9808f54b02aadc52748ffad29d034b82d1ca1333f82ff0bdfd62a23",
+    "modified": false,
+    "package_sha256": "f0f2c17ae9808f54b02aadc52748ffad29d034b82d1ca1333f82ff0bdfd62a23"
+  },
+  {
+    "original": "outputs/cutnote/drizzle/meta/_journal.json",
+    "package": "cutnote/drizzle/meta/_journal.json",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "10c3f381056a1c1737c61995ea8f0f88f3825b191774eb338060710971f0815b",
+    "modified": false,
+    "package_sha256": "10c3f381056a1c1737c61995ea8f0f88f3825b191774eb338060710971f0815b"
+  },
+  {
+    "original": "outputs/cutnote/drizzle/meta/0001_snapshot.json",
+    "package": "cutnote/drizzle/meta/0001_snapshot.json",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "2b5530e5d156dceee7c5c282328f925854731bfcc55ecb877edbd5494920924a",
+    "modified": false,
+    "package_sha256": "2b5530e5d156dceee7c5c282328f925854731bfcc55ecb877edbd5494920924a"
+  },
+  {
+    "original": "outputs/cutnote/drizzle/meta/0005_snapshot.json",
+    "package": "cutnote/drizzle/meta/0005_snapshot.json",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "b72723ab0c2a6a3776a298d1b3a518841a4408ba257b0dd970902e976f057ae5",
+    "modified": false,
+    "package_sha256": "b72723ab0c2a6a3776a298d1b3a518841a4408ba257b0dd970902e976f057ae5"
+  },
+  {
+    "original": "outputs/cutnote/drizzle/meta/0002_snapshot.json",
+    "package": "cutnote/drizzle/meta/0002_snapshot.json",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "d0aa5780754c76ba8fe8ef41ab5ed00b120308da5cba2df63897e7fa0822ce8f",
+    "modified": false,
+    "package_sha256": "d0aa5780754c76ba8fe8ef41ab5ed00b120308da5cba2df63897e7fa0822ce8f"
+  },
+  {
+    "original": "outputs/cutnote/drizzle/meta/0006_snapshot.json",
+    "package": "cutnote/drizzle/meta/0006_snapshot.json",
+    "purpose": "웹 소스/설정/리소스",
+    "source_sha256": "eb8e0296461bd5a17d65d76f7c48d4272764bdaf0cf46570730196a1a26f5b54",
+    "modified": false,
+    "package_sha256": "eb8e0296461bd5a17d65d76f7c48d4272764bdaf0cf46570730196a1a26f5b54"
+  },
+  {
+    "original": "outputs/cutnote-android/build.sh",
+    "package": "cutnote-android/build.sh",
+    "purpose": "Android 앱/브릿지/런처 소스",
+    "source_sha256": "559ced8049979c6dd536c2659ed15610986bb3b68eee960921cf149d057b7a23",
+    "modified": true,
+    "package_sha256": "ec4687927b4ffb007e3a9d550765258122fb99c2f7ac19b714e22de4c76f7922"
+  },
+  {
+    "original": "outputs/cutnote-android/.gitignore",
+    "package": "cutnote-android/.gitignore",
+    "purpose": "Android 앱/브릿지/런처 소스",
+    "source_sha256": "319912008f2fb8b874cfd2b511b8dfb55bd1b2e34257eea470aaddbdf054079b",
+    "modified": true,
+    "package_sha256": "a416ca85af93e7a6d8d3c6f35c9a8bf5c5240deeef12944760a5ea9f47eb3c7c"
+  },
+  {
+    "original": "outputs/cutnote-android/launcher.mjs",
+    "package": "cutnote-android/launcher.mjs",
+    "purpose": "Android 앱/브릿지/런처 소스",
+    "source_sha256": "ef56c2bd10ab4cd0f2e24226d9c93fb9185e71e4bc144d589fe542f3f02624f1",
+    "modified": false,
+    "package_sha256": "ef56c2bd10ab4cd0f2e24226d9c93fb9185e71e4bc144d589fe542f3f02624f1"
+  },
+  {
+    "original": "outputs/cutnote-android/PC-컷노트-시작.command",
+    "package": "cutnote-android/PC-컷노트-시작.command",
+    "purpose": "Android 앱/브릿지/런처 소스",
+    "source_sha256": "f12cf14960e86c91e2698bce898317533a0099719c061094133a12dc9d17b637",
+    "modified": true,
+    "package_sha256": "f9bbc8538fb9c942e303b1d8147d01260f22750dad3d1cb3a0aa0cf34a8307d7"
+  },
+  {
+    "original": "outputs/cutnote-android/app/src/main/AndroidManifest.xml",
+    "package": "cutnote-android/app/src/main/AndroidManifest.xml",
+    "purpose": "Android 앱/브릿지/런처 소스",
+    "source_sha256": "3409e63166148c0bd12125a9f8cbeea46029af3d4b57f7f429bf048cb49160e3",
+    "modified": false,
+    "package_sha256": "3409e63166148c0bd12125a9f8cbeea46029af3d4b57f7f429bf048cb49160e3"
+  },
+  {
+    "original": "outputs/cutnote-android/app/src/main/res/values-v27/colors.xml",
+    "package": "cutnote-android/app/src/main/res/values-v27/colors.xml",
+    "purpose": "Android 앱/브릿지/런처 소스",
+    "source_sha256": "d12f114a7a66868ac4b2278a21674ca0b9f93e50d46affc2d8e09c4f208abc8b",
+    "modified": false,
+    "package_sha256": "d12f114a7a66868ac4b2278a21674ca0b9f93e50d46affc2d8e09c4f208abc8b"
+  },
+  {
+    "original": "outputs/cutnote-android/app/src/main/res/drawable/cutnote_dialog_background.xml",
+    "package": "cutnote-android/app/src/main/res/drawable/cutnote_dialog_background.xml",
+    "purpose": "Android 앱/브릿지/런처 소스",
+    "source_sha256": "30c0e60775a2f7d9a218635c4bde2be24f9f9c78986932d0a9ea07d4b4ed7af5",
+    "modified": false,
+    "package_sha256": "30c0e60775a2f7d9a218635c4bde2be24f9f9c78986932d0a9ea07d4b4ed7af5"
+  },
+  {
+    "original": "outputs/cutnote-android/app/src/main/res/drawable/ic_cutnote.xml",
+    "package": "cutnote-android/app/src/main/res/drawable/ic_cutnote.xml",
+    "purpose": "Android 앱/브릿지/런처 소스",
+    "source_sha256": "8dd3cddb6ec0ad49951e32492206f780a348ed3c3c4bed66a0a85423fb9c6d7e",
+    "modified": false,
+    "package_sha256": "8dd3cddb6ec0ad49951e32492206f780a348ed3c3c4bed66a0a85423fb9c6d7e"
+  },
+  {
+    "original": "outputs/cutnote-android/app/src/main/res/color/cutnote_text_secondary.xml",
+    "package": "cutnote-android/app/src/main/res/color/cutnote_text_secondary.xml",
+    "purpose": "Android 앱/브릿지/런처 소스",
+    "source_sha256": "782fb6bb367b5fa875c608ab6933db3d93301d632124561dd72be47610bdcd39",
+    "modified": false,
+    "package_sha256": "782fb6bb367b5fa875c608ab6933db3d93301d632124561dd72be47610bdcd39"
+  },
+  {
+    "original": "outputs/cutnote-android/app/src/main/res/color/cutnote_text_primary.xml",
+    "package": "cutnote-android/app/src/main/res/color/cutnote_text_primary.xml",
+    "purpose": "Android 앱/브릿지/런처 소스",
+    "source_sha256": "e67d5a96408d9edd81ba721fb1acf0a608ef02a22ef99752c432f6b8f1e89f3b",
+    "modified": false,
+    "package_sha256": "e67d5a96408d9edd81ba721fb1acf0a608ef02a22ef99752c432f6b8f1e89f3b"
+  },
+  {
+    "original": "outputs/cutnote-android/app/src/main/res/values/styles.xml",
+    "package": "cutnote-android/app/src/main/res/values/styles.xml",
+    "purpose": "Android 앱/브릿지/런처 소스",
+    "source_sha256": "a008b10b33a3d1c92b6bf07b5f8a82ccc487188c5b504f9c45e4b6598f6622a4",
+    "modified": false,
+    "package_sha256": "a008b10b33a3d1c92b6bf07b5f8a82ccc487188c5b504f9c45e4b6598f6622a4"
+  },
+  {
+    "original": "outputs/cutnote-android/app/src/main/java/app/cutnote/mobile/UploadPolicy.java",
+    "package": "cutnote-android/app/src/main/java/app/cutnote/mobile/UploadPolicy.java",
+    "purpose": "Android 앱/브릿지/런처 소스",
+    "source_sha256": "2b90622a02096c070f957747d9221f3e94cbd44cc8f6b5c87ed327a4049b9294",
+    "modified": false,
+    "package_sha256": "2b90622a02096c070f957747d9221f3e94cbd44cc8f6b5c87ed327a4049b9294"
+  },
+  {
+    "original": "outputs/cutnote-android/app/src/main/java/app/cutnote/mobile/ConnectionProbe.java",
+    "package": "cutnote-android/app/src/main/java/app/cutnote/mobile/ConnectionProbe.java",
+    "purpose": "Android 앱/브릿지/런처 소스",
+    "source_sha256": "1027ffb95e2d8d89d625a0493b4b018cd1c56b30bd7d13b05ae4ca85ccb8c8a2",
+    "modified": false,
+    "package_sha256": "1027ffb95e2d8d89d625a0493b4b018cd1c56b30bd7d13b05ae4ca85ccb8c8a2"
+  },
+  {
+    "original": "outputs/cutnote-android/app/src/main/java/app/cutnote/mobile/FileAccess.java",
+    "package": "cutnote-android/app/src/main/java/app/cutnote/mobile/FileAccess.java",
+    "purpose": "Android 앱/브릿지/런처 소스",
+    "source_sha256": "dfec1c2d2833524bc4cb285e39ecc6af673fe63db74f913435aa548a6c8df50c",
+    "modified": false,
+    "package_sha256": "dfec1c2d2833524bc4cb285e39ecc6af673fe63db74f913435aa548a6c8df50c"
+  },
+  {
+    "original": "outputs/cutnote-android/app/src/main/java/app/cutnote/mobile/MainActivity.java",
+    "package": "cutnote-android/app/src/main/java/app/cutnote/mobile/MainActivity.java",
+    "purpose": "Android 앱/브릿지/런처 소스",
+    "source_sha256": "3ed83a4936cfb97468fda713f90dd970d8c0d4f39a69cb6651ef81f75a9d7a9c",
+    "modified": false,
+    "package_sha256": "3ed83a4936cfb97468fda713f90dd970d8c0d4f39a69cb6651ef81f75a9d7a9c"
+  },
+  {
+    "original": "outputs/cutnote-android/app/src/main/java/app/cutnote/mobile/DownloadPolicy.java",
+    "package": "cutnote-android/app/src/main/java/app/cutnote/mobile/DownloadPolicy.java",
+    "purpose": "Android 앱/브릿지/런처 소스",
+    "source_sha256": "0222b026e7ab723239823176517a00baecf090984209f456ce05d36c6765df73",
+    "modified": false,
+    "package_sha256": "0222b026e7ab723239823176517a00baecf090984209f456ce05d36c6765df73"
+  },
+  {
+    "original": "outputs/cutnote-android/app/src/main/java/app/cutnote/mobile/DownloadTransfer.java",
+    "package": "cutnote-android/app/src/main/java/app/cutnote/mobile/DownloadTransfer.java",
+    "purpose": "Android 앱/브릿지/런처 소스",
+    "source_sha256": "56bf67f26cb97e068926c8ccf0fd034806415e401496c11f28c79306ecf344ca",
+    "modified": false,
+    "package_sha256": "56bf67f26cb97e068926c8ccf0fd034806415e401496c11f28c79306ecf344ca"
+  },
+  {
+    "original": "outputs/cutnote-android/app/src/main/java/app/cutnote/mobile/EntryPolicy.java",
+    "package": "cutnote-android/app/src/main/java/app/cutnote/mobile/EntryPolicy.java",
+    "purpose": "Android 앱/브릿지/런처 소스",
+    "source_sha256": "ffa2168354afde4f0e340cf4161cd1d034dbf3cff696448a29444077219f88b3",
+    "modified": false,
+    "package_sha256": "ffa2168354afde4f0e340cf4161cd1d034dbf3cff696448a29444077219f88b3"
+  },
+  {
+    "original": "outputs/cutnote-android/app/src/main/java/app/cutnote/mobile/ShareRequest.java",
+    "package": "cutnote-android/app/src/main/java/app/cutnote/mobile/ShareRequest.java",
+    "purpose": "Android 앱/브릿지/런처 소스",
+    "source_sha256": "f2d0e02898bb379cdd745dd3403df26b4508035b7fca5999043da9eb6ebee58e",
+    "modified": false,
+    "package_sha256": "f2d0e02898bb379cdd745dd3403df26b4508035b7fca5999043da9eb6ebee58e"
+  },
+  {
+    "original": "outputs/cutnote-android/app/src/main/java/app/cutnote/mobile/LinkPolicy.java",
+    "package": "cutnote-android/app/src/main/java/app/cutnote/mobile/LinkPolicy.java",
+    "purpose": "Android 앱/브릿지/런처 소스",
+    "source_sha256": "8cbe6f69e8b9d05ad7569b7a834f0ab9477fe7f41ce2ef51ce3df1cbd89ef0bf",
+    "modified": false,
+    "package_sha256": "8cbe6f69e8b9d05ad7569b7a834f0ab9477fe7f41ce2ef51ce3df1cbd89ef0bf"
+  },
+  {
+    "original": "outputs/cutnote-android/bridge/start.command",
+    "package": "cutnote-android/bridge/start.command",
+    "purpose": "Android 앱/브릿지/런처 소스",
+    "source_sha256": "343775cae0a0930f4484372c92c6bce396b2e2baa3a649bbbbe6e8551e639f9b",
+    "modified": true,
+    "package_sha256": "56e0e3486dbb5ab4385c822e6ba098b871c6bc7e516d72401c2a8905a7ddd3a6"
+  },
+  {
+    "original": "outputs/cutnote-android/bridge/server.mjs",
+    "package": "cutnote-android/bridge/server.mjs",
+    "purpose": "Android 앱/브릿지/런처 소스",
+    "source_sha256": "2dc86db3bae144dfdef2392a53c9054515de9eefec7462e3c824c2d0a7a2d69b",
+    "modified": false,
+    "package_sha256": "2dc86db3bae144dfdef2392a53c9054515de9eefec7462e3c824c2d0a7a2d69b"
+  },
+  {
+    "original": "outputs/cutnote-android/bridge/server.test.mjs",
+    "package": "cutnote-android/bridge/server.test.mjs",
+    "purpose": "Android 앱/브릿지/런처 소스",
+    "source_sha256": "520ec45d75991fd122ba0cfffc3bb49adc99c68f87633c72afc57d6c931bdd3c",
+    "modified": false,
+    "package_sha256": "520ec45d75991fd122ba0cfffc3bb49adc99c68f87633c72afc57d6c931bdd3c"
+  },
+  {
+    "original": "outputs/cutnote-android/tests/DownloadFormatsTest.java",
+    "package": "cutnote-android/tests/DownloadFormatsTest.java",
+    "purpose": "Android 앱/브릿지/런처 소스",
+    "source_sha256": "cb618aa9386f83b33d562b9dd37433c5b95137ae9e5b7b0846dda436fa36bae7",
+    "modified": false,
+    "package_sha256": "cb618aa9386f83b33d562b9dd37433c5b95137ae9e5b7b0846dda436fa36bae7"
+  },
+  {
+    "original": "outputs/cutnote-android/tests/EntryPolicyTest.java",
+    "package": "cutnote-android/tests/EntryPolicyTest.java",
+    "purpose": "Android 앱/브릿지/런처 소스",
+    "source_sha256": "e798a9cd036b1ce183c49097c36870f943786a530b8e25200dbf626188aead93",
+    "modified": false,
+    "package_sha256": "e798a9cd036b1ce183c49097c36870f943786a530b8e25200dbf626188aead93"
+  },
+  {
+    "original": "outputs/cutnote-android/tests/ShareRequestTest.java",
+    "package": "cutnote-android/tests/ShareRequestTest.java",
+    "purpose": "Android 앱/브릿지/런처 소스",
+    "source_sha256": "6b994fe43a472d7f43e8a724a168b6de2c606d4bfe0d54fac18237572bb9a967",
+    "modified": false,
+    "package_sha256": "6b994fe43a472d7f43e8a724a168b6de2c606d4bfe0d54fac18237572bb9a967"
+  },
+  {
+    "original": "outputs/cutnote-android/tests/LinkPolicyTest.java",
+    "package": "cutnote-android/tests/LinkPolicyTest.java",
+    "purpose": "Android 앱/브릿지/런처 소스",
+    "source_sha256": "590ad9e28dc7426d4c6c4d31bbdd25e74d54a7220ba584b7813643ab3f168ffc",
+    "modified": false,
+    "package_sha256": "590ad9e28dc7426d4c6c4d31bbdd25e74d54a7220ba584b7813643ab3f168ffc"
+  },
+  {
+    "original": "outputs/cutnote-android/tests/ConnectionProbeTest.java",
+    "package": "cutnote-android/tests/ConnectionProbeTest.java",
+    "purpose": "Android 앱/브릿지/런처 소스",
+    "source_sha256": "995bd4afff359d74beaa9de9eb8110a54c55effc03a74f53020bdb8c02e15255",
+    "modified": false,
+    "package_sha256": "995bd4afff359d74beaa9de9eb8110a54c55effc03a74f53020bdb8c02e15255"
+  },
+  {
+    "original": "outputs/cutnote-android/tests/MediaTransferTest.java",
+    "package": "cutnote-android/tests/MediaTransferTest.java",
+    "purpose": "Android 앱/브릿지/런처 소스",
+    "source_sha256": "c10703ffe6b33be23061044ad335c1fe4563159f1a803e65b7f8234ec7a271cb",
+    "modified": false,
+    "package_sha256": "c10703ffe6b33be23061044ad335c1fe4563159f1a803e65b7f8234ec7a271cb"
+  },
+  {
+    "original": "outputs/cutnote-logo-kit/cutnote-lockup-dark.svg",
+    "package": "assets/logos/cutnote-lockup-dark.svg",
+    "purpose": "브랜드 벡터 리소스; 워드마크 글꼴 권리 확인 필요",
+    "source_sha256": "7ea0b32d72a89e6ce261ad880b37896b584d616dab0053b24fd4d9c9bac03d18",
+    "modified": false,
+    "package_sha256": "7ea0b32d72a89e6ce261ad880b37896b584d616dab0053b24fd4d9c9bac03d18"
+  },
+  {
+    "original": "outputs/cutnote-logo-kit/cutnote-web-icon.svg",
+    "package": "assets/logos/cutnote-web-icon.svg",
+    "purpose": "브랜드 벡터 리소스; 워드마크 글꼴 권리 확인 필요",
+    "source_sha256": "ab9ef68457791797eb78479d31e444962be7b5d63936bd869267f4f7ca305e40",
+    "modified": false,
+    "package_sha256": "ab9ef68457791797eb78479d31e444962be7b5d63936bd869267f4f7ca305e40"
+  },
+  {
+    "original": "outputs/cutnote-logo-kit/cutnote-lockup-white.svg",
+    "package": "assets/logos/cutnote-lockup-white.svg",
+    "purpose": "브랜드 벡터 리소스; 워드마크 글꼴 권리 확인 필요",
+    "source_sha256": "5f51f959efabee78491b9d26303fa7039d90fda1ee1b9350914fc2ab8e964aef",
+    "modified": false,
+    "package_sha256": "5f51f959efabee78491b9d26303fa7039d90fda1ee1b9350914fc2ab8e964aef"
+  },
+  {
+    "original": "outputs/cutnote-logo-kit/cutnote-app-icon.svg",
+    "package": "assets/logos/cutnote-app-icon.svg",
+    "purpose": "브랜드 벡터 리소스; 워드마크 글꼴 권리 확인 필요",
+    "source_sha256": "a4d74fe9655088b88b64ce8761929d279c47cc66aec17aa725e81e04fd581126",
+    "modified": false,
+    "package_sha256": "a4d74fe9655088b88b64ce8761929d279c47cc66aec17aa725e81e04fd581126"
+  },
+  {
+    "original": "work/export-cutnote-logo.py",
+    "package": "reference/design/export-cutnote-logo.py",
+    "purpose": "선택적 디자인 제작 소스; 기존 작업폴더 구조 전제, 실행 전 조정 필요",
+    "source_sha256": "6ee51096597d810d72d2f912af6e9b7610885ee05827cb872f58b19cf6be68c2",
+    "modified": false,
+    "package_sha256": "6ee51096597d810d72d2f912af6e9b7610885ee05827cb872f58b19cf6be68c2"
+  },
+  {
+    "original": "work/logo-outline.swift",
+    "package": "reference/design/logo-outline.swift",
+    "purpose": "선택적 디자인 제작 소스; 기존 작업폴더 구조 전제, 실행 전 조정 필요",
+    "source_sha256": "2879165e02f672fa9c126b90e35b97138f49525e5ea5a5065fd6f06d87ee2852",
+    "modified": false,
+    "package_sha256": "2879165e02f672fa9c126b90e35b97138f49525e5ea5a5065fd6f06d87ee2852"
+  },
+  {
+    "original": "work/image-search-review-tests.ts",
+    "package": "tests/web/image-search-review-tests.ts",
+    "purpose": "오프라인 회귀 테스트 / Cloudflare mock",
+    "source_sha256": "f2417c5c129b659bd817fcc02b0b877e6b6f9f92bd4bf043705065af28f2f603",
+    "modified": true,
+    "package_sha256": "b4bbe5417c4b48c334be39138dd213f6668aa27fb618a4d70f3ba30cafef16e0"
+  },
+  {
+    "original": "work/segment-media-review-tests.ts",
+    "package": "tests/web/segment-media-review-tests.ts",
+    "purpose": "오프라인 회귀 테스트 / Cloudflare mock",
+    "source_sha256": "e32ec799af8a54044e7644cc85f60dff7e4bfc77701d6ab48cd7a1b9a87cc595",
+    "modified": true,
+    "package_sha256": "3abdba565923a1e3011781c436ca4618f1d4f1911b99b657425ede0592dafa01"
+  },
+  {
+    "original": "work/segment-tagging-current-review-tests.ts",
+    "package": "tests/web/segment-tagging-current-review-tests.ts",
+    "purpose": "오프라인 회귀 테스트 / Cloudflare mock",
+    "source_sha256": "31f56f403cf32c46a37ac552c1eb912750feb755c25bd397e1d13dfb93d06f64",
+    "modified": true,
+    "package_sha256": "bc75b9dff537783e5130c285d3c509670b00c8f8d75849623b1aa6e5feb97e8d"
+  },
+  {
+    "original": "work/full-video-tests.ts",
+    "package": "tests/web/full-video-tests.ts",
+    "purpose": "오프라인 회귀 테스트 / Cloudflare mock",
+    "source_sha256": "de2259b02f2f5b0d16dbbe05a35db1a9f5a7874dc5ada4c75e9009356bd000bd",
+    "modified": true,
+    "package_sha256": "e14c095be567268fce05c72ff1a086780a670db0e70dea5e8533621dfd7ba6df"
+  },
+  {
+    "original": "work/segment-independent-review-tests.ts",
+    "package": "tests/web/segment-independent-review-tests.ts",
+    "purpose": "오프라인 회귀 테스트 / Cloudflare mock",
+    "source_sha256": "fa448bff352f0d960038949d79c7c59686ddfca5ab4dc33e7edab7cbead0b0da",
+    "modified": true,
+    "package_sha256": "d9c9893020ec3f4d6f95a3a713a94853ac140edce4517f9e215ee770620b5885"
+  },
+  {
+    "original": "work/discovery-order-check.ts",
+    "package": "tests/web/discovery-order-check.ts",
+    "purpose": "오프라인 회귀 테스트 / Cloudflare mock",
+    "source_sha256": "1015a12b506cec0cb1cd91fcbb1ffe5135e83b157feeb743b82a276810a59328",
+    "modified": true,
+    "package_sha256": "68509a9fefc15eae4bc90ea887f7b0b8b43b4415cd5945b1b3c2343c6a05ffdd"
+  },
+  {
+    "original": "work/segment-retag-parser-review-tests.ts",
+    "package": "tests/web/segment-retag-parser-review-tests.ts",
+    "purpose": "오프라인 회귀 테스트 / Cloudflare mock",
+    "source_sha256": "5366a3f5083d9e27cf900da70aa4f27553c8bc32754ed3564e024757307b5e36",
+    "modified": true,
+    "package_sha256": "0570d3a2dfd5194b91d76903cab8c88c3a3c389ea68de34e6974881e65479297"
+  },
+  {
+    "original": "work/favorites-review-tests.ts",
+    "package": "tests/web/favorites-review-tests.ts",
+    "purpose": "오프라인 회귀 테스트 / Cloudflare mock",
+    "source_sha256": "c0fd57a19be9bddb7e6301f5d81288e5f2380adfd7a5d834e458dcb4bdc235de",
+    "modified": true,
+    "package_sha256": "068f30f72fa412b3274a06414531ffe5fede3bcb90dbaad2da2d1689aa5ad705"
+  },
+  {
+    "original": "work/recommendation-review-tests.ts",
+    "package": "tests/web/recommendation-review-tests.ts",
+    "purpose": "오프라인 회귀 테스트 / Cloudflare mock",
+    "source_sha256": "07cfd9417d8d1935065922d0b57df7245a95d632cdcda3d138d75dd961491894",
+    "modified": true,
+    "package_sha256": "56eabc4efe22dd4d2d7cf929bc83588e9c115616be1901ce44480e98c2782da9"
+  },
+  {
+    "original": "work/sync-polling-tests.mjs",
+    "package": "tests/web/sync-polling-tests.mjs",
+    "purpose": "오프라인 회귀 테스트 / Cloudflare mock",
+    "source_sha256": "bb35d56bb3a4d7a516d824e3703eac97cf1f7db7314ead476a91982aae4f31c1",
+    "modified": true,
+    "package_sha256": "9a966bbcb9488607019696a5e83ea4105d4e8c9a3f5898f0068bfc1b9813545e"
+  },
+  {
+    "original": "work/mock-cloudflare.ts",
+    "package": "tests/web/mock-cloudflare.ts",
+    "purpose": "오프라인 회귀 테스트 / Cloudflare mock",
+    "source_sha256": "7e870470870287a4623edf570059b1d396abc9b1128ad9311b07dbb05a6eb171",
+    "modified": false,
+    "package_sha256": "7e870470870287a4623edf570059b1d396abc9b1128ad9311b07dbb05a6eb171"
+  }
+]

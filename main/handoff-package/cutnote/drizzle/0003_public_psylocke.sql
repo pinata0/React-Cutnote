@@ -1,0 +1,1 @@
+ALTER TABLE `clips` ADD `segments` text DEFAULT '[]' NOT NULL;

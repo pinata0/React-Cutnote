@@ -1,0 +1,8 @@
+import {env} from 'cloudflare:workers';
+import {database} from '@/lib/server';
+import {openKey,sealKey} from './crypto';
+export type Provider='openai'|'gemini';
+export const models={openai:'gpt-6-sol',gemini:'gemini-3.8-flash'};
+export async function aiStatus(){const {results}=await database().prepare("SELECT id FROM ai_settings WHERE id IN ('openai','gemini') ORDER BY updated_at DESC").all<{id:Provider}>();const provider=results[0]?.id||(env.OPENAI_API_KEY?'openai':env.GEMINI_API_KEY?'gemini':'openai');const providers={openai:Boolean(env.OPENAI_API_KEY||results.some(row=>row.id==='openai')),gemini:Boolean(env.GEMINI_API_KEY||results.some(row=>row.id==='gemini'))};return{configured:providers.openai||providers.gemini,canConnect:Boolean(env.CUTNOTE_SECRET_KEY),provider,model:models[provider],providers};}
+export async function apiKey(provider:Provider){const row=await database().prepare('SELECT encrypted_key FROM ai_settings WHERE id=?').bind(provider).first<{encrypted_key:string}>();if(row){if(!env.CUTNOTE_SECRET_KEY)throw new Error('AI 연결 정보를 열지 못했어요. 다시 연결해주세요.');return openKey(row.encrypted_key,env.CUTNOTE_SECRET_KEY);}return(provider==='openai'?env.OPENAI_API_KEY:env.GEMINI_API_KEY)||null;}
+export async function saveKey(provider:Provider,key:string){if(!env.CUTNOTE_SECRET_KEY)throw new Error('AI 연결 저장소가 아직 준비되지 않았어요.');const encrypted=await sealKey(key,env.CUTNOTE_SECRET_KEY);await database().prepare('INSERT INTO ai_settings(id,encrypted_key,updated_at) VALUES(?,?,?) ON CONFLICT(id) DO UPDATE SET encrypted_key=excluded.encrypted_key,updated_at=excluded.updated_at').bind(provider,encrypted,new Date().toISOString()).run();}

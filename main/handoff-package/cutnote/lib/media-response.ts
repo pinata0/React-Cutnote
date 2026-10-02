@@ -1,0 +1,10 @@
+import {bucket,json} from './server';
+export function attachmentName(title:string,mime:string){const extension=mime.includes('webm')?'webm':mime.includes('quicktime')?'mov':mime.includes('ogg')?'ogg':'mp4';return `attachment; filename="cutnote.${extension}"; filename*=UTF-8''${encodeURIComponent(title.slice(0,100).replace(/[\\/:*?"<>|\u0000-\u001f]/g,'_')+'.'+extension).replace(/['()*]/g,c=>'%'+c.charCodeAt(0).toString(16))}`;}
+export async function mediaResponse(req:Request,key:string,title:string){
+ const store=bucket(),head=await store.head(key);if(!head)return json({error:'파일을 찾지 못했어요.'},404);
+ const mime=head.httpMetadata?.contentType||'application/octet-stream';const headers=new Headers({'Content-Type':mime,'Accept-Ranges':'bytes','Cache-Control':'private, no-cache','X-Content-Type-Options':'nosniff'});
+ if(new URL(req.url).searchParams.get('download')==='1')headers.set('Content-Disposition',attachmentName(title,mime));
+ let start=0,end=head.size-1,status=200;const range=req.headers.get('range');
+ if(range){const match=/^bytes=(\d*)-(\d*)$/.exec(range);if(!match||(!match[1]&&!match[2]))return new Response(null,{status:416,headers:{'Content-Range':`bytes */${head.size}`}});if(match[1]){start=Number(match[1]);end=match[2]?Math.min(Number(match[2]),end):end;}else{start=Math.max(0,head.size-Number(match[2]));}if(!Number.isSafeInteger(start)||!Number.isSafeInteger(end)||start>end||start>=head.size)return new Response(null,{status:416,headers:{'Content-Range':`bytes */${head.size}`}});status=206;headers.set('Content-Range',`bytes ${start}-${end}/${head.size}`);}
+ headers.set('Content-Length',String(end-start+1));if(req.method==='HEAD')return new Response(null,{status,headers});const obj=await store.get(key,status===206?{range:{offset:start,length:end-start+1}}:undefined);if(!obj)return json({error:'파일을 찾지 못했어요.'},404);if(typeof FixedLengthStream!=='undefined'){const {readable,writable}=new FixedLengthStream(end-start+1);void obj.body.pipeTo(writable).catch(()=>{});return new Response(readable,{status,headers});}return new Response(obj.body,{status,headers});
+}

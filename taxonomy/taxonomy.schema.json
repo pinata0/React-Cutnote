@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kakao-ralph.local/schemas/taxonomy.schema.json",
+  "title": "Kakao Ralph Video Effect Taxonomy",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "source_document", "description", "namespaces", "tags", "relations"],
+  "properties": {
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "source_document": { "type": "string", "minLength": 1 },
+    "description": { "type": "string", "minLength": 1 },
+    "namespaces": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "display_name", "root_id", "default_observable", "description"],
+        "properties": {
+          "id": { "$ref": "#/$defs/identifier" },
+          "display_name": { "type": "string", "minLength": 1 },
+          "root_id": { "$ref": "#/$defs/canonicalId" },
+          "default_observable": { "type": "boolean" },
+          "description": { "type": "string" }
+        }
+      }
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "namespace", "display_name", "aliases", "parent", "observable", "auto_accept_allowed"],
+        "properties": {
+          "id": { "$ref": "#/$defs/canonicalId" },
+          "namespace": { "$ref": "#/$defs/identifier" },
+          "display_name": { "type": "string", "minLength": 1 },
+          "aliases": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": { "type": "string", "minLength": 1 }
+          },
+          "parent": { "$ref": "#/$defs/canonicalId" },
+          "observable": { "type": "boolean" },
+          "auto_accept_allowed": { "type": "boolean" }
+        }
+      }
+    },
+    "relations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["source_tag_id", "target_tag_id", "relation_type"],
+        "properties": {
+          "source_tag_id": { "$ref": "#/$defs/canonicalId" },
+          "target_tag_id": { "$ref": "#/$defs/canonicalId" },
+          "relation_type": {
+            "type": "string",
+            "enum": ["related_to", "often_with", "conflicts_with"]
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "identifier": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+    },
+    "canonicalId": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*\\.[a-z0-9_]+$"
+    }
+  }
+}

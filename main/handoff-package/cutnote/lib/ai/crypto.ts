@@ -1,0 +1,5 @@
+const encode=(bytes:Uint8Array)=>btoa(String.fromCharCode(...bytes));
+const decode=(value:string)=>Uint8Array.from(atob(value),c=>c.charCodeAt(0));
+async function encryptionKey(secret:string){const bytes=decode(secret);if(bytes.length!==32)throw new Error('Encryption key unavailable');return crypto.subtle.importKey('raw',bytes,{name:'AES-GCM'},false,['encrypt','decrypt']);}
+export async function sealKey(value:string,secret:string){const iv=crypto.getRandomValues(new Uint8Array(12));const ciphertext=await crypto.subtle.encrypt({name:'AES-GCM',iv,additionalData:new TextEncoder().encode('cutnote-gemini-v1')},await encryptionKey(secret),new TextEncoder().encode(value));return JSON.stringify({v:1,iv:encode(iv),data:encode(new Uint8Array(ciphertext))});}
+export async function openKey(value:string,secret:string){const item=JSON.parse(value);if(item.v!==1)throw new Error('Unsupported key format');const plain=await crypto.subtle.decrypt({name:'AES-GCM',iv:decode(item.iv),additionalData:new TextEncoder().encode('cutnote-gemini-v1')},await encryptionKey(secret),decode(item.data));return new TextDecoder().decode(plain);}

@@ -1,0 +1,22 @@
+import {classifyColor,type PixelFrame} from './color';
+import type {AnalysisProgress,AnalysisReport} from './types';
+const aborted=()=>new DOMException('분석을 취소했어요.','AbortError');
+function waitVideo(video:HTMLVideoElement,event:'loadedmetadata'|'seeked',signal:AbortSignal,run:()=>void){return new Promise<void>((resolve,reject)=>{const done=(e?:unknown)=>{clearTimeout(timer);video.removeEventListener(event,ok);video.removeEventListener('error',fail);signal.removeEventListener('abort',cancel);if(e)reject(e);else resolve();};const ok=()=>done();const fail=()=>done(new Error('브라우저에서 영상을 읽지 못했어요. MP4(H.264) 또는 WebM 파일로 다시 시도해주세요.'));const cancel=()=>done(aborted());const timer=setTimeout(()=>done(new Error('영상 장면을 읽는 데 시간이 너무 오래 걸려요. 파일을 확인해주세요.')),20000);video.addEventListener(event,ok,{once:true});video.addEventListener('error',fail,{once:true});signal.addEventListener('abort',cancel,{once:true});if(signal.aborted){cancel();return;}run();});}
+export async function extractFrames(source:Blob|string,signal:AbortSignal,onProgress:(p:AnalysisProgress)=>void):Promise<PixelFrame[]>{
+ const video=document.createElement('video');video.preload='auto';video.muted=true;video.playsInline=true;const url=typeof source==='string'?source:URL.createObjectURL(source);
+ try{onProgress({message:'영상에서 대표 장면을 고르고 있어요.',percent:3});await waitVideo(video,'loadedmetadata',signal,()=>{video.src=url;video.load();});if(!Number.isFinite(video.duration)||video.duration<=0||!video.videoWidth)throw new Error('분석할 수 있는 영상 길이를 확인하지 못했어요.');
+ const scale=Math.min(1,384/Math.max(video.videoWidth,video.videoHeight));const canvas=document.createElement('canvas');canvas.width=Math.max(1,Math.round(video.videoWidth*scale));canvas.height=Math.max(1,Math.round(video.videoHeight*scale));const ctx=canvas.getContext('2d',{willReadFrequently:true});if(!ctx)throw new Error('이 브라우저에서는 영상 분석을 지원하지 않아요.');const frames:PixelFrame[]=[];
+ for(const ratio of [.12,.38,.64,.88]){if(signal.aborted)throw aborted();const time=Math.min(Math.max(.001,video.duration-.02),Math.max(.001,video.duration*ratio));if(Math.abs(video.currentTime-time)>.0001)await waitVideo(video,'seeked',signal,()=>{video.currentTime=time;});ctx.drawImage(video,0,0,canvas.width,canvas.height);const image=ctx.getImageData(0,0,canvas.width,canvas.height);frames.push({data:image.data,width:image.width,height:image.height});onProgress({message:`대표 장면 ${frames.length}/4 추출 중`,percent:3+frames.length*3});}return frames;
+ }finally{video.pause();video.removeAttribute('src');video.load();if(typeof source!=='string')URL.revokeObjectURL(url);}
+}
+export async function analyzeVideo(source:Blob|string,signal:AbortSignal,onProgress:(p:AnalysisProgress)=>void,onColor:(tags:string[])=>void):Promise<AnalysisReport>{
+ const frames=await extractFrames(source,signal,onProgress);return analyzeFrames(frames,signal,onProgress,onColor);
+}
+export async function analyzeFrames(frames:PixelFrame[],signal:AbortSignal,onProgress:(p:AnalysisProgress)=>void,onColor:(tags:string[])=>void,basis:'video'|'storyboard'|'preview'='video'):Promise<AnalysisReport>{
+ const color=classifyColor(frames);if(signal.aborted)throw aborted();onColor(color);
+ return new Promise((resolve,reject)=>{const worker=new Worker('/analysis-worker.js',{type:'module'});const timer=setTimeout(()=>finish(new Error('AI 모델을 불러오지 못했어요. 인터넷 연결을 확인한 뒤 다시 시도해주세요.')),240000);const cancel=()=>finish(aborted());let settled=false;
+ const finish=(error?:Error,result?:AnalysisReport)=>{if(settled)return;settled=true;clearTimeout(timer);signal.removeEventListener('abort',cancel);worker.terminate();if(error)reject(error);else resolve(result!);};signal.addEventListener('abort',cancel,{once:true});if(signal.aborted){cancel();return;}
+ worker.onmessage=(event)=>{const m=event.data;if(m.type==='progress')onProgress({message:m.message,percent:m.percent});else if(m.type==='error'){console.error('Automatic classification failed:',m.detail);finish(new Error(m.message));}else if(m.type==='result')finish(undefined,{engine:'mobileclip-s0-v1',frameCount:frames.length,basis,analyzedAt:new Date().toISOString(),suggestedTags:{color,shot:m.shot,effect:basis==='preview'?['효과 확인 필요']:m.effect},notes:[...(basis==='preview'?['미리보기 이미지 1장만 분석했어요. 영상 전체의 색감·구도·효과를 대표하지 않을 수 있어요.']:basis==='storyboard'?['유튜브가 제공한 서로 다른 미리보기 장면을 분석했어요.']:[]),...m.notes]});};worker.onerror=()=>finish(new Error('AI 분석을 시작하지 못했어요. 네트워크 연결을 확인하고 다시 시도해주세요.'));
+ worker.postMessage({frames},frames.map(f=>f.data.buffer));
+ });
+}

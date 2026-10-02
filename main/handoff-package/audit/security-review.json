@@ -1,0 +1,35 @@
+{
+  "result": "2026-10-02 publication candidate and lint recheck passed; see root SECURITY_REMEDIATION.md for scope and residual risks.",
+  "scope": "Root publication candidates plus temporary-index blobs; known credentials read from excluded local sources only in memory for duplicate matching. PDF visually reviewed and excluded; two PNG logos visually reviewed and hash-pinned.",
+  "checks": [
+    "No actual .env/.dev.vars, connection state, .git directory, database, media library, certificate, keystore, APK or dependency cache files",
+    "OpenAI/Gemini/GitHub/AWS/private-key pattern scan",
+    "Credential assignment review: only variables, blank example settings, generated runtime values and explicit synthetic test fixtures",
+    "No original personal home path or owner identifier found",
+    "889 npm resolved URLs have no userinfo, query or fragment",
+    "5 SVG resources contain no remote references or embedded images/fonts/scripts",
+    "Root .env.example contains only three empty application variable assignments"
+  ],
+  "allowed_nonsecrets": [
+    "Synthetic test keys and pairing codes explicitly named fixture/not-real",
+    "Loopback/private IPs and email-like strings used as synthetic tests or address entry examples",
+    "SHA-256 source hashes and npm integrity metadata",
+    "Third-party copyright holders preserved in required license notices"
+  ],
+  "limitations": "Pattern/static review is not a formal proof. Review new changes before publishing; license clearance is separate.",
+  "original_files_preserved": "20 sensitive original-file hashes verified unchanged; edited public application source intentionally differs from archival copies. Actual root index absent and unchanged; no commit/push/history cleanup.",
+  "prior_review": {
+    "result": "No actual credentials or private personal data found in the reviewed package.",
+    "scope": "All package source/config/data/resources/docs. Original .env/.dev.vars/pairing/keystore/database contents were never read or copied.",
+    "original_files_preserved": "251 source/resource hashes and 4 Git metadata hashes match baseline; Git clean."
+  },
+  "recheck": {
+    "lint": "0 errors, 0 warnings",
+    "typescript": "pass",
+    "offline_web_suites": "11/11",
+    "production_build": "pass",
+    "secret_scanner_tests": "4/4",
+    "service_credential_rotation": "required separately; not performed",
+    "limitations": "No full interactive browser/device regression, paid AI requests, remote history audit or credential rotation verification."
+  }
+}
