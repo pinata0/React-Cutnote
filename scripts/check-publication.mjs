@@ -58,14 +58,20 @@ for (const path of candidates) {
   }
 }
 
+// Validate the selected manifest: the real index may still contain the old layout
+// while an unstaged move is being reviewed. Never mix index paths with disk paths.
+const legacyIndex = indexOnly && !candidates.includes('apps/web/package-lock.json')
+  && candidates.includes('main/handoff-package/cutnote/package-lock.json');
+const webRoot = legacyIndex ? 'main/handoff-package/cutnote' : 'apps/web';
+const environmentExample = legacyIndex ? 'main/handoff-package/.env.example' : 'apps/.env.example';
 // Verify essential source is retained; never ignore every directory named build.
 for (const path of [
-  'main/handoff-package/cutnote/package-lock.json',
-  'main/handoff-package/cutnote/build/sites-worker.ts',
-  'main/handoff-package/cutnote/drizzle/0000_steady_wendell_rand.sql',
-  'main/handoff-package/.env.example',
+  `${webRoot}/package-lock.json`,
+  `${webRoot}/build/sites-worker.ts`,
+  `${webRoot}/drizzle/0000_steady_wendell_rand.sql`,
+  environmentExample,
 ]) {
-  if (!existsSync(resolve(root, path))) failures.push('Essential source missing: ' + path);
+  if (!indexOnly && !existsSync(resolve(root, path))) failures.push('Essential source missing: ' + path);
   if (!candidates.includes(path)) failures.push('Essential source absent from candidate manifest: ' + path);
   if (spawnSync('git', ['check-ignore', '-q', path], { cwd: root }).status === 0) {
     failures.push('Essential source unexpectedly ignored: ' + path);

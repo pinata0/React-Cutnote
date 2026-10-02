@@ -1,4 +1,4 @@
-# Public application source lives in /main/handoff-package/.
+# Public application source lives in /apps/ and /tests/.
 # Preserve original checkouts, personal state, backups and tooling locally.
 /main/outputs/
 /main/work/
@@ -77,7 +77,7 @@ next-env.d.ts
 *.apk
 *.aab
 *.idsig
-/main/handoff-package/cutnote-android/build/
+/apps/android/build/
 
 # macOS metadata, including metadata copies of ignored private directories
 __MACOSX/

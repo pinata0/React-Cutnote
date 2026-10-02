@@ -1,9 +1,9 @@
 {
-  "material/logo_black.png": {
+  "assets/branding/logo_black.png": {
     "sha256": "0f2ffdc6d15c124c6c1d2f89999d2f35796d9078d0f78db7fcf37ad6df3d6233",
     "review": "2026-10-02: full image visually inspected; logo and wordmark only; no personal or authentication information visible."
   },
-  "material/logo_white.png": {
+  "assets/branding/logo_white.png": {
     "sha256": "55a76de372166f8d22afff86554d0287f2e5e22980faeb4fa1182af0d9a53644",
     "review": "2026-10-02: full image visually inspected; logo and wordmark only; no personal or authentication information visible."
   }

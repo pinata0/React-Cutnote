@@ -1,3 +1,3 @@
 # 라이선스 확인 사항
 
-현재 안내는 [통합 기술문서](../../docs/licenses.md)에서 관리합니다.
+현재 안내는 [통합 기술문서](../../docs/engineering/licenses.md)에서 관리합니다.

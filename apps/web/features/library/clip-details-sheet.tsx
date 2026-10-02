@@ -1,0 +1,22 @@
+'use client';
+import NextImage from 'next/image';
+import { SegmentLibrary } from '../segments/segment-library';
+
+import { Sheet,SheetContent,SheetDescription,SheetTitle } from '@/components/ui/sheet';
+import { displayTags,sourceName } from '@/lib/clips';
+import { videoProvider } from '@/lib/links/provider';
+import { emptyTagging } from '@/lib/tagging';
+import { ExternalLink,Link2,Pencil,Sparkles,Trash2 } from 'lucide-react';
+import { SourcePlayer } from '../../components/media/source-player';
+import { VideoPlayer } from '../../components/media/video-player';
+import { AnalysisHistory,TagReview } from '../tagging/tag-review';
+import { FavoriteButton } from './favorite-button';
+
+import { date,groups } from './library-presentation';
+import type { LibraryWorkspaceState } from './use-library-workspace';
+type Props=Pick<LibraryWorkspaceState,'favoriteBusy'|'selected'|'setSelected'|'busy'|'setConfirmDelete'|'playback'|'setPlayback'|'changeClip'|'toggle'|'toggleFavorite'|'playSegment'|'begin'|'playEvidence'|'reviewSelected'|'togglePlaybackLoop'>;
+export function ClipDetailsSheet({favoriteBusy,selected,setSelected,busy,setConfirmDelete,playback,setPlayback,changeClip,toggle,toggleFavorite,playSegment,begin,playEvidence,reviewSelected,togglePlaybackLoop}:Props){
+ return <Sheet open={Boolean(selected)} onOpenChange={next=>{if(!next&&!busy){setPlayback(null);setSelected(null);}}}><SheetContent className="details-sheet">{selected&&<><p className="eyebrow" style={{marginBottom:0}}>REFERENCE DETAIL / {sourceName(selected)}</p><SheetTitle className="detail-title">{selected.title}</SheetTitle><SheetDescription>{date(selected.createdAt)} 등록</SheetDescription><FavoriteButton favorite={!!selected.favorite} title={selected.title+' 영상'} busy={favoriteBusy.has(selected.id)} onToggle={()=>void toggleFavorite(selected)}/>{selected.videoUrl?<><VideoPlayer src={selected.videoUrl} poster={selected.posterUrl||undefined} range={playback}/><p className="form-note">재생되지 않으면 <a href={selected.videoUrl} target="_blank" rel="noopener noreferrer" style={{textDecoration:'underline'}}>원본 파일 열기</a>로 확인해주세요.</p></>:<><>{videoProvider(selected.sourceUrl)?<SourcePlayer url={selected.sourceUrl} title={selected.title} range={playback}/>:<div className="detail-placeholder">{selected.posterUrl?<NextImage unoptimized width={640} height={360} className="detail-poster" src={selected.posterUrl} alt="참고 이미지"/>:<Link2 size={46}/>}</div>}</><a className="primary" href={selected.sourceUrl} target="_blank" rel="noopener noreferrer"><ExternalLink size={17}/>원본 영상 열기</a><p className="form-note">{selected.sourceUrl.length>80?selected.sourceUrl.slice(0,80)+'…':selected.sourceUrl}</p></>}
+   {playback&&<button className="secondary" aria-pressed={!!playback.loop} onClick={togglePlaybackLoop}>구간 반복 {playback.loop?'켜짐':'꺼짐'}</button>}
+   <TagReview value={selected.tagging||emptyTagging()} onDecision={(id,status)=>void reviewSelected(id,status)} onEvidence={seconds=>playEvidence(seconds,selected.analysis)} disabled={busy}/><AnalysisHistory reports={selected.analysisHistory||[]}/><SegmentLibrary key={selected.id} clip={selected} onChange={changeClip} onPlay={playSegment} onEdit={()=>begin(selected)} onFavorite={segmentId=>void toggleFavorite(selected,segmentId)} favoriteBusy={favoriteBusy.has(selected.id)}/><div>{selected.analysis&&<section className="analysis-box"><div className="analysis-heading"><span><Sparkles size={17}/>{selected.analysis.basis==='full-duration-frames'?'전체 구간 프레임을 분석한 태그':selected.analysis.basis==='full-video'?'전체 영상을 분석한 태그':selected.analysis.basis==='preview'?'미리보기 이미지로 제안한 태그':'일부 장면으로 제안한 태그'}</span></div><ul className="analysis-evidence">{selected.analysis.notes.map((note,i)=><li key={i}>{note}</li>)}</ul></section>}</div><dl className="detail-fields">{groups.map(g=><div className="detail-row" key={g.key}><dt>{g.name}</dt><dd>{displayTags(selected)[g.key].length?displayTags(selected)[g.key].map(t=><button className="chip" key={t} onClick={()=>{toggle(g.key,t);setSelected(null);}}>#{t}</button>):<span className="form-note">등록된 태그 없음</span>}</dd></div>)}</dl><div><h3 style={{fontSize:14,color:'var(--muted-foreground)',marginBottom:10}}>참고 메모</h3><p className="notes">{selected.notes||'등록한 메모가 없어요.'}</p></div><div className="detail-bottom"><button className="danger-button" onClick={()=>setConfirmDelete(true)}><Trash2 size={16}/>삭제</button><button className="secondary" onClick={()=>begin(selected)}><Pencil size={16}/>정보 수정</button></div></>}</SheetContent></Sheet>;
+}

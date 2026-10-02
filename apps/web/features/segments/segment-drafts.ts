@@ -1,0 +1,7 @@
+
+import { splitTags } from '@/lib/clips';
+import { parseSegments,parseTime,segmentTags,type ClipSegment } from '@/lib/segments';
+import { type Tagging } from '@/lib/tagging';
+export type SegmentDraft={id:string;title:string;start:string;end:string;color:string;shot:string;effects:string;note:string;tagIds?:string[];tagging?:Tagging;legacyStatus?:ClipSegment['legacyStatus']};
+export const segmentDrafts=(segments:ClipSegment[])=>segments.map(s=>{const legacy=segmentTags({...s,tagging:undefined});return{legacyStatus:s.legacyStatus,tagIds:s.tagIds,tagging:s.tagging,id:s.id,title:s.title||'',start:String(s.startSeconds),end:String(s.endSeconds),color:(s.tags?.color??legacy.color).join(', '),shot:(s.tags?.shot??legacy.shot).join(', '),effects:(s.tags?.effect??legacy.effect).join(', '),note:s.note};});
+export const readSegments=(drafts:SegmentDraft[],duration?:number)=>parseSegments(drafts.map(s=>{const start=parseTime(s.start),end=parseTime(s.end);const tagging=s.tagging?{...s.tagging,assignments:s.tagging.assignments.map(a=>{const evidenceMs=a.evidenceMs.filter(ms=>ms>=Math.floor(start*1000)&&ms<=Math.ceil(end*1000));return!evidenceMs.length&&a.decisionBy==='user'?{...a,source:'user' as const,aiScore:null,evidenceMs:[]}: {...a,evidenceMs};}).filter(a=>a.source==='user'||a.evidenceMs.length)}:undefined;return{legacyStatus:s.legacyStatus,tagIds:s.tagIds,tagging,id:s.id,title:s.title,startSeconds:start,endSeconds:end,tags:{color:splitTags(s.color),shot:splitTags(s.shot),effect:splitTags(s.effects)},effects:[],note:s.note};}),duration);
