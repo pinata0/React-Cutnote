@@ -1,6 +1,6 @@
 # 설치와 실행
 
-[문서 목록](../README.md) · 기준일: 2026-10-02
+[문서 목록](../README.md) · 기준일: 2026-10-03
 
 ## 환경
 
@@ -18,7 +18,7 @@ npm ci --include=dev --include=optional
 npm run taxonomy:generate
 ```
 
-AI 키 저장·분석을 사용할 경우 새 설치에서 `.dev.vars`를 만들고 에디터로 값을 입력합니다. 기존 파일은 덮어쓰지 않습니다.
+개발 서버에서도 AI 키 저장·분석을 사용할 경우 새 설치에서 `.dev.vars`를 만들고 에디터로 값을 입력합니다. 기존 파일은 덮어쓰지 않습니다.
 
 ```powershell
 if (-not (Test-Path .dev.vars)) { Copy-Item ../.env.example .dev.vars }
@@ -30,7 +30,7 @@ if (-not (Test-Path .dev.vars)) { Copy-Item ../.env.example .dev.vars }
 | `OPENAI_API_KEY`, `GEMINI_API_KEY` | 제공자 분석용; UI 저장 키가 우선 |
 | `DB`, `BUCKET` | 문자열 환경변수가 아닌 Cloudflare D1/R2 바인딩 |
 
-키 없이도 빈 보관함·수동 저장·빌드·오프라인 테스트는 가능합니다. YouTube 링크 직접 분석은 Gemini, 접근 가능한 원본/업로드 프레임 분석은 OpenAI 경로를 사용합니다.
+키 없이도 빈 보관함·수동 저장·빌드·오프라인 테스트는 가능합니다. PC 실행기의 새 YouTube·Instagram 수집은 yt-dlp/FFmpeg와 OpenAI를 사용합니다. [PC 수집 운영 안내](local-video-ingestion-operations.md)에서 도구·폴더 설정을 확인하세요. 기존 온라인/개발 서버의 직접 링크 분석 경로는 유지합니다.
 
 ```powershell
 npm run build
@@ -38,7 +38,9 @@ npm run db:init
 npm start
 ```
 
-PC에서 <http://127.0.0.1:5173/>을 엽니다. `db:init`은 이 앱의 로컬 D1에 9개 마이그레이션을 적용합니다. 개인 DB 자동 이관 절차가 아니므로 새 설치 DB로 진행합니다.
+PC에서 <http://127.0.0.1:5173/>을 엽니다. `db:init`은 이 앱의 로컬 D1에 미적용 마이그레이션을 적용합니다(전체 10개). 기존 DB를 삭제하지 마세요. 신규 작업 테이블은 0009에서 추가됩니다.
+
+`npm start`는 외부 gateway 5173과 내부 Worker 5175를 실행합니다. 기존 `.dev.vars`의 암호화 키를 보존하고, 키가 전혀 없으면 `.cutnote-pc/master.key`를 소유자 전용 권한으로 생성합니다. PC 기본 UI에서 OpenAI를 등록할 수 있습니다.
 
 개발 화면은 운영 서버를 종료한 뒤 `npm run dev -- --hostname 127.0.0.1`로 실행합니다.
 

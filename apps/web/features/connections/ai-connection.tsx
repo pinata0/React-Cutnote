@@ -2,7 +2,7 @@
 import {useState,type FormEvent} from 'react';
 import {Check,Loader2,ExternalLink} from 'lucide-react';
 import {Dialog,DialogContent,DialogTitle,DialogDescription} from '@/components/ui/dialog';
-export type AiStatus={configured:boolean;canConnect:boolean;provider:'openai'|'gemini';model:string;providers?:{openai:boolean;gemini:boolean};workspace?:import('@/lib/workspace-context').WorkspaceContext};
+export type AiStatus={localIngestAvailable?:boolean;configured:boolean;canConnect:boolean;provider:'openai'|'gemini';model:string;providers?:{openai:boolean;gemini:boolean};workspace?:import('@/lib/workspace-context').WorkspaceContext};
 export function AiConnection({open,onOpenChange,status,onConnected,initialProvider,resumeAnalysis=false}:{open:boolean;onOpenChange:(value:boolean)=>void;status:AiStatus|null;onConnected:(status:AiStatus)=>void;initialProvider:AiStatus['provider'];resumeAnalysis?:boolean}){
  const[key,setKey]=useState(''),[provider,setProvider]=useState(initialProvider),[busy,setBusy]=useState(false),[error,setError]=useState('');
  function close(value:boolean){if(busy)return;if(!value){setKey('');setError('');}onOpenChange(value);}

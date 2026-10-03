@@ -23,7 +23,7 @@ try {
   const result = spawnSync(process.execPath, [
     path.join(projectRoot, 'node_modules/wrangler/bin/wrangler.js'),
     'd1', 'migrations', 'apply', 'DB', '--local', '--config', localConfig,
-    '--persist-to', path.join(projectRoot, '.wrangler/state'),
+    '--persist-to', process.env.CUTNOTE_STATE_DIR || path.join(projectRoot, '.wrangler/state'),
   ], { cwd: projectRoot, env: process.env, stdio: 'inherit' });
   if (result.error) throw result.error;
   process.exitCode = result.status ?? 1;

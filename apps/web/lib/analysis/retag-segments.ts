@@ -8,7 +8,7 @@ import {videoProvider} from '../links/provider';
 import type {AnalysisReport} from './types';
 async function request(url:string,options:RequestInit){const response=await fetch(url,options);const data=await response.json() as {error?:string;configured:boolean;providers?:{gemini?:boolean};provider:string;report:AnalysisReport;link:{mediaUrl?:string};clip:Clip};if(!response.ok)throw new Error(data.error||'구간 태그를 분석하지 못했어요.');return data;}
 export async function retagSegments(clip:Clip,selected:ClipSegment[],signal:AbortSignal,onProgress:(message:string)=>void):Promise<Clip>{
- const segmentTargets=parseSegmentTargets(selected)!;onProgress('구간별 색감·구도·효과를 확인하고 있어요…');
+ const segmentTargets=parseSegmentTargets(selected)!;if(clip.localVideo){await request('/api/jobs',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({requestId:crypto.randomUUID(),kind:'retag',clipId:clip.id,segmentTargets}),signal});onProgress('PC에 구간 재분석을 접수했어요. 화면을 닫아도 처리돼요.');return clip;}onProgress('구간별 색감·구도·효과를 확인하고 있어요…');
  const status=await request('/api/ai/status',{signal});if(!status.configured)throw new Error('이 보관함에 AI를 먼저 연결해주세요.');
  const provider=videoProvider(clip.sourceUrl)?.kind==='youtube'&&status.providers?.gemini?'gemini':status.provider;
  let result:{report:AnalysisReport};

@@ -14,6 +14,7 @@ const testRoot = join(repositoryRoot, 'tests', 'web');
 const requireFromCutnote = createRequire(join(cutnoteRoot, 'package.json'));
 const mockCloudflare = join(testRoot, 'mock-cloudflare.ts');
 const suites = [
+  'pc-jobs.test.ts',
   'discovery-order.test.ts',
   'youtube-public-search.test.ts',
   'segment-independent.test.ts',

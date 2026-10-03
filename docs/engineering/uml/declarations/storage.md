@@ -1,0 +1,66 @@
+# 저장·DB·레코드: 선언 목록
+
+[전체 안내](README.md) · [핵심 타입 초안](diagrams.md)
+
+## 조사 질문과 이유
+
+이 영역에 어떤 실제 타입·함수·상태 선언이 있는가? 코드에 없는 클래스를 추가하지 않고 핵심 관계를 고르기 위한 목록이다.
+
+## 확인 위치와 조사 결과
+
+현재 선정 파일의 선언을 파서로 수집했다. 동일 이름도 파일·범위가 다르면 별개 선언이다. 타입/메서드의 일부 표시만으로 실제 호출 또는 객체 소유권을 단정하지 않는다. 값 전문 대신 식별자·타입·역할을 기록한다.
+
+| 이름 | 종류 | 정의 파일 | 모듈/package | 역할 | UML 표시 여부 | 표시/생략 이유 |
+|---|---|---|---|---|---|---|
+| changed | function binding (runtime) | [apps/web/app/api/segment-media/[id]/[segmentId]/route.ts:6](<../../../../apps/web/app/api/segment-media/[id]/[segmentId]/route.ts>) | apps/web/app/api/segment-media/[id]/[segmentId]/route.ts | 기존 구간 객체 입출력 — parameters: | 생략(표 보존) | 세부 함수·필드·상태/보조 타입; 핵심 관계만 도식화 |
+| Context | TS type alias (erased) | [apps/web/app/api/segment-media/[id]/[segmentId]/route.ts:7](<../../../../apps/web/app/api/segment-media/[id]/[segmentId]/route.ts>) | apps/web/app/api/segment-media/[id]/[segmentId]/route.ts | 기존 구간 객체 입출력 — {params:Promise&lt;{id:string;segmentId:string}&gt;} | 생략(표 보존) | 세부 함수·필드·상태/보조 타입; 핵심 관계만 도식화 |
+| GET | function (runtime) | [apps/web/app/api/segment-media/[id]/[segmentId]/route.ts:8](<../../../../apps/web/app/api/segment-media/[id]/[segmentId]/route.ts>) | apps/web/app/api/segment-media/[id]/[segmentId]/route.ts | 기존 구간 객체 입출력 — export; req, {params} | 생략(표 보존) | 세부 함수·필드·상태/보조 타입; 핵심 관계만 도식화 |
+| HEAD | module variable/constant (runtime) | [apps/web/app/api/segment-media/[id]/[segmentId]/route.ts:9](<../../../../apps/web/app/api/segment-media/[id]/[segmentId]/route.ts>) | apps/web/app/api/segment-media/[id]/[segmentId]/route.ts | 기존 구간 객체 입출력 — export;  | 생략(표 보존) | 세부 함수·필드·상태/보조 타입; 핵심 관계만 도식화 |
+| POST | function (runtime) | [apps/web/app/api/segment-media/[id]/[segmentId]/route.ts:10](<../../../../apps/web/app/api/segment-media/[id]/[segmentId]/route.ts>) | apps/web/app/api/segment-media/[id]/[segmentId]/route.ts | 기존 구간 객체 입출력 — export; req, {params} | 생략(표 보존) | 세부 함수·필드·상태/보조 타입; 핵심 관계만 도식화 |
+| GET | function (runtime) | [apps/web/app/api/segment-media/[id]/route.ts:4](<../../../../apps/web/app/api/segment-media/[id]/route.ts>) | apps/web/app/api/segment-media/[id]/route.ts | 구간 파일 목록 — export; _req, {params} | 생략(표 보존) | 세부 함수·필드·상태/보조 타입; 핵심 관계만 도식화 |
+| getDb | function (runtime) | [apps/web/db/index.ts:5](<../../../../apps/web/db/index.ts>) | apps/web/db/index.ts | Drizzle getDb 래퍼 — export;  | 생략(표 보존) | 1단계 보조 파일; 활성 호출·도구 경계 구분 |
+| clips | Drizzle table object (runtime) | [apps/web/db/schema.ts:2](<../../../../apps/web/db/schema.ts>) | apps/web/db/schema.ts | 테이블·컬럼·인덱스/FK 정의 — export; DB table 'clips'; fields: id, title, sourceUrl, localAsset, lastJobId, videoKey, posterKey, tags, notes, analysis, segments, tagging, revision, analysisHistory, favorite, favoriteSegments, createdAt | 생략(표 보존) | 세부 함수·필드·상태/보조 타입; 핵심 관계만 도식화 |
+| clips | SQLite table (persistent schema) | [apps/web/db/schema.ts:2](<../../../../apps/web/db/schema.ts>) | apps/web/db/schema.ts | 테이블·컬럼·인덱스/FK 정의 — id:TEXT PK NOT NULL; title:TEXT NOT NULL; source_url:TEXT NOT NULL; video_key:TEXT; poster_key:TEXT; tags:TEXT NOT NULL; notes:TEXT NOT NULL; created_at:TEXT NOT NULL; analysis:TEXT; segments:TEXT NOT NULL; tagging:TE... | 생략(표 보존) | 세부 함수·필드·상태/보조 타입; 핵심 관계만 도식화 |
+| ai_settings | SQLite table (persistent schema) | [apps/web/db/schema.ts:15](<../../../../apps/web/db/schema.ts>) | apps/web/db/schema.ts | 테이블·컬럼·인덱스/FK 정의 — id:TEXT PK NOT NULL; encrypted_key:TEXT NOT NULL; updated_at:TEXT NOT NULL | 생략(표 보존) | 세부 함수·필드·상태/보조 타입; 핵심 관계만 도식화 |
+| aiSettings | Drizzle table object (runtime) | [apps/web/db/schema.ts:15](<../../../../apps/web/db/schema.ts>) | apps/web/db/schema.ts | 테이블·컬럼·인덱스/FK 정의 — export; DB table 'ai_settings'; fields: id, encryptedKey, updatedAt | 생략(표 보존) | 세부 함수·필드·상태/보조 타입; 핵심 관계만 도식화 |
+| library_order | SQLite table (persistent schema) | [apps/web/db/schema.ts:18](<../../../../apps/web/db/schema.ts>) | apps/web/db/schema.ts | 테이블·컬럼·인덱스/FK 정의 — scope:TEXT PK NOT NULL; ordered_keys:TEXT NOT NULL; revision:INTEGER NOT NULL | 생략(표 보존) | 세부 함수·필드·상태/보조 타입; 핵심 관계만 도식화 |
+| libraryOrder | Drizzle table object (runtime) | [apps/web/db/schema.ts:18](<../../../../apps/web/db/schema.ts>) | apps/web/db/schema.ts | 테이블·컬럼·인덱스/FK 정의 — export; DB table 'library_order'; fields: scope, orderedKeys, revision | 생략(표 보존) | 세부 함수·필드·상태/보조 타입; 핵심 관계만 도식화 |
+| youtube_discovery | SQLite table (persistent schema) | [apps/web/db/schema.ts:21](<../../../../apps/web/db/schema.ts>) | apps/web/db/schema.ts | 테이블·컬럼·인덱스/FK 정의 — id:TEXT PK NOT NULL; result:TEXT NOT NULL; updated_at:INTEGER NOT NULL; locked_until:INTEGER NOT NULL; <code>lock_token</code>:TEXT NOT NULL | 생략(표 보존) | 세부 함수·필드·상태/보조 타입; 핵심 관계만 도식화 |
+| youtubeDiscovery | Drizzle table object (runtime) | [apps/web/db/schema.ts:21](<../../../../apps/web/db/schema.ts>) | apps/web/db/schema.ts | 테이블·컬럼·인덱스/FK 정의 — export; DB table 'youtube_discovery'; fields: id, result, updatedAt, lockedUntil, <code>lockToken</code> | 생략(표 보존) | 세부 함수·필드·상태/보조 타입; 핵심 관계만 도식화 |
+| segment_media | SQLite table (persistent schema) | [apps/web/db/schema.ts:25](<../../../../apps/web/db/schema.ts>) | apps/web/db/schema.ts | 테이블·컬럼·인덱스/FK 정의 — object_key:TEXT PK NOT NULL; clip_id:TEXT NOT NULL; segment_id:TEXT NOT NULL; source_identity:TEXT NOT NULL; start_ms:INTEGER NOT NULL; end_ms:INTEGER NOT NULL; fingerprint:TEXT NOT NULL; status:TEXT NOT NULL; mime:TE... | 생략(표 보존) | 세부 함수·필드·상태/보조 타입; 핵심 관계만 도식화 |
+| segmentMedia | Drizzle table object (runtime) | [apps/web/db/schema.ts:25](<../../../../apps/web/db/schema.ts>) | apps/web/db/schema.ts | 테이블·컬럼·인덱스/FK 정의 — export; DB table 'segment_media'; fields: objectKey, clipId, segmentId, sourceIdentity, startSeconds, endSeconds, fingerprint, status, mime, size, durationMs, width, height, createdAt | 생략(표 보존) | 세부 함수·필드·상태/보조 타입; 핵심 관계만 도식화 |
+| recommendation_feedback | SQLite table (persistent schema) | [apps/web/db/schema.ts:31](<../../../../apps/web/db/schema.ts>) | apps/web/db/schema.ts | 테이블·컬럼·인덱스/FK 정의 — context_key:TEXT PK NOT NULL; clip_id:TEXT PK NOT NULL; segment_id:TEXT PK NOT NULL; signature:TEXT NOT NULL; value:TEXT NOT NULL; updated_at:TEXT NOT NULL | 생략(표 보존) | 세부 함수·필드·상태/보조 타입; 핵심 관계만 도식화 |
+| recommendationFeedback | Drizzle table object (runtime) | [apps/web/db/schema.ts:31](<../../../../apps/web/db/schema.ts>) | apps/web/db/schema.ts | 테이블·컬럼·인덱스/FK 정의 — export; DB table 'recommendation_feedback'; fields: contextKey, clipId, segmentId, signature, value, updatedAt | 생략(표 보존) | 세부 함수·필드·상태/보조 타입; 핵심 관계만 도식화 |
+| pc_jobs | SQLite table (persistent schema) | [apps/web/db/schema.ts:36](<../../../../apps/web/db/schema.ts>) | apps/web/db/schema.ts | 테이블·컬럼·인덱스/FK 정의 — id:TEXT PK NOT NULL; clip_id:TEXT NOT NULL; kind:TEXT NOT NULL; payload:TEXT NOT NULL; state:TEXT NOT NULL; phase:TEXT NOT NULL; progress:INTEGER NOT NULL; attempt:INTEGER NOT NULL; <code>lease_token</code>:TEXT; lease_until:INTEG... | 생략(표 보존) | 세부 함수·필드·상태/보조 타입; 핵심 관계만 도식화 |
+| pcJobs | Drizzle table object (runtime) | [apps/web/db/schema.ts:36](<../../../../apps/web/db/schema.ts>) | apps/web/db/schema.ts | 테이블·컬럼·인덱스/FK 정의 — export; DB table 'pc_jobs'; fields: id, clipId, kind, payload, state, phase, progress, attempt, <code>leaseToken</code>, leaseUntil, cancelRequested, errorCode, result, createdAt, updatedAt | 생략(표 보존) | 세부 함수·필드·상태/보조 타입; 핵심 관계만 도식화 |
+| default export L3 | export expression (runtime) | [apps/web/drizzle.config.ts:3](<../../../../apps/web/drizzle.config.ts>) | apps/web/drizzle.config.ts | 기존 상태 위치·migration 실행 — CallExpression | 생략(표 보존) | 세부 함수·필드·상태/보조 타입; 핵심 관계만 도식화 |
+| LocalAsset | TS type alias (erased) | [apps/web/lib/jobs/types.ts:1](<../../../../apps/web/lib/jobs/types.ts>) | apps/web/lib/jobs/types.ts | PcJob·LocalAsset·상태 문구 — export; {root:string;directory:string;video:string;poster:string&#124;null;size:number;duration:number;mime:string} | 표시 | 공개 계약·영속 변환·핵심 값 구조 |
+| readLibraryOrder | function (runtime) | [apps/web/lib/library-order-server.ts:3](<../../../../apps/web/lib/library-order-server.ts>) | apps/web/lib/library-order-server.ts | 객체 수명·응답·정렬 저장 — export;  | 생략(표 보존) | 세부 함수·필드·상태/보조 타입; 핵심 관계만 도식화 |
+| attachmentName | function (runtime) | [apps/web/lib/media-response.ts:2](<../../../../apps/web/lib/media-response.ts>) | apps/web/lib/media-response.ts | 객체 수명·응답·정렬 저장 — export; title, mime | 생략(표 보존) | 세부 함수·필드·상태/보조 타입; 핵심 관계만 도식화 |
+| mediaResponse | function (runtime) | [apps/web/lib/media-response.ts:3](<../../../../apps/web/lib/media-response.ts>) | apps/web/lib/media-response.ts | 객체 수명·응답·정렬 저장 — export; req, key, title | 생략(표 보존) | 세부 함수·필드·상태/보조 타입; 핵심 관계만 도식화 |
+| SegmentMediaRow | TS type alias (erased) | [apps/web/lib/segment-media.ts:3](<../../../../apps/web/lib/segment-media.ts>) | apps/web/lib/segment-media.ts | 객체 수명·응답·정렬 저장 — export; {object_key:string;clip_id:string;segment_id:string;fingerprint:string;status:string;mime:string;size:number;duration_ms:number;width:number;height:number;created_at:string} | 생략(표 보존) | 세부 함수·필드·상태/보조 타입; 핵심 관계만 도식화 |
+| sourceIdentity | function binding (runtime) | [apps/web/lib/segment-media.ts:4](<../../../../apps/web/lib/segment-media.ts>) | apps/web/lib/segment-media.ts | 객체 수명·응답·정렬 저장 — export; parameters: row | 생략(표 보존) | 세부 함수·필드·상태/보조 타입; 핵심 관계만 도식화 |
+| segmentFingerprint | function (runtime) | [apps/web/lib/segment-media.ts:5](<../../../../apps/web/lib/segment-media.ts>) | apps/web/lib/segment-media.ts | 객체 수명·응답·정렬 저장 — export; row, segment | 생략(표 보존) | 세부 함수·필드·상태/보조 타입; 핵심 관계만 도식화 |
+| mediaUrl | function (runtime) | [apps/web/lib/segment-media.ts:6](<../../../../apps/web/lib/segment-media.ts>) | apps/web/lib/segment-media.ts | 객체 수명·응답·정렬 저장 — export; clipId, segmentId, fingerprint | 생략(표 보존) | 세부 함수·필드·상태/보조 타입; 핵심 관계만 도식화 |
+| segmentMediaList | function (runtime) | [apps/web/lib/segment-media.ts:7](<../../../../apps/web/lib/segment-media.ts>) | apps/web/lib/segment-media.ts | 객체 수명·응답·정렬 저장 — export; row | 생략(표 보존) | 세부 함수·필드·상태/보조 타입; 핵심 관계만 도식화 |
+| cleanSegmentMedia | function (runtime) | [apps/web/lib/segment-media.ts:9](<../../../../apps/web/lib/segment-media.ts>) | apps/web/lib/segment-media.ts | 객체 수명·응답·정렬 저장 — export; clipId | 생략(표 보존) | 세부 함수·필드·상태/보조 타입; 핵심 관계만 도식화 |
+| ClipRow | TS type alias (erased) | [apps/web/lib/server.ts:5](<../../../../apps/web/lib/server.ts>) | apps/web/lib/server.ts | D1/R2 접근·ClipRow 직렬화 — export; {local_asset?:string&#124;null;last_job_id?:string&#124;null;id:string;title:string;source_url:string;video_key:string&#124;null;poster_key:string&#124;null;tags:string;notes:string;created_at:string;analysis?:string&#124;null;segment... | 표시 | 공개 계약·영속 변환·핵심 값 구조 |
+| database | function (runtime) | [apps/web/lib/server.ts:6](<../../../../apps/web/lib/server.ts>) | apps/web/lib/server.ts | D1/R2 접근·ClipRow 직렬화 — export;  | 생략(표 보존) | 세부 함수·필드·상태/보조 타입; 핵심 관계만 도식화 |
+| bucket | function (runtime) | [apps/web/lib/server.ts:7](<../../../../apps/web/lib/server.ts>) | apps/web/lib/server.ts | D1/R2 접근·ClipRow 직렬화 — export;  | 생략(표 보존) | 세부 함수·필드·상태/보조 타입; 핵심 관계만 도식화 |
+| serialize | function (runtime) | [apps/web/lib/server.ts:8](<../../../../apps/web/lib/server.ts>) | apps/web/lib/server.ts | D1/R2 접근·ClipRow 직렬화 — export; row | 생략(표 보존) | 세부 함수·필드·상태/보조 타입; 핵심 관계만 도식화 |
+| json | function (runtime) | [apps/web/lib/server.ts:9](<../../../../apps/web/lib/server.ts>) | apps/web/lib/server.ts | D1/R2 접근·ClipRow 직렬화 — export; data, status | 생략(표 보존) | 세부 함수·필드·상태/보조 타입; 핵심 관계만 도식화 |
+| crossOrigin | function (runtime) | [apps/web/lib/server.ts:10](<../../../../apps/web/lib/server.ts>) | apps/web/lib/server.ts | D1/R2 접근·ClipRow 직렬화 — export; req | 생략(표 보존) | 세부 함수·필드·상태/보조 타입; 핵심 관계만 도식화 |
+| unavailable | function (runtime) | [apps/web/lib/server.ts:11](<../../../../apps/web/lib/server.ts>) | apps/web/lib/server.ts | D1/R2 접근·ClipRow 직렬화 — export; error | 생략(표 보존) | 세부 함수·필드·상태/보조 타입; 핵심 관계만 도식화 |
+| findClip | function (runtime) | [apps/web/lib/server.ts:12](<../../../../apps/web/lib/server.ts>) | apps/web/lib/server.ts | D1/R2 접근·ClipRow 직렬화 — export; id | 생략(표 보존) | 세부 함수·필드·상태/보조 타입; 핵심 관계만 도식화 |
+| builtConfig | module variable/constant (runtime) | [apps/web/scripts/init-local-db.mjs:9](<../../../../apps/web/scripts/init-local-db.mjs>) | apps/web/scripts/init-local-db.mjs | 기존 상태 위치·migration 실행 | 생략(표 보존) | 세부 함수·필드·상태/보조 타입; 핵심 관계만 도식화 |
+| config | module variable/constant (runtime) | [apps/web/scripts/init-local-db.mjs:10](<../../../../apps/web/scripts/init-local-db.mjs>) | apps/web/scripts/init-local-db.mjs | 기존 상태 위치·migration 실행 | 생략(표 보존) | 세부 함수·필드·상태/보조 타입; 핵심 관계만 도식화 |
+| binding | module variable/constant (runtime) | [apps/web/scripts/init-local-db.mjs:13](<../../../../apps/web/scripts/init-local-db.mjs>) | apps/web/scripts/init-local-db.mjs | 기존 상태 위치·migration 실행 | 생략(표 보존) | 세부 함수·필드·상태/보조 타입; 핵심 관계만 도식화 |
+| directory | module variable/constant (runtime) | [apps/web/scripts/init-local-db.mjs:15](<../../../../apps/web/scripts/init-local-db.mjs>) | apps/web/scripts/init-local-db.mjs | 기존 상태 위치·migration 실행 | 생략(표 보존) | 세부 함수·필드·상태/보조 타입; 핵심 관계만 도식화 |
+
+## 다이어그램과 읽는 방법
+
+[핵심 타입 초안](diagrams.md)의 해당 영역을 읽는다. 표시 열은 실제 선언과 그림 요소의 대응이며 생략 선언도 위 표에서 보존한다. 함수·지역 상태는 클래스 관계로 확대하지 않는다.
+
+## 판단·학습 포인트와 미확인
+
+선언 종류·수집 범위·미확인 사항은 [수집 기준](README.md)을 따른다. 표시한 타입의 실제 관계 근거는 [초안](diagrams.md)에 있다.

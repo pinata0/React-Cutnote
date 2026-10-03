@@ -12,7 +12,7 @@ const execFileAsync = promisify(execFile);
 
 // Windows ignores POSIX mode bits. Restrict a newly created, still empty file
 // before writing the pairing code; never interpolate its path into shell code.
-async function protectConnectionFile(filename, file) {
+export async function protectConnectionFile(filename, file) {
   if (process.platform !== 'win32') return file.chmod(0o600);
   const script = `
 $ErrorActionPreference = 'Stop'
@@ -116,6 +116,8 @@ function requestPath(raw) {
 export function allowedPath(pathname, method, projectRoot) {
   if (pathname.split('/').some(v => v.startsWith('.') && !['.vite', '.pnpm'].includes(v))) return false;
   if (pathname.startsWith('/api/')) {
+    if (pathname === '/api/jobs') return ['GET', 'POST'].includes(method);
+    if (/^\/api\/jobs\/[a-f0-9-]{36}\/(cancel|retry)$/.test(pathname)) return method === 'POST';
     if (pathname === '/api/clips') return ['GET', 'HEAD', 'POST'].includes(method);
     if (pathname === '/api/library/order') return method === 'PATCH';
     if (pathname === '/api/recommendations/feedback') return method === 'GET' || method === 'POST';
@@ -237,8 +239,11 @@ export function createBridge({publicOrigin, projectRoot, upstream = 'http://127.
     if (counted && active >= 4) return reply(res, 503, '요청을 처리 중이에요. 잠시 후 다시 시도해주세요.');
     if (req.headers['content-length'] && (!/^\d+$/.test(req.headers['content-length']) || Number(req.headers['content-length']) > maxBytes)) return reply(res, 413, '요청은 28MB까지 보낼 수 있어요.');
     if (counted) active++;
+    const mediaStream = SAFE_METHODS.has(method) && /^\/api\/(media|segment-media)\/[\w/-]+$/.test(parsed.pathname);
+    const responseLimit = mediaStream ? 2 * 1024 ** 3 : maxBytes;
     let outgoing;
-    const deadline = setTimeout(() => { reply(res, 504, '처리 시간이 초과됐어요.'); outgoing?.destroy(); req.destroy(); }, timeout);
+    const deadline = setTimeout(() => { reply(res, 504, '처리 시간이 초과됐어요.'); outgoing?.destroy(); req.destroy(); }, mediaStream ? 24 * 60 * 60 * 1000 : timeout);
+    if (mediaStream) res.setTimeout(60000, () => res.destroy());
     res.on('close', () => { if (!res.writableEnded) outgoing?.destroy(); });
     try {
       const body = await readBody(req, maxBytes);
@@ -253,7 +258,7 @@ export function createBridge({publicOrigin, projectRoot, upstream = 'http://127.
       await new Promise((resolve, reject) => {
         outgoing = http.request({hostname: target.hostname, port: target.port, method, path: parsed.target, headers, timeout}, upstreamRes => {
           const size = Number(upstreamRes.headers['content-length'] || 0);
-          if (size > maxBytes) { upstreamRes.destroy(); reject(Object.assign(new Error('응답 크기가 너무 커요.'), {status: 502})); return; }
+          if (size > responseLimit) { upstreamRes.destroy(); reject(Object.assign(new Error('응답 크기가 너무 커요.'), {status: 502})); return; }
           if (upstreamRes.headers.location) {
             try {
               const location = new URL(upstreamRes.headers.location, target);
@@ -267,7 +272,7 @@ export function createBridge({publicOrigin, projectRoot, upstream = 'http://127.
           res.setHeader('X-Content-Type-Options', 'nosniff');
           res.statusCode = upstreamRes.statusCode || 502;
           let received = 0;
-          upstreamRes.on('data', chunk => { received += chunk.length; if (received > maxBytes) { upstreamRes.destroy(); res.destroy(); reject(new Error('Response too large')); } });
+          upstreamRes.on('data', chunk => { received += chunk.length; if (received > responseLimit) { upstreamRes.destroy(); res.destroy(); reject(new Error('Response too large')); } });
           upstreamRes.on('error', reject);
           upstreamRes.on('end', resolve);
           upstreamRes.pipe(res);

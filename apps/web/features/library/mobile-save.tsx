@@ -1,4 +1,5 @@
 'use client';
+import {PcIngest} from './pc-ingest';
 import Link from 'next/link';
 import NextImage from 'next/image';
 import {useEffect,useEffectEvent,useSyncExternalStore,useRef,useState,type FormEvent} from 'react';
@@ -15,7 +16,8 @@ type AnalysisResult={title:string;memo:string;report:AnalysisReport};
 async function request<T>(url:string,options?:RequestInit):Promise<T>{const response=await fetch(url,options);const data=await response.json().catch(()=>({error:'컴퓨터와의 연결을 확인해주세요.'})) as T & {error?:string};if(!response.ok)throw new Error(data.error||'요청을 처리하지 못했어요.');return data;}
 async function poster(info:LinkInfo|null){if(!info?.previewUrl)return null;try{const response=await fetch(proxyMedia(info.previewUrl),{signal:AbortSignal.timeout(10000)});if(!response.ok)return null;const blob=await response.blob(),url=URL.createObjectURL(blob);try{const image=new Image();image.src=url;await image.decode();const canvas=document.createElement('canvas');canvas.width=640;canvas.height=Math.max(1,Math.round(640*image.height/image.width));canvas.getContext('2d')?.drawImage(image,0,0,canvas.width,canvas.height);return await new Promise<Blob|null>(resolve=>canvas.toBlob(resolve,'image/jpeg',.8));}finally{URL.revokeObjectURL(url);}}catch{return null;}}
 const subscribeLocation=()=>()=>{};
-export default function MobileSave(){const location=useSyncExternalStore(subscribeLocation,()=>window.location.href,()=> '');return location?<MobileSaveSession location={location}/>:null;}
+export default function MobileSave(){const location=useSyncExternalStore(subscribeLocation,()=>window.location.href,()=> '');return location?<MobileRouter location={location}/>:null;}
+function MobileRouter({location}:{location:string}){const [pc,setPc]=useState<boolean|null>(null);const [error,setError]=useState('');useEffect(()=>{let live=true;void request<AiStatus>('/api/ai/status').then(s=>{if(live)setPc(!!s.localIngestAvailable);}).catch(()=>{if(live)setError('PC에 연결하지 못했어요. 연결 설정에서 다시 연결해주세요.');});return()=>{live=false;};},[]);return pc===null?<main><p role="status">{error||'PC 연결 확인 중…'}</p>{error&&<button onClick={()=>window.location.reload()}>다시 연결</button>}</main>:pc?<main className="mobile-save"><Link href="/">내 보관함</Link><PcIngest location={location}/></main>:<MobileSaveSession location={location}/>;}
 function MobileSaveSession({location}:{location:string}){
  const initial=new URL(location),params=new URLSearchParams(initial.search),savedId=params.get('saved'),restoring=!!savedId&&/^[a-f0-9-]{36}$/.test(savedId);
  const[url,setUrl]=useState(()=>sharedUrl([params.get('url'),params.get('text')].filter(Boolean).join(' '))),[info,setInfo]=useState<LinkInfo|null>(null),[notes,setNotes]=useState(''),[auto,setAuto]=useState(()=>!restoring||params.get('auto')!=='0'),[busy,setBusy]=useState(restoring),[resolvedUrl,setResolvedUrl]=useState(''),[message,setMessage]=useState(''),[error,setError]=useState(''),[saved,setSaved]=useState<Clip|null>(null),[status,setStatus]=useState<AiStatus|null>(null);

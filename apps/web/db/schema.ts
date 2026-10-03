@@ -2,6 +2,7 @@ import { index, integer, sqliteTable, text, primaryKey } from 'drizzle-orm/sqlit
 export const clips = sqliteTable('clips', {
   id: text('id').primaryKey(), title: text('title').notNull(),
   sourceUrl: text('source_url').notNull().default(''),
+  localAsset:text('local_asset'), lastJobId:text('last_job_id'),
   videoKey: text('video_key'), posterKey: text('poster_key'),
   tags: text('tags').notNull(), notes: text('notes').notNull().default(''),
   analysis: text('analysis'), segments: text('segments').notNull().default('[]'),
@@ -31,3 +32,9 @@ export const recommendationFeedback=sqliteTable('recommendation_feedback',{
  contextKey:text('context_key').notNull(),clipId:text('clip_id').notNull().references(()=>clips.id,{onDelete:'cascade'}),segmentId:text('segment_id').notNull(),
  signature:text('signature').notNull(),value:text('value').notNull(),updatedAt:text('updated_at').notNull(),
 },table=>[primaryKey({columns:[table.contextKey,table.clipId,table.segmentId]})]);
+
+export const pcJobs=sqliteTable('pc_jobs',{
+ id:text('id').primaryKey(),clipId:text('clip_id').notNull(),kind:text('kind').notNull(),payload:text('payload').notNull(),
+ state:text('state').notNull().default('queued'),phase:text('phase').notNull().default('queued'),progress:integer('progress').notNull().default(0),attempt:integer('attempt').notNull().default(0),
+ leaseToken:text('lease_token'),leaseUntil:integer('lease_until').notNull().default(0),cancelRequested:integer('cancel_requested').notNull().default(0),errorCode:text('error_code'),result:text('result'),createdAt:text('created_at').notNull(),updatedAt:text('updated_at').notNull(),
+},t=>[index('pc_jobs_queue').on(t.state,t.createdAt),index('pc_jobs_clip').on(t.clipId)]);

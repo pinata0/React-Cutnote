@@ -10,21 +10,28 @@ import type { Dispatch,SetStateAction } from 'react';
 import { useEffect,useRef,useState } from 'react';
 import { type AiStatus } from '../connections/ai-connection';
 import type { Draft } from './clip-draft';
-type AnalysisInput={editing:Clip|null;automatic:(fields:Partial<Draft>)=>void;completeAnalysis:(result:{report:AnalysisReport;title:string;memo:string})=>void;setPoster:Dispatch<SetStateAction<Blob|null>>;setAiStatus:Dispatch<SetStateAction<AiStatus|null>>};
-export function useClipAnalysis({editing,automatic,completeAnalysis,setPoster,setAiStatus}:AnalysisInput){
+type AnalysisInput={pcMode?:boolean;editing:Clip|null;automatic:(fields:Partial<Draft>)=>void;completeAnalysis:(result:{report:AnalysisReport;title:string;memo:string})=>void;setPoster:Dispatch<SetStateAction<Blob|null>>;setAiStatus:Dispatch<SetStateAction<AiStatus|null>>};
+export function useClipAnalysis({pcMode=false,editing,automatic,completeAnalysis,setPoster,setAiStatus}:AnalysisInput){
  const[analysis,setAnalysis]=useState<AnalysisReport|null>(null),[analysisProgress,setAnalysisProgress]=useState<AnalysisProgress|null>(null),[analyzing,setAnalyzing]=useState(false),[analysisError,setAnalysisError]=useState('');
  const analysisController=useRef<AbortController|null>(null);
  const linkTimerRef=useRef<ReturnType<typeof setTimeout>|null>(null);
  useEffect(()=>()=>{if(linkTimerRef.current)clearTimeout(linkTimerRef.current);},[]);
  useEffect(()=>()=>analysisController.current?.abort(),[]);
  function stopAnalysis(){if(linkTimerRef.current)clearTimeout(linkTimerRef.current);linkTimerRef.current=null;analysisController.current?.abort();analysisController.current=null;setAnalyzing(false);}
+ async function submitLocalAnalysis(){
+  stopAnalysis();setAnalysisError('');
+  if(!editing?.localVideo){setAnalysisProgress({message:'저장 버튼을 누르면 PC에서 다운로드·OpenAI 분석을 시작해요.',percent:0});return;}
+  try{await request('/api/jobs',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({requestId:crypto.randomUUID(),kind:'analyze',clipId:editing.id})});setAnalysisProgress({message:'PC에 재분석을 접수했어요. 보관함에서 진행 상태를 확인해주세요.',percent:0});}catch(e){setAnalysisError((e as Error).message);}
+ }
  async function classify(source:File|string){
+  if(editing?.localVideo&&!(source instanceof File)){await submitLocalAnalysis();return;}
   stopAnalysis();const controller=new AbortController();analysisController.current=controller;setAnalyzing(true);setAnalysisError('');setAnalysisProgress({message:'전체 영상의 색감·구도·효과를 분석하고 있어요.',percent:0});
   try{const status=await request<AiStatus>('/api/ai/status',{signal:controller.signal});if(analysisController.current!==controller)return;setAiStatus(status);if(!status.configured)throw new Error('분석에 사용할 AI 서비스를 먼저 연결해주세요.');if(status.provider==='openai'){const result=await analyzeWholeVideo(source,controller.signal,p=>{if(analysisController.current===controller)setAnalysisProgress(p);});if(analysisController.current===controller&&!controller.signal.aborted)completeAnalysis(result);return;}let options:RequestInit;if(source instanceof File){const body=new FormData();body.set('video',source);options={method:'POST',body,signal:controller.signal};}else options={method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({clipId:editing?.id}),signal:controller.signal};const result=await request<{report:AnalysisReport;title:string;memo:string}>('/api/ai/analyze',options);if(analysisController.current!==controller||controller.signal.aborted)return;completeAnalysis(result);}
   catch(e){if(analysisController.current===controller&&!controller.signal.aborted)setAnalysisError((e as Error).message);}
   finally{if(analysisController.current===controller)setAnalyzing(false);}
  }
  async function classifyUrl(value:string){
+  if(pcMode||editing?.localVideo){await submitLocalAnalysis();return;}
   stopAnalysis();const controller=new AbortController();analysisController.current=controller;setAnalyzing(true);setAnalysisError('');setAnalysisProgress({message:'원본 영상 정보를 확인하고 있어요.',percent:0});
   try{
    let info:LinkInfo|undefined;

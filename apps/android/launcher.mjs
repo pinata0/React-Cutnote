@@ -151,7 +151,7 @@ export async function launch(options = {}) {
       await new Promise(resolve => {
         const timer = setTimeout(resolve, 5000);
         child.once('exit', () => { clearTimeout(timer); resolve(); });
-        child.kill('SIGTERM');
+        if(child.connected&&child.send)child.send('cutnote-shutdown');else child.kill('SIGTERM');
       });
     }
     await release?.();
@@ -167,7 +167,7 @@ export async function launch(options = {}) {
       const entry = path.join(projectRoot, 'scripts/start-pc.mjs');
       if (!existsSync(entry) || !existsSync(path.join(projectRoot, 'dist/server/wrangler.json'))) throw new Error('PC 실행 파일이나 빌드가 없어요. 컷노트 프로젝트의 빌드를 먼저 준비해주세요.');
       report('PC 컷노트를 시작하고 있어요…');
-      child = (options.spawnPc || (() => spawn(process.execPath, [entry], {cwd: projectRoot, stdio: 'ignore', env: process.env})))();
+      child = (options.spawnPc || (() => spawn(process.execPath, [entry], {cwd: projectRoot, stdio: ['ignore','ignore','ignore','ipc'], env: process.env, windowsHide: true})))();
       child.once('error', () => { failed = true; });
       child.once('exit', () => { failed = true; });
       const deadline = Date.now() + 60000;
@@ -179,6 +179,7 @@ export async function launch(options = {}) {
       }
       if (!pcReady(status)) throw new Error('PC 컷노트 시작을 확인하지 못했어요. 다시 실행해주세요.');
     }
+    if (!status.data?.localIngestAvailable) report('현재 PC 서버는 로컬 다운로드 작업자를 지원하지 않아요. 개발 서버를 종료하고 최신 빌드로 다시 실행해주세요.');
     let bridgeStatus = await probe(origin + '/api/ai/status');
     let code;
     if (bridgeStatus.kind === 'offline') {

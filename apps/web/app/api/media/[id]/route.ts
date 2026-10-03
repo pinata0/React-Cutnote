@@ -9,7 +9,7 @@ export async function POST(req:Request,{params}:{params:Promise<{id:string}>}){
  if(crossOrigin(req))return json({error:'이 페이지에서 다시 저장해주세요.'},403);
  if(Number(req.headers.get('content-length')||0)>MAX_FILE_SIZE+1024*1024)return json({error:'영상 파일은 25MB까지 저장할 수 있어요.'},413);
  let key:string|undefined;
- try{const{id}=await params,row=await findClip(id);if(!row)return json({error:'영상을 찾지 못했어요.'},404);if(row.video_key)return json({error:'이미 영상 파일을 보관하고 있어요.'},409);
+ try{const{id}=await params,row=await findClip(id);if(!row)return json({error:'영상을 찾지 못했어요.'},404);if(row.video_key||row.local_asset)return json({error:'이미 영상 파일을 보관하고 있어요.'},409);
  const form=await req.formData(),file=form.get('video'),duration=Number(form.get('durationSeconds'));
  if(!(file instanceof File)||!file.size||file.size>MAX_FILE_SIZE||!videoTypes.includes(file.type)||!Number.isFinite(duration)||duration<=0||duration>7200)return json({error:'25MB 이하의 재생 가능한 영상 파일을 선택해주세요.'},400);
  const prior=serialize(row),known=prior.analysis&&'durationSeconds' in prior.analysis?prior.analysis.durationSeconds:undefined;

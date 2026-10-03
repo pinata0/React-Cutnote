@@ -4,7 +4,12 @@
 
 | 문서 | 내용 |
 |---|---|
+| [PC 수집 구조·API 기준](local-video-ingestion-reference.md) | 최종 구현의 모듈·데이터·처리 흐름 |
+| [문서 점검 기록](documentation-review-2026-10-03.md) | 문서별 판단·공개 검사·확인한 코드 결함 |
+| [UML 학습과 유지보수](uml/README.md) | 추천 읽기 순서·1~11단계 조사·실제 타입/계약/상태 전이·종합 검증 |
 | [구조와 코드 지도](architecture.md) | 폴더 역할과 수정 위치 |
+| [PC 로컬 영상 수집 계획](local-video-ingestion-plan.md) · [조사·학습 기록](local-video-ingestion-study.md) | 사전 조사 기준 구조와 설계 판단 |
+| [PC 수집 운영](local-video-ingestion-operations.md) · [구현·검증 기록](local-video-ingestion-progress.md) | 실행 설정, 실패 복구, 완료 조건과 실제 서비스·기기 미검증 항목 |
 | [설치와 실행](setup.md) | Windows 로컬 실행, 환경변수, DB |
 | [개발 규칙](development.md) | 데이터 보존, 생성물, 검증 |
 | [태깅 정책](tagging.md) | 현재 사전 원본과 검수·재분석 |

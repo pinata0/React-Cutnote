@@ -587,7 +587,7 @@ public final class MainActivity extends Activity {
                 Uri location = Uri.parse(url);
                 if (!"/".equals(location.getPath()) && !"/mobile".equals(location.getPath()) && !"/mobile/".equals(location.getPath())) return;
                 currentPath = location.getEncodedPath() + (location.getEncodedQuery() == null ? "" : "?" + location.getEncodedQuery());
-                if (pendingShare != null && pendingShare.id.equals(location.getQueryParameter("saved"))) {
+                if (pendingShare != null && (pendingShare.id.equals(location.getQueryParameter("accepted")) || pendingShare.id.equals(location.getQueryParameter("saved")))) {
                     pendingShare = null;
                     persistPendingShare();
                     updateShareNotice();

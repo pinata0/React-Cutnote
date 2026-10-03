@@ -22,6 +22,7 @@ async function fixture(options = {}) {
     if (req.url === '/mobile?redirect=1') { res.writeHead(302, {Location: `http://127.0.0.1:${upstream.address().port}/mobile?url=next`, 'Set-Cookie': 'upstream-secret=no'}); res.end(); return; }
     if (req.url === '/mobile?external=1') { res.writeHead(302, {Location: 'https://example.com/'}); res.end(); return; }
     if (req.url === '/mobile?slow=1') return;
+    if (req.url === '/api/media/large') {res.writeHead(200,{'Content-Type':'video/mp4','Content-Length':String(29*1024**2)});res.end(Buffer.alloc(29*1024**2,7));return;}
     if (req.url === '/api/ai/analyze?provider-error=1') { res.writeHead(401, {'Content-Type': 'application/json'}); res.end('{"error":"fixture provider authentication"}'); return; }
     if (req.url.startsWith('/api/media/') && req.url.includes('download=1') || req.url.startsWith('/api/segment-media/') && req.url.includes('download=1')) {
       const segment = req.url.startsWith('/api/segment-media/');
@@ -73,6 +74,18 @@ test('private address discovery never chooses a public or loopback address', () 
   assert.equal(privateIPv4('172.32.0.1'), false);
   assert.equal(privateIPv4('192.168.1.9'), true);
   assert.equal(discoverAddress({utun0: [{family: 'IPv4', internal: false, address: '10.2.2.2'}], en0: [{family: 'IPv4', internal: false, address: '192.168.3.4'}]}), '192.168.3.4');
+});
+
+test('durable jobs require pairing and exact methods; large local media streams',async()=>{
+ const f=await fixture();try{
+  assert.equal((await f.request('/api/jobs',{method:'POST',body:'{}'})).status,401);
+  const cookie=await f.pair(),headers={Cookie:cookie,Origin:publicOrigin,'Content-Type':'application/json'};
+  const id='12345678-1234-4123-8123-123456789012';
+  for(const endpoint of ['/api/jobs','/api/jobs/'+id+'/retry','/api/jobs/'+id+'/cancel'])assert.equal((await f.request(endpoint,{method:'POST',headers,body:'{}'})).status,200);
+  for(const endpoint of ['/api/internal/jobs','/api/pc/settings','/api/jobs/'+id+'/unknown'])assert.equal((await f.request(endpoint,{method:'POST',headers,body:'{}'})).status,403);
+  assert.equal((await f.request('/api/jobs/'+id+'/cancel',{headers})).status,403);
+  const media=await f.request('/api/media/large',{headers});assert.equal(media.status,200);assert.equal(media.bodyBytes.length,29*1024**2);
+ }finally{await f.close();}
 });
 
 test('connection details are written privately and existing files are not overwritten', async () => {

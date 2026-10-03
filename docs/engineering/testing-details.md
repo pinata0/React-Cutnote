@@ -28,7 +28,7 @@ node tests/run-web.mjs
 
 ## 실행 방식과 격리
 
-- `run-web.mjs`가 12개 테스트를 각각 현재 소스와 함께 임시 디렉터리에 ESM으로 bundle합니다. 각 테스트는 별도의 Node 프로세스에서 실행하고 끝나면 생성 파일을 지웁니다.
+- `run-web.mjs`가 13개 테스트를 각각 현재 소스와 함께 임시 디렉터리에 ESM으로 bundle합니다. 각 테스트는 별도의 Node 프로세스에서 실행하고 끝나면 생성 파일을 지웁니다.
 - `cloudflare:workers`는 `web/mock-cloudflare.ts`의 빈 `env` 객체로 연결됩니다. 각 테스트가 메모리 DB와 메모리 버킷을 직접 설정합니다. 영속 SQLite, D1, R2, Wrangler 상태에는 연결하지 않습니다.
 - 기본 `fetch`는 항상 실패합니다. 테스트에 선언된 가짜 `fetch`만 사용할 수 있고, 기본 차단 함수 호출이 한 번이라도 발생하면 그 suite는 실패합니다. localhost 요청도 기본 차단에 포함됩니다.
 - 자식 프로세스에는 실행에 필요한 환경 변수만 전달합니다. API 키, 비밀 키, `NODE_OPTIONS`는 전달하지 않습니다. 테스트 안의 키 문자열은 가짜 값이며 암호화 테스트용 키는 메모리에서 새로 생성합니다.
@@ -52,6 +52,7 @@ node tests/run-web.mjs
 | `full-video.test.ts` | `work/full-video-tests.ts` | 암호화, 링크 분류, 전체 길이 샘플링, AI 요청·응답 형식과 근거, 할당량 오류, 임시 업로드 정리 |
 | `sync-polling.test.mjs` | `work/sync-polling-tests.mjs` | 느린 동기화 요청과 주기 polling, 타임아웃, 수동 동기화 우선 처리, 오래된 응답 무시 |
 | `clip-analysis.test.ts` | 5단계 신규 작성 | 실제 분석 훅의 취소·경합·종료 후 결과 무시, 편집 완료의 검수 보존, AI 연결 세션 재개 |
+| `pc-jobs.test.ts` | PC 수집 신규 | 메모리 SQLite, 멱등 접수·lease·취소·충돌·검수 보존·로컬 export 계약. 실제 제공자 호출 없음 |
 | `mock-cloudflare.ts` | `work/mock-cloudflare.ts` | 테스트별로 채우는 빈 Cloudflare 환경 객체 |
 | `youtube-public-search.test.ts` | 인수인계용 신규 작성 | 합성 renderer/HTML로 공개 검색 JSON 파서, 실제 Shorts endpoint, 중복·저장 영상 제외, 검색 횟수·동시성 제한, 오류·취소 |
 

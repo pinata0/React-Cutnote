@@ -19,9 +19,9 @@ function declaration(source:string,name:string){
 function compile(source:string){return ts.transpileModule(source,{compilerOptions:{target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.None}}).outputText;}
 function deferred(){let resolve!:(value:any)=>void,reject!:(error:Error)=>void;const promise=new Promise<any>((yes,no)=>{resolve=yes;reject=no;});return{promise,resolve,reject};}
 const tick=async()=>{for(let i=0;i<10;i++)await Promise.resolve();};
-function harness(){
+function harness(options:Record<string,unknown>={}){
  const states:any[]=[],cleanups:(()=>void)[]=[],requests:any[]=[],frames:any[]=[],completed:any[]=[],titles:any[]=[],posters:any[]=[],timers=new Set<number>();
- const context={AbortController,File,FormData,Blob,Error,URL,
+ const context={AbortController,File,FormData,Blob,Error,URL,crypto,
   useState:(initial:any)=>{const index=states.length;states.push(initial);return[initial,(next:any)=>{states[index]=typeof next==='function'?next(states[index]):next;}];},
   useRef:(current:any)=>({current}),useEffect:(run:()=>()=>void)=>cleanups.push(run()),
   request:(url:string,options:any)=>{const d=deferred();requests.push({url,options,...d});return d.promise;},
@@ -34,11 +34,16 @@ function harness(){
  };
  const hook=vm.runInNewContext(compile(declaration(source,'useClipAnalysis'))+'\nuseClipAnalysis;',context);
  const posterValues:any[]=[];
- const actions=hook({editing:{id:'existing'},automatic:(v:any)=>titles.push(v),completeAnalysis:(v:any)=>completed.push(v),setPoster:(v:any)=>posterValues.push(v),setAiStatus:()=>{}});
+ const actions=hook({editing:{id:'existing'},automatic:(v:any)=>titles.push(v),completeAnalysis:(v:any)=>completed.push(v),setPoster:(v:any)=>posterValues.push(v),setAiStatus:()=>{},...options});
  return{actions,states,cleanups,requests,frames,completed,titles,posters,posterValues,timers};
 }
 let passed=0;
 async function test(name:string,run:()=>void|Promise<void>){await run();passed++;console.log('PASS',name);}
+
+await test('PC links never resolve or call Google/Gemini from the editor',async()=>{
+ const h=harness({pcMode:true,editing:null});await h.actions.classifyUrl('https://youtu.be/abcdefghijk');assert.equal(h.requests.length,0);assert.equal(h.frames.length,0);
+ const local=harness({pcMode:true,editing:{id:'local',localVideo:true}});const pending=local.actions.classifyUrl('https://youtu.be/abcdefghijk');assert.equal(local.requests.length,1);assert.equal(local.requests[0].url,'/api/jobs');assert.equal(JSON.parse(local.requests[0].options.body).kind,'analyze');local.requests[0].resolve({});await pending;assert.equal(local.frames.length,0);
+});
 
 await test('superseded status response never starts analysis',async()=>{
  const h=harness(),a=h.actions.classify('old'),b=h.actions.classify('new');

@@ -4,7 +4,7 @@ import {resolveAliases,isDescendant,tagById,categoryForTag} from './taxonomy';
 export const categories = ['color','shot','effect'] as const;
 export type Category=typeof categories[number];
 export type Tags=Record<Category,string[]>;
-export type Clip={favorite?:boolean;favoriteSegmentIds?:string[];id:string;title:string;sourceUrl:string;videoUrl:string|null;posterUrl:string|null;tags:Tags;notes:string;createdAt:string;revision?:number;tagging?:Tagging;analysisHistory?:import('./analysis/types').AnalysisReport[];segments?:import('./segments').ClipSegment[];analysis?:import('./analysis/types').AnalysisReport|null};
+export type Clip={localVideo?:boolean;favorite?:boolean;favoriteSegmentIds?:string[];id:string;title:string;sourceUrl:string;videoUrl:string|null;posterUrl:string|null;tags:Tags;notes:string;createdAt:string;revision?:number;tagging?:Tagging;analysisHistory?:import('./analysis/types').AnalysisReport[];segments?:import('./segments').ClipSegment[];analysis?:import('./analysis/types').AnalysisReport|null};
 export type TagFilter={category:Category;value:string};
 export const MAX_FILE_SIZE=25*1024*1024;
 export const videoTypes=['video/mp4','video/webm','video/quicktime','video/ogg'];

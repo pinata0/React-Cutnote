@@ -1,12 +1,15 @@
 # 구조와 코드 지도
 
-[문서 목록](../README.md) · 기준일: 2026-10-02
+2026-10-03 추가: PC 로컬 수집 작업자는 `apps/pc/`에서 실행됩니다. [운영 안내](local-video-ingestion-operations.md)와 [구현·검증 상태](local-video-ingestion-progress.md)를 함께 확인하세요. 외부 PC 5173·LAN 5174는 유지하고 내부 Worker는 5175로 분리했습니다.
+
+[문서 목록](../README.md) · 기준일: 2026-10-03
 
 ## 저장소 구조
 
 | 경로 (저장소 루트 기준) | 역할 |
 |---|---|
 | `apps/web/` | 현재 웹 UI·API·분석·저장소 |
+| `apps/pc/` | Node 도구 실행·영속 작업·로컬 스트리밍; [구조·API](local-video-ingestion-reference.md) |
 | `apps/android/` | Android 앱, PC 실행기, LAN 서버 |
 | `tests/` | 현재 웹 소스를 검사하는 오프라인 회귀 테스트 |
 | `assets/branding/` | 브랜드 PNG 2개·SVG 4개; 출처를 유지한 통합 위치 |
@@ -41,7 +44,7 @@
 | `lib/ai/`, `lib/analysis/`, `lib/links/` | 제공자 호출·파싱, 프레임/영상 분석, 링크 해석 |
 | `lib/client-request.ts` | 보관함·분석 훅의 공통 JSON 요청·오류 처리 |
 | `lib/server.ts`, `lib/server/chatgpt-auth.ts` | 서버 DB·버킷 접근 및 인증; 클라이언트에서 import하지 않음 |
-| `db/schema.ts`, `drizzle/` | SQLite 스키마와 0000~0008 마이그레이션 |
+| `db/schema.ts`, `drizzle/` | SQLite 스키마와 0000~0009 마이그레이션 |
 | `data/taxonomy/`, `lib/taxonomy.ts` | 태그 원본·스키마와 조회·별칭 처리 |
 | `scripts/` | 실행, DB 초기화, 태그 생성 |
 | `build/` | Worker 진입점·Vite 플러그인 입력 소스 |
@@ -53,11 +56,11 @@
 
 보관함 화면은 `library-workspace.tsx` → `use-library-workspace.ts` → `use-library-sync.ts` / `use-clip-analysis.ts` 방향으로 연결됩니다. 편집·상세 화면은 상태와 동작을 props로 받으며 컨트롤러 타입만 참조합니다. 상태 조정 훅은 자식 화면을 import하지 않습니다. 공통 UI·재생기는 상위 보관함 화면에 의존하지 않습니다.
 
-D1 테이블은 `clips`, `ai_settings`, `segment_media`, `recommendation_feedback`, `library_order`, `youtube_discovery`입니다. 구간·태그·분석 이력 일부는 JSON 문자열 컬럼입니다. 별도 PostgreSQL 태그 테이블이 존재한다고 가정하지 않습니다. 영상·포스터·구간 객체는 R2를 사용합니다.
+D1 테이블은 `clips`, `ai_settings`, `segment_media`, `recommendation_feedback`, `library_order`, `youtube_discovery`, `pc_jobs`입니다. 구간·태그·분석 이력 일부는 JSON 문자열 컬럼입니다. 별도 PostgreSQL 태그 테이블이 존재한다고 가정하지 않습니다. 기존 업로드 영상·포스터·구간 객체는 R2를 사용합니다. PC 수집 원본·썸네일·구간 파일은 지정 로컬 폴더에 두고 D1의 자산 ID·상대 파일 정보로 연결합니다.
 
 주요 API는 `clips`, `media`, `segment-media`, `ai/analyze`, `ai/frames`, `ai/connect`, `ai/status`, `ai/image-query`, `ai/effect-query`, `links/resolve`, `links/media`, `library/order`, `recommendations/youtube`, `recommendations/feedback`입니다. 메서드·응답은 각 `route.ts`를 기준으로 확인합니다.
 
-Android → LAN Bridge(5174) → PC 웹(5173) → 동일한 D1/R2를 사용합니다. 온라인 사이트와 로컬 PC DB는 별개입니다.
+Android → LAN Bridge(5174) → PC Gateway(5173) → 내부 Worker(5175) → 동일한 D1/R2로 연결됩니다. PC 로컬 프레임 추출·내보내기는 Node/FFmpeg가 맡습니다. 새 jobs/settings/internal API와 모듈·흐름도는 [PC 구조·API 기준](local-video-ingestion-reference.md)에 모았습니다. 온라인 사이트와 로컬 PC DB는 별개입니다.
 
 ## 기능 수정 시 연결 지점
 

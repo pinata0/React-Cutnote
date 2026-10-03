@@ -86,3 +86,7 @@ __MACOSX/
 
 # Captured external pages may contain embedded API keys
 /main/work/youtube-probe/public-search.html
+
+# PC toolchain and private runtime state
+.cutnote-pc/
+.tools/
